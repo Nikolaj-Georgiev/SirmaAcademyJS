@@ -1,0 +1,14 @@
+.small-image {
+  width: 400px;
+  height: 250px;
+}
+
+div {
+  margin: 20px;
+}
+
+h1 {
+  margin-left: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
