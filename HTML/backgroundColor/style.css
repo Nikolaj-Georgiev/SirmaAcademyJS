@@ -1,0 +1,28 @@
+.bold {
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+}
+
+.red-text {
+  color: red;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.green-text {
+  color: green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-style: oblique;
+  text-align: center;
+  line-height: 0.8;
+  background-color: orange;
+}
+
+.link {
+  display: block;
+  text-align: end;
+  background-color: yellowgreen;
+}
