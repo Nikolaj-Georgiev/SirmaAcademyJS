@@ -1,0 +1,19 @@
+* {
+  font-size: 18px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-weight: 500;
+}
+
+#bold {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#red-text {
+  color: red;
+}
+
+#green-text {
+  color: green;
+}
