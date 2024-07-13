@@ -1,0 +1,11 @@
+p > span {
+  font-weight: 600;
+}
+
+body p:nth-last-of-type(2) {
+  color: red;
+}
+
+body p:last-of-type {
+  color: green;
+}
