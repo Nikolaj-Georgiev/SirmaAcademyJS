@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset=utf-8 />
+    <title>Remove items from a dropdown list</title>
+  </head>
+
+  <body>
+    <form>
+      <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+      </select>
+      <input type="button" onclick="removecolor()" value="Select and
+Remove">
+    </form>
+    <script>
+      function removecolor() {
+        const selectElement = document.getElementById('colorSelect');
+        const selected = selectElement.selectedIndex;
+
+        if (selected === -1) {
+          alert('No more colors to remove');
+          return;
+        }
+
+        // selectElement.children[selected].remove(); // може и така, едно и също е
+        selectElement.remove(selected);
+      }
+    </script>
+  </body>
+
+</html>
