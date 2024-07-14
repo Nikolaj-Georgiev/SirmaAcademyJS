@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset=utf-8 />
+    <title>Create a table</title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table id="myTable" border="1">
+      <tbody>
+
+      </tbody>
+    </table>
+    <form>
+      <div>
+        <label for="rowNumber">How many rows do you want in your table?</label>
+        <input type="number" name="rowNumber">
+      </div>
+      <div>
+        <label for="colNumber">How many columns do you want in your table?</label>
+        <input type="number" name="colNumber">
+      </div>
+      <input type="button" onclick="createTable()" value="Create the
+table">
+    </form>
+    <script>
+      function createTable() {
+        const tBodyElement = document.querySelector('#myTable > tbody');
+        const formData = new FormData(document.getElementsByTagName('form')[0]);
+        const rowNum = formData.get('rowNumber');
+        const colNum = formData.get('colNumber');
+
+        if (rowNum < 1 || colNum < 1) {
+          alert('Add valid row and column numbers!')
+          return;
+        }
+
+        for (let i = 0; i < rowNum; i++) {
+          const tr = document.createElement('tr');
+          for (let j = 0; j < colNum; j++) {
+            const td = document.createElement('td');
+            td.textContent = `Row ${i + 1} cell ${j + 1}`;
+            tr.appendChild(td);
+          }
+          tBodyElement.appendChild(tr);
+        }
+      }
+    </script>
+  </body>
+
+</html>
