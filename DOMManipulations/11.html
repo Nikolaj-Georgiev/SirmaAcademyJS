@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight on mouse over the link</title>
+    <style>
+      .highlight {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="#" onmouseover="highlightWords(true)" onmouseout="highlightWords(false)">link</a>
+    <p><b>We</b> have just started <b>this</b> section for the users (beginner to intermediate) who <b>want</b> to
+      work with <b>various</b> JavaScript <b>problems</b> and write scripts online to <b>test</b> their
+      JavaScript <b>skill.</b></p>
+    <script>
+      function highlightWords(word) {
+        const boldWords = [...document.getElementsByTagName('b')];
+        boldWords.forEach(e => word ? e.classList.add('highlight') : e.classList.remove('highlight'))
+      }
+    </script>
+  </body>
+
+</html>
