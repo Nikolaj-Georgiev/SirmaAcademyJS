@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Items</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+
+      }
+
+      input {
+        margin-left: 42px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="list-app">
+      <p>Click on the item to change the text, or click on the button to create a new
+        item.</p>
+      <ul id="items">
+        <li>Map, filter, reduce</li>
+        <li>The DOM</li>
+        <li>Callbacks</li>
+      </ul>
+      <input type="text" value="">
+      <button type="button">Create New</button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const appElement = document.getElementById('list-app');
+        const listOfItems = appElement.querySelector('#items');
+        listOfItems.addEventListener('click', editItem);
+        const button = appElement.querySelector('button[type=button]');
+        button.addEventListener('click', addItem)
+
+        function editItem(e) {
+          const newText = prompt('Edit item:', e.target.textContent).trim();
+          e.target.textContent = newText ? newText : e.target.textContent;
+        }
+
+
+        function addItem() {
+          const inputElement = appElement.querySelector('input[type=text]');
+          const newItemText = inputElement.value.trim();
+
+          if (newItemText === '') {
+            alert('Write some text!');
+            return;
+          }
+
+          const newItem = document.createElement('li');
+          newItem.textContent = newItemText;
+          listOfItems.appendChild(newItem);
+          inputElement.value = '';
+        }
+      })
+    </script>
+  </body>
+
+</html>
