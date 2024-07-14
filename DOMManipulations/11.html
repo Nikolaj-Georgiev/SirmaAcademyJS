@@ -18,9 +18,9 @@
       work with <b>various</b> JavaScript <b>problems</b> and write scripts online to <b>test</b> their
       JavaScript <b>skill.</b></p>
     <script>
-      function highlightWords(word) {
+      function highlightWords(isHighlighted) {
         const boldWords = [...document.getElementsByTagName('b')];
-        boldWords.forEach(e => word ? e.classList.add('highlight') : e.classList.remove('highlight'))
+        boldWords.forEach(w => isHighlighted ? w.classList.add('highlight') : w.classList.remove('highlight'));
       }
     </script>
   </body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display window size</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 400;
+        padding: 20px;
+        color: blueviolet;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="dimensions"></p>
+    <script>
+      function displayDimensions() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        const dimensionsElement = document.getElementById('dimensions');
+        dimensionsElement.textContent = `Window Width: ${width}px, Window Height: ${height}px`;
+      }
+
+      displayDimensions();
+      window.addEventListener("resize", displayDimensions);
+    </script>
+  </body>
+
+</html>
