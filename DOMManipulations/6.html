@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset=utf-8 />
+    <title>Change the content of a cell</title>
+  </head>
+
+  <body>
+    <table id="myTable" border="1">
+      <tbody>
+        <tr>
+          <td>Row1 cell1</td>
+          <td>Row1 cell2</td>
+        </tr>
+        <tr>
+          <td>Row2 cell1</td>
+          <td>Row2 cell2</td>
+        </tr>
+        <tr>
+          <td>Row3 cell1</td>
+          <td>Row3 cell2</td>
+        </tr>
+      </tbody>
+    </table>
+    <form>
+      <input type="button" onclick="changeContent()" value="Change
+    content">
+      <div>
+        <label for="rowNumber">Which row you want to change?</label>
+        <input type="number" name="rowNumber">
+      </div>
+      <div>
+        <label for="colNumber">Which column you want to change?</label>
+        <input type="number" name="colNumber">
+      </div>
+      <div>
+        <label for="cellContent">What you want in your column?</label>
+        <input type="text" name="cellContent">
+      </div>
+    </form>
+    <script>
+      function changeContent() {
+        const tBodyElement = document.querySelector('#myTable > tbody');
+        const tableRowsCount = tBodyElement.children.length;
+        const formData = new FormData(document.getElementsByTagName('form')[0]);
+        const rowNum = formData.get('rowNumber');
+        const colNum = formData.get('colNumber');
+        const cellContent = formData.get('cellContent');
+
+        if (rowNum > tableRowsCount || rowNum < 1 || colNum < 1 || colNum > 2) {
+          alert('Add valid row and column numbers!')
+          return;
+        }
+
+        const changedRow = tBodyElement.children[rowNum - 1];
+        const changedCell = changedRow.children[colNum - 1];
+        changedCell.textContent = cellContent;
+      }
+    </script>
+  </body>
+
+</html>
