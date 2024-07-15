@@ -1,0 +1,8 @@
+.parent {
+  /* Set font-size to 20px */
+  font-size: 20px;
+}
+.child {
+  /* Set font-size to 1.5em */
+  font-size: 1.5em;
+}
