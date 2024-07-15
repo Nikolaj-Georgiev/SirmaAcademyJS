@@ -1,0 +1,10 @@
+.pixel-width {
+  /* Set width to 300px */
+  width: 300px;
+  background-color: antiquewhite;
+}
+.percentage-width {
+  /* Set width to 50% */
+  width: 50%;
+  background-color: rgb(170, 136, 92);
+}
