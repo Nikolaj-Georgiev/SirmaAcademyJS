@@ -1,0 +1,9 @@
+html {
+  /* Set font-size to 16px */
+  /* 16px is the default size of the browser, therefore I'm setting it to 18px */
+  font-size: 18px;
+}
+.rem-size {
+  /* Set font-size to 2rem */
+  font-size: 2rem;
+}
