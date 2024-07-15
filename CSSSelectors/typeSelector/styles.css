@@ -1,0 +1,23 @@
+p {
+  color: blue;
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  color: GREEN;
+}
+
+h3 {
+  color: orange;
+}
+
+p:nth-last-of-type(1) {
+  color: blueviolet;
+}
+
+div {
+  display: inline-block;
+  background-color: yellowgreen;
+  color: brown;
+}
