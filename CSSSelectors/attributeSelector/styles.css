@@ -1,0 +1,10 @@
+input[type='text'] {
+  /* Style for text input */
+  background-color: antiquewhite;
+  color: brown;
+}
+input[type='submit'] {
+  /* Style for submit input */
+  background-color: green;
+  color: gray;
+}
