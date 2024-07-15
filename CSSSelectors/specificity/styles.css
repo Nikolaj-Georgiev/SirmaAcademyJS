@@ -6,3 +6,7 @@ p {
   /* Style for class selector */
   color: grey;
 }
+
+#unique {
+  color: blueviolet;
+}
