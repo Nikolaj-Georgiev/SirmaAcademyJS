@@ -3,6 +3,22 @@
   background-color: burlywood;
 }
 
+.not-highlight {
+  border: 2px solid black;
+  box-shadow: 0 5px 10px rgba(107, 74, 74, 0.664);
+}
+
 .red {
   color: rgba(107, 74, 74, 0.664);
+}
+
+.common-style {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+p {
+  background-color: aqua;
 }
