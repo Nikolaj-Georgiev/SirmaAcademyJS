@@ -1,3 +1,8 @@
 .highlight {
   color: red;
+  background-color: burlywood;
+}
+
+.red {
+  color: rgba(107, 74, 74, 0.664);
 }
