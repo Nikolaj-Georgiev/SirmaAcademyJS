@@ -1,8 +1,15 @@
-.box {
+/* .box {
   margin: 20px auto;
   padding: 30px;
   background-color: antiquewhite;
   font-size: large;
   font-weight: 500;
   color: #444;
+} */
+
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
 }
