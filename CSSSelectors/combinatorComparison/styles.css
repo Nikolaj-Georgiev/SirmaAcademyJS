@@ -2,9 +2,11 @@ div p {
   /* Style for descendant combinator */
   font-size: 18px;
   color: green;
+  background-color: rebeccapurple;
 }
-div > p {
+div > div > p {
   /* Style for child combinator */
   font-family: Arial, Helvetica, sans-serif;
   color: blueviolet;
+  background-color: aqua;
 }
