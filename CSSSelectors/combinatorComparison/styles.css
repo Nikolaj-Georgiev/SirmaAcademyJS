@@ -1,0 +1,10 @@
+div p {
+  /* Style for descendant combinator */
+  font-size: 18px;
+  color: green;
+}
+div > p {
+  /* Style for child combinator */
+  font-family: Arial, Helvetica, sans-serif;
+  color: blueviolet;
+}
