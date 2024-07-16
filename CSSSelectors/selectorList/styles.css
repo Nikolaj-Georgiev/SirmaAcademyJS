@@ -5,3 +5,8 @@ div {
   color: grey;
   background-color: antiquewhite;
 }
+
+h1,
+p {
+  font-style: italic;
+}
