@@ -1,0 +1,9 @@
+.width-example {
+  /* Set width, min-width, and max-width */
+  /* 1 */
+  width: 300px;
+  /* 2 */
+  min-width: fit-content;
+  /* 3 */
+  max-width: 150px;
+}
