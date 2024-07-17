@@ -1,0 +1,14 @@
+.box-model {
+  display: block;
+  width: fit-content;
+  box-sizing: border-box;
+  margin: 20px auto;
+  padding: 40px 20px;
+  border: 2px solid salmon;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #444;
+  background-color: antiquewhite;
+  text-align: center;
+}
