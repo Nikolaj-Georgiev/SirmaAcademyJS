@@ -6,18 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Responsive Design</title>
     <style>
-      body {}
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-rows: 10vh 5vh 1fr 10vh;
+        /* row-gap: 10px; */
+      }
 
       header,
-      footer {}
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        align-self: center;
+      }
 
-      nav {}
+      nav {
+        background-color: #444;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
 
-      nav a {}
+      nav a {
+        text-decoration: none;
+        color: #ddd;
+      }
 
-      .container {}
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 5px;
+      }
 
-      .section {}
+      .section {
+        background-color: #ddd;
+        padding: 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
 
       @media (min-width: 600px) and (max-width: 899px) {
         .container {}
