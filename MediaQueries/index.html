@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design with Media Queries</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {}
+
+      header,
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      main {
+        background-color: #f4f4f4;
+        padding: 10px;
+      }
+
+      .box {
+        background-color: #ddd;
+        padding: 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+
+      @media (min-width: 600px) and (max-width: 1199px) {
+        .container {}
+      }
+
+      @media (min-width: 1200px) {
+        .container {}
+      }
+
+      @media (max-width: 599px) {
+        .container {}
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Responsive Design Example</h1>
+    </header>
+    <div class="container">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Responsive Design</p>
+    </footer>
+  </body>
+
+</html>
