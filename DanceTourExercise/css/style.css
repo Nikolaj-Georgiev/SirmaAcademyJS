@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+  --background-color-main: #e8631c;
+  --background-color-secondary: #303030;
+  --text-color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: 'Montserrat';
+  font-size: 3rem;
+  background-color: var(--background-color-main);
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.app-wrapper {
+  margin: 0 auto;
+  max-width: 144rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  background-color: #303030;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.header-link:link,
+.header-link:visited {
+  color: inherit;
+  text-transform: uppercase;
+  font-family: 'Oswald';
+  font-size: 2.5rem;
+}
+
+.header-link:hover,
+.header-link:active {
+  cursor: pointer;
+  color: inherit;
+}
+
+.header-icon {
+  width: 3rem;
+  height: 3rem;
+  align-self: center;
+  transition: all 0.2s;
+}
+
+.header-icon:hover {
+  animation: shake 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
