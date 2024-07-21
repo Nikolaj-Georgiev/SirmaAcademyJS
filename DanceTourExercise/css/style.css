@@ -17,6 +17,7 @@ body {
   box-sizing: border-box;
   color: var(--text-color);
   font-family: 'Montserrat';
+  font-weight: 400;
   font-size: 3rem;
   background-color: var(--background-color-main);
 }
@@ -35,6 +36,15 @@ li {
   flex-direction: column;
   justify-content: center;
 }
+
+.button {
+  border: none;
+  border-radius: 4px;
+  width: 32rem;
+  height: 6.5rem;
+}
+
+/* Header */
 
 .header {
   background-color: #303030;
@@ -73,6 +83,44 @@ li {
   animation: shake 0.5s;
   animation-timing-function: ease-in-out;
 }
+/* Hero section */
+
+.hero {
+  background-image: url('../assets/images/hero.png');
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 8rem;
+}
+
+.hero-heading {
+  font-family: 'Oswald';
+  font-size: 12.5rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  margin-top: 20rem;
+}
+
+.hero-text {
+  max-width: 64rem;
+  font-weight: 400;
+}
+
+.hero-btn {
+  font-size: 2.9rem;
+  text-transform: uppercase;
+  color: var(--text-color);
+  background-color: var(--background-color-main);
+  font-weight: 400;
+  font-family: 'Oswald';
+  text-align: center;
+}
+
+/* animations */
 
 @keyframes shake {
   0% {
