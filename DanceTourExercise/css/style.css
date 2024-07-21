@@ -38,6 +38,8 @@ li {
 }
 
 .button {
+  font-size: 2.9rem;
+  text-transform: uppercase;
   border: none;
   border-radius: 4px;
   width: 32rem;
@@ -113,8 +115,6 @@ li {
 }
 
 .hero-btn {
-  font-size: 2.9rem;
-  text-transform: uppercase;
   color: var(--text-color);
   background-color: var(--background-color-main);
 }
@@ -137,6 +137,7 @@ li {
   font-weight: 700;
   font-family: 'Oswald';
   text-align: center;
+  margin: 0;
 }
 
 .product-text {
@@ -149,6 +150,24 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 6rem;
+}
+
+.product-card {
+  background-color: #303030;
+  max-width: 37.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card--img {
+  max-width: 37.4rem;
+  height: 32.4rem;
+}
+
+.product-card--title {
 }
 
 /* animations */
