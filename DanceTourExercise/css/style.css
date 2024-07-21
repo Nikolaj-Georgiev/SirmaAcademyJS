@@ -42,6 +42,9 @@ li {
   border-radius: 4px;
   width: 32rem;
   height: 6.5rem;
+  font-family: 'Oswald';
+  text-align: center;
+  cursor: pointer;
 }
 
 /* Header */
@@ -107,7 +110,6 @@ li {
 
 .hero-text {
   max-width: 64rem;
-  font-weight: 400;
 }
 
 .hero-btn {
@@ -115,9 +117,38 @@ li {
   text-transform: uppercase;
   color: var(--text-color);
   background-color: var(--background-color-main);
-  font-weight: 400;
+}
+
+/* Product section */
+
+.product {
+  padding: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-title {
+  font-size: 7.5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
   font-family: 'Oswald';
   text-align: center;
+}
+
+.product-text {
+  max-width: 88rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.product-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* animations */
