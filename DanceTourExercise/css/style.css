@@ -471,9 +471,16 @@ h2 {
 
 .link,
 .link:active {
+  display: inline-block;
   font-size: 2.5rem;
   line-height: 4.4rem;
   color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.link:hover {
+  transform: translateY(-1rem);
 }
 
 .footer-links--list {
@@ -485,6 +492,17 @@ h2 {
   justify-content: flex-start;
   padding: 0;
   gap: 2rem;
+}
+
+.footer-icon,
+.footer-icon:link {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.footer-icon:hover {
+  transform: translateY(-1rem);
 }
 /* animations */
 
