@@ -13,6 +13,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -86,6 +87,7 @@ h2 {
   background-color: #303030;
   display: flex;
   justify-content: space-around;
+  transition: all 0.2s;
 }
 
 .header-ul {
@@ -121,6 +123,16 @@ h2 {
 .header-icon:hover {
   animation: shake 0.5s;
   animation-timing-function: ease-in-out;
+}
+
+/* STICKY nav */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 /* HERO section */
 
@@ -517,6 +529,12 @@ h2 {
 .footer-icon:hover {
   transform: translateY(-1rem);
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 1440) {
+}
+
 /* animations */
 
 @keyframes shake {
