@@ -7,6 +7,8 @@
   --background-color-main: #e8631c;
   --background-color-secondary: #303030;
   --text-color: #fff;
+  --body-background-dark: #2e1406;
+  --body-background-light: #f4b18e;
 }
 
 html {
@@ -21,7 +23,7 @@ body {
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 3rem;
-  background-color: var(--background-color-main);
+  background-color: var(--body-background-dark);
 }
 
 a {
@@ -37,6 +39,15 @@ h3,
 h4 {
   font-family: 'Oswald';
   font-weight: 400;
+}
+
+h2 {
+  font-size: 7.5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
 }
 
 .app-wrapper {
@@ -130,6 +141,7 @@ h4 {
 /* PRODUCT section */
 
 .product {
+  background-color: var(--background-color-main);
   padding: 8rem;
   display: flex;
   flex-direction: column;
@@ -139,12 +151,6 @@ h4 {
 }
 
 .product-title {
-  font-size: 7.5rem;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: 700;
-  text-align: center;
-  margin: 0;
 }
 
 .product-text {
@@ -189,6 +195,16 @@ h4 {
 }
 
 /* PROMO section */
+
+.promo {
+  padding: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--background-color-secondary);
+}
 
 /* animations */
 
