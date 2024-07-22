@@ -296,12 +296,14 @@ h2 {
 }
 
 .about-info--text {
-  max-width: 54rem;
+  /* max-width: 54rem; */
   font-size: 30px;
 }
 
 .about-btn {
   align-self: flex-start;
+  background-color: var(--background-color-secondary);
+  color: var(--text-color);
 }
 
 /* animations */
