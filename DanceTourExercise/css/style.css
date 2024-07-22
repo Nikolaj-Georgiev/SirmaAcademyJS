@@ -73,6 +73,11 @@ h2 {
   font-family: 'Oswald';
   text-align: center;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-1rem);
 }
 
 /* HEADER */
@@ -91,14 +96,17 @@ h2 {
 
 .header-link:link,
 .header-link:visited {
+  display: inline-block;
   color: inherit;
   text-transform: uppercase;
   font-family: 'Oswald';
   font-size: 2.5rem;
+  transition: all 0.3s;
 }
 
 .header-link:hover,
 .header-link:active {
+  transform: translateY(-0.5rem);
   cursor: pointer;
   color: inherit;
 }
@@ -446,6 +454,11 @@ h2 {
   flex-grow: 1;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  transition: all 0.2s;
+}
+
+.form-btn:hover {
+  transform: scaleX(1.1);
 }
 
 /* FOOTER */
