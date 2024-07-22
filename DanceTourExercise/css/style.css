@@ -154,6 +154,7 @@ li {
 }
 
 .product-card {
+  margin-top: 8rem;
   background-color: #303030;
   max-width: 37.4rem;
   display: flex;
@@ -168,6 +169,18 @@ li {
 }
 
 .product-card--title {
+  margin: 0;
+  margin-top: 4rem;
+  font-size: 3.7rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'Oswald';
+  text-align: center;
+}
+
+.product-card--text {
+  text-align: center;
+  font-size: 2.2rem;
 }
 
 /* animations */
