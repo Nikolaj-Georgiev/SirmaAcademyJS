@@ -14,3 +14,34 @@
 .button:hover {
   transform: translateY(-1rem);
 }
+
+/* BURGER menu */
+.header-nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  position: absolute;
+  top: 2.2rem;
+  right: 1rem;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
