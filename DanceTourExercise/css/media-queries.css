@@ -17,18 +17,27 @@
   .product-card {
     max-width: 34rem;
   }
-
   .product-card img {
     padding: 0.2rem;
     max-width: 34rem;
   }
-
   .promo-cards {
     gap: 5rem;
   }
-
   .button {
     width: 27rem;
+  }
+  .about-card {
+    gap: 5rem;
+  }
+  .about-img {
+    width: 50%;
+  }
+  .about-info--1 {
+    padding-right: 4rem;
+  }
+  .about-info--2 {
+    padding-right: 6rem;
   }
 }
 @media screen and (max-width: 1200px) {
