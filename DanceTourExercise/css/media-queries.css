@@ -17,7 +17,7 @@
   .product-card {
     max-width: 34rem;
   }
-  .product-card img {
+  .product-card--img {
     padding: 0.2rem;
     max-width: 34rem;
   }
@@ -60,15 +60,44 @@
   }
 }
 @media screen and (max-width: 1200px) {
-}
-@media screen and (max-width: 1024px) {
   html {
     font-size: 56.25%;
   }
 
-  .app-wrapper {
-    max-width: 102.4rem;
+  .product-cards {
+    flex-wrap: wrap;
+    gap: 8rem;
   }
+
+  .product-card {
+    margin-top: 4rem;
+    max-width: 37rem;
+  }
+
+  .product-card--img {
+    max-width: 37rem;
+    padding: 0;
+  }
+
+  .product-card--3 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  .about-info--title {
+    font-size: 6rem;
+  }
+  .about-info--text {
+    font-size: 24px;
+  }
+  .button {
+    height: 6rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* .app-wrapper {
+    max-width: 102.4rem;
+  } */
 }
 
 @media screen and (max-width: 768px) {
