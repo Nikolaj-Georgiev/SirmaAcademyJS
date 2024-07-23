@@ -143,6 +143,36 @@
     max-width: 60rem;
     font-size: 2.6rem;
   }
+  .promo-cards {
+    flex-wrap: wrap;
+  }
+  .promo-card--3 {
+    margin-top: 4rem;
+  }
+  .about-info--2 {
+    padding-right: 2rem;
+  }
+  .about-info--title {
+    font-size: 6rem;
+    max-width: 40rem;
+  }
+  .about-info--1 {
+    padding-left: 0;
+    padding-right: 2rem;
+  }
+  .footer-text {
+    max-width: 40rem;
+  }
+  .link,
+  .link:active {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+  .link:hover,
+  .link:visited {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
