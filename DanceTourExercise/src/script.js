@@ -8,3 +8,12 @@ window.addEventListener('scroll', function () {
     navbar.classList.remove('sticky');
   }
 });
+
+const checkbox = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.header-ul');
+navLinks.addEventListener('click', (e) => {
+  const navLinkClass = e.target.classList[0];
+  if (navLinkClass === 'header-link') {
+    checkbox.checked = false;
+  }
+})

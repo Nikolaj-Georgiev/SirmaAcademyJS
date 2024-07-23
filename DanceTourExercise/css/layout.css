@@ -11,7 +11,7 @@
   background-color: #303030;
   display: flex;
   justify-content: space-around;
-  transition: all 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 
 .header-ul {
