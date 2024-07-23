@@ -220,4 +220,11 @@
   .menu-toggle:checked ~ .header-ul {
     top: 0;
   }
+
+  .product-card--2 {
+    margin-top: 0;
+  }
+  .promo-card--2 {
+    margin-top: 4rem;
+  }
 }
