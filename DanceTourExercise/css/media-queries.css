@@ -122,10 +122,27 @@
     height: 6rem;
   }
 }
-@media screen and (max-width: 1024px) {
-  /* .app-wrapper {
-    max-width: 102.4rem;
-  } */
+@media screen and (max-width: 1023px) {
+  html {
+    font-size: 50%;
+  }
+  .header {
+    justify-content: space-evenly;
+  }
+  .header-logo {
+    margin-right: -5rem;
+    width: 13rem;
+  }
+  .hero {
+    padding: 4rem;
+  }
+  .hero-heading {
+    font-size: 8.5rem;
+  }
+  .hero-text {
+    max-width: 60rem;
+    font-size: 2.6rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
