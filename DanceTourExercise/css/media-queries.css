@@ -84,11 +84,22 @@
     margin-bottom: 2rem;
   }
 
+  .about-info--1 {
+    padding-left: 3rem;
+  }
+
   .about-info--title {
     font-size: 6rem;
   }
   .about-info--text {
     font-size: 24px;
+  }
+  .statistics {
+    padding: 10rem 5rem 10rem 5rem;
+  }
+  .statistics-cards {
+    gap: 10rem;
+    margin-top: 0;
   }
   .button {
     height: 6rem;
