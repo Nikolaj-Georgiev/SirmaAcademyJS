@@ -50,6 +50,14 @@
     max-width: 100%;
     height: 90rem;
   }
+  .subscribe {
+    padding: 8rem 8rem 14rem 8rem;
+  }
+
+  .footer {
+    gap: 2rem;
+    padding: 3rem;
+  }
 }
 @media screen and (max-width: 1200px) {
 }
