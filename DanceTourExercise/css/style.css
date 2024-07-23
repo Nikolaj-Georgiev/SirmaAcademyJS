@@ -133,7 +133,40 @@ h2 {
   width: 100%;
   opacity: 0.8;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
+
+/* BURGER menu */
+.header-nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  position: absolute;
+  top: 2.2rem;
+  right: 1rem;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
 /* HERO section */
 
 .hero {
@@ -533,6 +566,53 @@ h2 {
 /* Media Queries */
 
 @media screen and (max-width: 1440) {
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .header-ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color-secondary);
+    position: fixed;
+    top: -100%;
+    left: 0;
+    transition: top 0.3s ease;
+    z-index: 1000;
+  }
+
+  .header-ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  .menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+  }
+
+  .menu-toggle:checked ~ .header-ul {
+    top: 0;
+  }
 }
 
 /* animations */
