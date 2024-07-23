@@ -227,4 +227,33 @@
   .promo-card--2 {
     margin-top: 4rem;
   }
+  .about-card {
+    gap: 3rem;
+  }
+  .about-info--title {
+    line-height: 1.2;
+  }
+  .about-info--text {
+    font-size: 20px;
+  }
+  .about-info--2 {
+    padding-left: 3rem;
+  }
+
+  .statistics-title {
+    font-size: 5.5rem;
+  }
+  .statistics-text {
+    max-width: 65rem;
+    font-size: 2.4rem;
+  }
+  .statistics-cards {
+    gap: 5rem;
+  }
+  .statistics-info--animation p {
+    font-size: 4rem;
+  }
+  .statistics-info > p {
+    font-size: 2rem;
+  }
 }
