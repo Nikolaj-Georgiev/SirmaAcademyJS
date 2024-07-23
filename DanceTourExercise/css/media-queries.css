@@ -1,4 +1,23 @@
-@media screen and (max-width: 1440) {
+@media screen and (max-width: 1439px) {
+  .hero {
+    padding: 4rem 4rem 6rem 8rem;
+  }
+  .app-wrapper {
+    width: 100%;
+  }
+
+  .sticky {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .app-wrapper {
+    max-width: 102.4rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -47,4 +66,3 @@
     top: 0;
   }
 }
-

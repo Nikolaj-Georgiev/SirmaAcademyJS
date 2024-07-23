@@ -40,7 +40,7 @@ h4 {
 h2 {
   font-size: 7.5rem;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--text-color);
   font-weight: 700;
   text-align: center;
   margin: 0;
