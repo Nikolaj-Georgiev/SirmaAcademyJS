@@ -39,6 +39,17 @@
   .about-info--2 {
     padding-right: 6rem;
   }
+  .statistics {
+    padding: 15rem 6rem 15rem 6rem;
+  }
+  .statistics-cards {
+    gap: 15rem;
+  }
+
+  .quote {
+    max-width: 100%;
+    height: 90rem;
+  }
 }
 @media screen and (max-width: 1200px) {
 }
