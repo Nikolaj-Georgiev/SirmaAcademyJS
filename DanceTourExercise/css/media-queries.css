@@ -22,6 +22,14 @@
     padding: 0.2rem;
     max-width: 34rem;
   }
+
+  .promo-cards {
+    gap: 5rem;
+  }
+
+  .button {
+    width: 27rem;
+  }
 }
 @media screen and (max-width: 1200px) {
 }
