@@ -1,14 +1,29 @@
 @media screen and (max-width: 1439px) {
-  .hero {
-    padding: 4rem 4rem 6rem 8rem;
-  }
   .app-wrapper {
     width: 100%;
   }
-
   .sticky {
     width: 100%;
   }
+  .hero {
+    padding: 4rem 4rem 6rem 8rem;
+  }
+  .product {
+    padding: 8rem 4rem 8rem 4rem;
+  }
+  .product-cards {
+    gap: 5rem;
+  }
+  .product-card {
+    max-width: 34rem;
+  }
+
+  .product-card img {
+    padding: 0.2rem;
+    max-width: 34rem;
+  }
+}
+@media screen and (max-width: 1200px) {
 }
 @media screen and (max-width: 1024px) {
   html {
