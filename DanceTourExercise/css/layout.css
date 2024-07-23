@@ -1,0 +1,51 @@
+.app-wrapper {
+  margin: 0 auto;
+  max-width: 144rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #303030;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.2s;
+}
+
+.header-ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.header-link:link,
+.header-link:visited {
+  display: inline-block;
+  color: inherit;
+  text-transform: uppercase;
+  font-family: 'Oswald';
+  font-size: 2.5rem;
+  transition: all 0.3s;
+}
+
+.header-link:hover,
+.header-link:active {
+  transform: translateY(-0.5rem);
+  cursor: pointer;
+  color: inherit;
+}
+
+.header-icon {
+  width: 3rem;
+  height: 3rem;
+  align-self: center;
+  transition: all 0.2s;
+}
+
+.header-icon:hover {
+  animation: shake 0.5s;
+  animation-timing-function: ease-in-out;
+}
