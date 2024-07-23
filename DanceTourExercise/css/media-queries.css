@@ -101,6 +101,23 @@
     gap: 10rem;
     margin-top: 0;
   }
+  .quote {
+    height: 75rem;
+  }
+  .quote-text {
+    font-size: 4rem;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+  .footer {
+    gap: 1rem;
+    padding: 2rem;
+  }
+  .footer-text {
+    font-size: 2rem;
+    max-width: 47rem;
+  }
   .button {
     height: 6rem;
   }
