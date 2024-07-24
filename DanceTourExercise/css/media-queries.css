@@ -371,4 +371,28 @@
     width: 22rem;
     height: 5rem;
   }
+
+  .footer {
+    flex-wrap: wrap;
+  }
+  .footer-icon img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .header-logo {
+    width: 10rem;
+  }
+  .header-icon {
+    font-size: 2.3rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .menu-icon {
+    width: 25px;
+    height: 20px;
+    top: 1.2rem;
+    right: -1.5rem;
+  }
 }
