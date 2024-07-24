@@ -320,8 +320,9 @@
   }
 
   .about-btn {
-    margin-top: 4rem;
+    margin-top: 6rem;
     align-self: center;
+    background-color: var(--background-color-main);
   }
 
   .about-img {
@@ -333,6 +334,7 @@
   }
   .quote {
     max-height: 50rem;
+    background-position: center;
   }
   .quote-text {
     font-size: 2.4rem;
@@ -340,5 +342,33 @@
   }
   .quote-title {
     font-size: 4rem;
+  }
+  .subscribe {
+    padding: 5rem 5rem 8rem 5rem;
+  }
+  .subscribe-title {
+    font-size: 5.5rem;
+  }
+  .subscribe-text {
+    font-size: 2rem;
+  }
+  .form {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 30rem;
+    gap: 2rem;
+  }
+  .form-input {
+    font-size: 3.1rem;
+    margin-left: 0rem;
+  }
+
+  .form-btn {
+    font-size: 2.5rem;
+    flex-grow: 1;
+    border-radius: 4px;
+    width: 22rem;
+    height: 5rem;
   }
 }
