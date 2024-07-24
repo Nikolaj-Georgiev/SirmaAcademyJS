@@ -231,6 +231,13 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  .product-card {
+    margin-top: 0;
+  }
+  .product-text {
+    margin-bottom: 8rem;
+  }
   .promo-card {
     margin-top: 4rem;
   }
