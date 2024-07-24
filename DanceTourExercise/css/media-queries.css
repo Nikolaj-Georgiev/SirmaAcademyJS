@@ -227,6 +227,12 @@
     padding-right: 3rem;
   }
 
+  .sticky {
+    justify-content: space-around;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .promo-card {
     margin-top: 4rem;
   }
