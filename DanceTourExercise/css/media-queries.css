@@ -221,10 +221,13 @@
     top: 0;
   }
 
-  .product-card--2 {
-    margin-top: 0;
+  .header {
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
-  .promo-card--2 {
+
+  .promo-card {
     margin-top: 4rem;
   }
   .about-card {
