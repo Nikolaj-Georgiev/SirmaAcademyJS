@@ -331,4 +331,14 @@
   .statistics-cards {
     flex-direction: column;
   }
+  .quote {
+    max-height: 50rem;
+  }
+  .quote-text {
+    font-size: 2.4rem;
+    max-width: 34rem;
+  }
+  .quote-title {
+    font-size: 4rem;
+  }
 }
