@@ -265,4 +265,8 @@
   .statistics-info > p {
     font-size: 2rem;
   }
+
+  .header-ul {
+    gap: 0;
+  }
 }
