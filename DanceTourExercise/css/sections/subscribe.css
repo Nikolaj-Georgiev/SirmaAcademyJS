@@ -16,7 +16,7 @@
 .form {
   display: flex;
   justify-content: stretch;
-  width: 77rem;
+  max-width: 77rem;
   padding-top: 2rem;
 }
 
