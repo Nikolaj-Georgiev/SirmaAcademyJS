@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .about-card {
@@ -12,9 +13,6 @@
   align-items: center;
   background-color: var(--background-color-main);
   gap: 10rem;
-}
-
-.about-img {
 }
 
 .about-info {
