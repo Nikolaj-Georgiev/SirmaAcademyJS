@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        text-align: center;
+        width: 300px;
+      }
+
+      #todo-input {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      #add-button {
+        padding: 10px 20px;
+      }
+
+      #todo-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      #todo-list li {
+        background: #f0f0f0;
+        margin: 5px 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .remove-button {
+        background: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <input type="text" id="todo-input" placeholder="Add a new task">
+      <button id="add-button">Add</button>
+      <ul id="todo-list"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
