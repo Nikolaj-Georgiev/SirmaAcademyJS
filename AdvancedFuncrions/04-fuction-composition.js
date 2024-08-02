@@ -6,8 +6,14 @@ function square(num) {
   return num ** 2;
 }
 
-function doubleThenSquare(num) {
-  return square(double(num));
+function compose(doubleFn, squareFn) {
+  return (n) => squareFn(doubleFn(n));
 }
+
+const doubleThenSquare = compose(double, square);
+
+// function doubleThenSquare(num) {
+//   return square(double(num));
+// }
 
 console.log(doubleThenSquare(3));
