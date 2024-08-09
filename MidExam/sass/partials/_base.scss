@@ -16,4 +16,12 @@ body {
 .container {
   max-width: 140rem;
   margin: 0 auto;
+  display: grid;
+  grid-template-rows: minmax(min-content, 7.2rem) 1fr minmax(min-content, 8rem);
+  grid-template-columns: repeat(10, minmax(min-content, 14rem));
+}
+
+.main {
+  grid-row: 2 / 3;
+  grid-column: 1 /-1;
 }
