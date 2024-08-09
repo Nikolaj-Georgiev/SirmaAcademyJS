@@ -1,5 +1,5 @@
 .hero {
-  background-color: #000;
+  background-color: $color-black;
   // max-height: 93.3rem;
   max-width: 140rem;
   height: 75.8rem;
@@ -18,7 +18,8 @@
     grid-column: 2 / 6;
     align-self: center;
     justify-self: center;
-    padding: 3rem 1rem 0 1rem;
+    padding: 3rem 1rem 0 0.5rem;
+    margin-top: 6rem;
 
     &--logo {
       max-width: 15rem;
@@ -34,25 +35,25 @@
       font-size: $font-huge;
       font-family: $font-stack-headings;
       line-height: $line-height-heading;
-      color: $color-text-white;
-      font-weight: 200;
-      padding: 3rem 0 4rem 0;
+      color: $color-white;
+      font-weight: 300;
+      padding: 2rem 0 3rem 0;
     }
 
     &--divider {
       width: 8.4rem;
       height: 0.22rem;
-      background-color: $color-text-white;
+      background-color: $color-white;
     }
 
     &--text {
       opacity: 0.8;
       font-size: $font-medium;
       line-height: $line-height-medium;
-      color: $color-text-white;
+      color: $color-white;
       font-weight: 300;
       font-family: $font-stack-headings;
-      padding: 4rem 2rem 5rem 0;
+      padding: 3rem 2rem 4rem 0;
     }
   }
 

@@ -1,0 +1,22 @@
+.button {
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: $font-button;
+  color: $color-white;
+  font-weight: 600;
+  font-family: $font-stack-main;
+  transition: all 0.3s;
+
+  &--main {
+    background-color: transparent;
+    border: 2px solid $color-white;
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

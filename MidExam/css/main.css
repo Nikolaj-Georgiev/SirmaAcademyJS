@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -8,10 +10,12 @@
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
+  box-sizing: border-box;
+  overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
@@ -111,7 +115,8 @@ body {
   grid-column: 2/6;
   align-self: center;
   justify-self: center;
-  padding: 3rem 1rem 0 1rem;
+  padding: 3rem 1rem 0 0.5rem;
+  margin-top: 6rem;
 }
 .hero__left--logo {
   max-width: 15rem;
@@ -126,8 +131,8 @@ body {
   font-family: "Raleway", sans-serif;
   line-height: 4.3rem;
   color: #fff;
-  font-weight: 200;
-  padding: 3rem 0 4rem 0;
+  font-weight: 300;
+  padding: 2rem 0 3rem 0;
 }
 .hero__left--divider {
   width: 8.4rem;
@@ -141,7 +146,7 @@ body {
   color: #fff;
   font-weight: 300;
   font-family: "Raleway", sans-serif;
-  padding: 4rem 2rem 5rem 0;
+  padding: 3rem 2rem 4rem 0;
 }
 .hero__right {
   grid-column: 6/10;
@@ -159,6 +164,27 @@ body {
 
 .testimonials {
   background-color: royalblue;
+}
+
+.button {
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.3s;
+}
+.button--main {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.button--main:hover {
+  background-color: #fff;
+  color: #000;
+}
+.button:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */
