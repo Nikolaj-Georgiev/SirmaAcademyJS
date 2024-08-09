@@ -1,6 +1,7 @@
 .hero {
   background-color: #000;
   // max-height: 93.3rem;
+  max-width: 140rem;
   height: 75.8rem;
   background-image: url('../../../../images/hero-section/background-image-large.png');
   background-origin: border-box;
@@ -17,8 +18,7 @@
     grid-column: 2 / 6;
     align-self: center;
     justify-self: center;
-    padding-left: 0.5em;
-    padding-right: 1rem;
+    padding: 3rem 1rem 0 1rem;
 
     &--logo {
       max-width: 15rem;
@@ -36,8 +36,23 @@
       line-height: $line-height-heading;
       color: $color-text-white;
       font-weight: 200;
-      padding: 2rem 0;
-      padding-bottom: 6rem;
+      padding: 3rem 0 4rem 0;
+    }
+
+    &--divider {
+      width: 8.4rem;
+      height: 0.22rem;
+      background-color: $color-text-white;
+    }
+
+    &--text {
+      opacity: 0.8;
+      font-size: $font-medium;
+      line-height: $line-height-medium;
+      color: $color-text-white;
+      font-weight: 300;
+      font-family: $font-stack-headings;
+      padding: 4rem 2rem 5rem 0;
     }
   }
 

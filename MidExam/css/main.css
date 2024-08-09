@@ -94,6 +94,7 @@ body {
 
 .hero {
   background-color: #000;
+  max-width: 140rem;
   height: 75.8rem;
   background-image: url("../../../../images/hero-section/background-image-large.png");
   background-origin: border-box;
@@ -110,8 +111,7 @@ body {
   grid-column: 2/6;
   align-self: center;
   justify-self: center;
-  padding-left: 0.5em;
-  padding-right: 1rem;
+  padding: 3rem 1rem 0 1rem;
 }
 .hero__left--logo {
   max-width: 15rem;
@@ -127,8 +127,21 @@ body {
   line-height: 4.3rem;
   color: #fff;
   font-weight: 200;
-  padding: 2rem 0;
-  padding-bottom: 6rem;
+  padding: 3rem 0 4rem 0;
+}
+.hero__left--divider {
+  width: 8.4rem;
+  height: 0.22rem;
+  background-color: #fff;
+}
+.hero__left--text {
+  opacity: 0.8;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: #fff;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  padding: 4rem 2rem 5rem 0;
 }
 .hero__right {
   grid-column: 6/10;
