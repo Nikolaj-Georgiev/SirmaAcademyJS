@@ -149,9 +149,31 @@ body {
   padding: 3rem 2rem 4rem 0;
 }
 .hero__right {
-  grid-column: 6/10;
-  align-self: center;
-  justify-self: center;
+  grid-column: 7/10;
+  place-self: center;
+  border-top: 3px solid #f5f5f5;
+  border-radius: 3px;
+}
+.hero__form {
+  width: 38rem;
+  height: 37.2rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+}
+.hero__form--heading {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  padding: 2rem 6.4rem;
+  background-color: #f5f5f5;
+}
+.hero__form--heading span {
+  color: #ff8b38;
 }
 
 .our-process {
@@ -181,7 +203,7 @@ body {
 }
 .button--main:hover {
   background-color: #fff;
-  color: #000;
+  color: #333;
 }
 .button:hover {
   cursor: pointer;
