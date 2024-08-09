@@ -1,0 +1,13 @@
+.navbar {
+  background-color: #000;
+  max-height: 7.2rem;
+  display: flex;
+  padding: 2.1rem 15rem;
+  justify-content: space-between;
+
+  &__links {
+    display: flex;
+    gap: 4.6rem;
+    align-items: center;
+  }
+}

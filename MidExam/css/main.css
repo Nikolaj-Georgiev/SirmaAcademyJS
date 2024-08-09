@@ -1,3 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.footer {
+  background-color: seagreen;
+}
+
+.navbar {
+  background-color: #000;
+  max-height: 7.2rem;
+  display: flex;
+  padding: 2.1rem 15rem;
+  justify-content: space-between;
+}
+.navbar__links {
+  display: flex;
+  gap: 4.6rem;
+  align-items: center;
+}
+
+.brand-bar {
+  background-color: gold;
+}
+
+.contact-us {
+  background-color: saddlebrown;
+}
+
+.custom-section {
+  background-color: sandybrown;
+}
+
+.features {
+  background-color: green;
+}
+
+.header {
+  background-color: red;
+}
+
+.our-process {
+  background-color: yellowgreen;
+}
+
+.pricing {
+  background-color: rosybrown;
+}
+
+.testimonials {
+  background-color: royalblue;
+}
 
 /*# sourceMappingURL=main.css.map */
