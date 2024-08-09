@@ -13,5 +13,30 @@
     display: flex;
     gap: 4.6rem;
     align-items: center;
+    list-style: none;
+    transition: all 0.2s;
+  }
+
+  &__link,
+  &__link:link,
+  &__link:active {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    opacity: 0.69;
+  }
+
+  &__link:hover,
+  &__link:visited {
+    opacity: 0.89;
+    text-decoration: underline;
+  }
+
+  &__logo {
+    &--img {
+      max-width: 7.9rem;
+      max-height: 2.7rem;
+      overflow: hidden;
+    }
   }
 }

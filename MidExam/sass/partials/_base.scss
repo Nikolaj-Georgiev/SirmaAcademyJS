@@ -11,6 +11,9 @@ html {
 
 body {
   font-family: $font-stack-main;
+  font-size: $font-standard;
+  font-weight: 400;
+  line-height: $line-height-standard;
 }
 
 .container {
@@ -24,4 +27,6 @@ body {
 .main {
   grid-row: 2 / 3;
   grid-column: 1 /-1;
+  display: grid;
+  grid-template-rows: repeat(8, auto);
 }
