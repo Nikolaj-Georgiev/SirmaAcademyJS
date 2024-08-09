@@ -7,5 +7,43 @@
   background-position: top;
   background-size: cover;
   opacity: 1.522;
-  margin-top: -4.6rem;
+  margin-top: -10.6rem;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: auto;
+
+  &__left {
+    grid-column: 2 / 6;
+    align-self: center;
+    justify-self: center;
+    padding-left: 0.5em;
+    padding-right: 1rem;
+
+    &--logo {
+      max-width: 15rem;
+      max-height: 6rem;
+      padding-left: 0;
+    }
+
+    &--logo img {
+      width: 100%;
+    }
+
+    &--heading {
+      font-size: $font-huge;
+      font-family: $font-stack-headings;
+      line-height: $line-height-heading;
+      color: #fff;
+      font-weight: 200;
+      padding: 2rem 0;
+      padding-bottom: 6rem;
+    }
+  }
+
+  &__right {
+    grid-column: 6 / 10;
+    align-self: center;
+    justify-self: center;
+  }
 }
