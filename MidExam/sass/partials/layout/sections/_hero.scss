@@ -1,3 +1,11 @@
 .hero {
-  background-color: red;
+  background-color: #000;
+  // max-height: 93.3rem;
+  height: 75.8rem;
+  background-image: url('../../../../images/hero-section/background-image-large.png');
+  background-origin: border-box;
+  background-position: top;
+  background-size: cover;
+  opacity: 1.522;
+  margin-top: -4.6rem;
 }
