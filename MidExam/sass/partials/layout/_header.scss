@@ -5,7 +5,7 @@
 }
 
 .navbar {
-  background-color: #000;
+  background-color: $color-background-black;
   max-height: 7.2rem;
   display: flex;
   padding: 2.1rem 15rem;
@@ -22,7 +22,7 @@
   &__link,
   &__link:link,
   &__link:active {
-    color: #fff;
+    color: $color-text-white;
     font-weight: 600;
     text-decoration: none;
     opacity: 0.69;
