@@ -6,11 +6,43 @@
   &__panel {
     grid-column: 1 / -1;
 
-    &-tabs {
-      grid-column: 2 / 3;
+    &-1 {
+      max-height: 59.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(min-content, 14rem)) auto auto minmax(
+          min-content,
+          14rem
+        );
+
+      &-tabs {
+        grid-column: 2 / 3;
+      }
+
+      &-tab {
+        width: 14.1rem;
+        height: 14.1rem;
+        font-size: $font-button;
+        line-height: $line-height-standard;
+        color: $color-white;
+        font-weight: 700;
+        font-family: $font-stack-main;
+        background-color: $color-grey-dark;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--1 {
+          background-color: $color-orange-dark;
+        }
+      }
+
+      &-info {
+        grid-column: 3 / 4;
+      }
     }
 
-    &--2 {
+    &-2 {
       background-color: $color-white;
     }
   }
