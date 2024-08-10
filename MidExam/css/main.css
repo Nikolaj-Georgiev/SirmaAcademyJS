@@ -166,8 +166,6 @@ body {
   padding: 2rem 0 3rem 0;
 }
 .hero__left--divider {
-  width: 8.4rem;
-  height: 0.22rem;
   background-color: #fff;
 }
 .hero__left--text {
@@ -281,6 +279,11 @@ body {
   font-size: 2rem;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
+}
+
+.divider {
+  width: 8.4rem;
+  height: 0.22rem;
 }
 
 /*# sourceMappingURL=main.css.map */
