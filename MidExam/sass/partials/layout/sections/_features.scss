@@ -78,6 +78,55 @@
         align-self: center;
         margin-left: -2rem;
       }
+
+      &-info {
+        grid-column: 3 / 4;
+        align-self: center;
+        padding: 0 3rem 0 13rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+      }
+
+      &-heading {
+        color: $color-grey-darkest;
+      }
+
+      &-divider {
+        background-color: $color-orange-dark;
+      }
+
+      &-text {
+        color: $color-text-primary;
+      }
+
+      &-card {
+        color: $color-text-primary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+
+        i {
+          color: $color-orange-dark;
+          padding: 1rem;
+          border: 3px solid $color-orange-dark;
+          border-radius: 50%;
+          text-align: center;
+          font-size: $font-medium;
+        }
+
+        &-title {
+          font-size: $font-standard;
+          line-height: $line-height-title-card;
+          color: $color-grey-darkest;
+          font-weight: 600;
+          font-family: $font-stack-main;
+          text-align: start;
+          margin-bottom: 0.6rem;
+        }
+      }
     }
 
     &-3 {
