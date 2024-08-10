@@ -123,12 +123,13 @@ body {
 }
 
 .features {
-  background-color: green;
+  background-color: #f5f5f5;
+  grid-column: 1/-1;
+  grid-row: 3/4;
 }
 
 .hero {
   background-color: #000;
-  max-width: 140rem;
   height: 75.8rem;
   background-image: url("../../../../images/hero-section/background-image-large.png");
   background-origin: border-box;
