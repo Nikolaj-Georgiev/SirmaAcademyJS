@@ -81,7 +81,37 @@ body {
 }
 
 .brand-bar {
-  background-color: gold;
+  width: 1400px;
+  height: 105px;
+  filter: drop-shadow(0px 1px 1.5px rgba(0, 0, 0, 0.38));
+  background-color: #fff;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: auto;
+}
+.brand-bar__info {
+  grid-column: 2/5;
+  justify-self: center;
+  align-self: center;
+}
+.brand-bar__info--heading {
+  color: #333;
+  line-height: 2.3rem;
+}
+.brand-bar__info--text {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #86878b;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  padding-right: 5rem;
+}
+.brand-bar__social {
+  grid-column: 5/-1;
+  justify-self: start;
+  align-self: center;
 }
 
 .contact-us {
@@ -107,6 +137,7 @@ body {
   opacity: 1.522;
   margin-top: -10.6rem;
   grid-column: 1/-1;
+  grid-row: 1/2;
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: auto;
@@ -242,6 +273,14 @@ body {
 }
 .button:hover {
   cursor: pointer;
+}
+
+.heading-4 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */
