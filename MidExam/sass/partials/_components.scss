@@ -16,6 +16,13 @@
     }
   }
 
+  &--secondary {
+    background-color: $color-orange-dark;
+    &:hover {
+      background-color: $color-orange-light;
+    }
+  }
+
   &:hover {
     cursor: pointer;
   }
