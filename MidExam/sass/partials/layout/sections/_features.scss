@@ -7,7 +7,7 @@
     grid-column: 1 / -1;
 
     &-1 {
-      height: 59.5rem;
+      height: 59.6rem;
       display: grid;
       grid-template-columns:
         repeat(2, minmax(min-content, 14rem)) minmax(min-content, 67.5rem)
@@ -32,6 +32,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-bottom: 1px solid $color-white;
 
         &--1 {
           background-color: $color-orange-dark;
@@ -66,6 +67,18 @@
 
     &-2 {
       background-color: $color-white;
+      height: 59.6rem;
+      display: grid;
+      grid-template-columns:
+        repeat(2, minmax(min-content, 14rem)) auto
+        auto minmax(min-content, 14rem);
+
+      &-img-container {
+      }
+    }
+
+    &-3 {
+      height: 59.6rem;
     }
   }
 }

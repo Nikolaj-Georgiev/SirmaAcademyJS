@@ -132,7 +132,7 @@ body {
   grid-column: 1/-1;
 }
 .features__panel-1 {
-  height: 59.5rem;
+  height: 59.6rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 14rem)) minmax(min-content, 67.5rem) auto minmax(min-content, 14rem);
 }
@@ -154,6 +154,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #fff;
 }
 .features__panel-1-tab--1 {
   background-color: #ff8b38;
@@ -182,6 +183,12 @@ body {
 }
 .features__panel-2 {
   background-color: #fff;
+  height: 59.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 14rem)) auto auto minmax(min-content, 14rem);
+}
+.features__panel-3 {
+  height: 59.6rem;
 }
 
 .hero {
