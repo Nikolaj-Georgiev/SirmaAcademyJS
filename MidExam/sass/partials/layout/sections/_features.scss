@@ -2,4 +2,16 @@
   background-color: $color-background-primary;
   grid-column: 1 / -1;
   grid-row: 3 / 4;
+
+  &__panel {
+    grid-column: 1 / -1;
+
+    &-tabs {
+      grid-column: 2 / 3;
+    }
+
+    &--2 {
+      background-color: $color-white;
+    }
+  }
 }

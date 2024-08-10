@@ -127,6 +127,15 @@ body {
   grid-column: 1/-1;
   grid-row: 3/4;
 }
+.features__panel {
+  grid-column: 1/-1;
+}
+.features__panel-tabs {
+  grid-column: 2/3;
+}
+.features__panel--2 {
+  background-color: #fff;
+}
 
 .hero {
   background-color: #000;
