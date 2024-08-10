@@ -236,6 +236,31 @@ body {
 }
 .features__panel-3 {
   height: 59.6rem;
+  display: grid;
+  grid-template-columns: minmax(min-content, 14rem) auto auto minmax(min-content, 14rem);
+}
+.features__panel-3-img-container {
+  grid-column: 3/4;
+  align-self: center;
+}
+.features__panel-3-info {
+  grid-column: 2/3;
+  align-self: center;
+  padding: 0 13rem 7rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.features__panel-3-heading {
+  color: #212121;
+}
+.features__panel-3-divider {
+  background-color: #ff8b38;
+}
+.features__panel-3-text {
+  color: #86878b;
+  text-align: left;
 }
 
 .hero {

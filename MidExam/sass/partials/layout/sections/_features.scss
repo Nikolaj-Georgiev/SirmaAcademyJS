@@ -131,6 +131,37 @@
 
     &-3 {
       height: 59.6rem;
+      display: grid;
+      grid-template-columns:
+        minmax(min-content, 14rem) auto
+        auto minmax(min-content, 14rem);
+
+      &-img-container {
+        grid-column: 3 / 4;
+        align-self: center;
+      }
+
+      &-info {
+        grid-column: 2 / 3;
+        align-self: center;
+        padding: 0 13rem 7rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+      }
+      &-heading {
+        color: $color-grey-darkest;
+      }
+
+      &-divider {
+        background-color: $color-orange-dark;
+      }
+
+      &-text {
+        color: $color-text-primary;
+        text-align: left;
+      }
     }
   }
 }
