@@ -185,7 +185,12 @@ body {
   background-color: #fff;
   height: 59.6rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(min-content, 14rem)) auto auto minmax(min-content, 14rem);
+  grid-template-columns: minmax(min-content, 14rem) auto auto minmax(min-content, 14rem);
+}
+.features__panel-2-img-container {
+  grid-column: 2/3;
+  align-self: center;
+  margin-left: -2rem;
 }
 .features__panel-3 {
   height: 59.6rem;
