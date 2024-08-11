@@ -28,6 +28,12 @@
   }
 }
 
+.heading {
+  font-size: $font-huge;
+  line-height: $line-height-heading;
+  font-family: $font-stack-headings;
+}
+
 .heading-4 {
   margin: 0;
   padding: 0;

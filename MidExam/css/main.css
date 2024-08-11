@@ -376,11 +376,63 @@ body {
   cursor: pointer;
 }
 
-.our-process {
+.about {
   grid-column: 1/-1;
   grid-row: 4/5;
   background-color: #fff;
   height: 59.2rem;
+  display: grid;
+  grid-template-columns: minmax(min-content, 14rem) minmax(min-content, 112rem) minmax(min-content, 14rem);
+  grid-template-rows: auto auto;
+}
+.about__info {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8rem;
+}
+.about__info-heading {
+  color: #212121;
+  font-weight: 400;
+  text-align: center;
+}
+.about__info-divider {
+  background-color: #ff8b38;
+}
+.about__info-text {
+  color: #86878b;
+}
+.about__cards {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about__card-icon {
+  width: 7rem;
+  height: 7rem;
+  font-size: 3.2rem;
+  color: #ff9b51;
+  border: 3px solid #ff9b51;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 1.6rem;
+  transition: all 0.2s;
+}
+.about__card-icon:hover {
+  color: #ff8b38;
+  border: 3px solid #ff8b38;
+  cursor: pointer;
 }
 
 .pricing {
@@ -416,6 +468,12 @@ body {
 }
 .button:hover {
   cursor: pointer;
+}
+
+.heading {
+  font-size: 3.6rem;
+  line-height: 4.3rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .heading-4 {
