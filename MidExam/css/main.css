@@ -377,7 +377,10 @@ body {
 }
 
 .our-process {
-  background-color: yellowgreen;
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  background-color: #fff;
+  height: 59.2rem;
 }
 
 .pricing {
