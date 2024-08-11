@@ -393,6 +393,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2.8rem;
+  padding: 2rem 0;
 }
 .about__info-heading {
   color: #212121;
@@ -410,13 +411,14 @@ body {
   grid-column: 2/3;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: start;
 }
 .about__card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 3rem;
 }
 .about__card-icon {
   width: 7rem;
@@ -433,6 +435,16 @@ body {
   color: #ff8b38;
   border: 3px solid #ff8b38;
   cursor: pointer;
+}
+.about__card-title {
+  line-height: 2rem;
+  color: #333;
+  text-align: center;
+}
+.about__card-text {
+  color: #86878b;
+  text-align: center;
+  padding: 0 1rem;
 }
 
 .pricing {
