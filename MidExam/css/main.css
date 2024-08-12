@@ -123,11 +123,13 @@ body {
   background-color: #000;
   grid-column: 1/-1;
   grid-row: 7/8;
+  width: 140rem;
   height: 32rem;
   display: grid;
   grid-template-columns: minmax(min-content, 14rem) minmax(min-content, 112rem) minmax(min-content, 14rem);
   grid-template-rows: auto auto;
   background-image: url("../../../../images/custom/u25_state0.png");
+  background-origin: border-box;
   background-position: top;
   background-size: cover;
   opacity: 1.6;
@@ -154,7 +156,7 @@ body {
 }
 .custom-section__info-text {
   opacity: 0.8;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #fff;
   font-weight: 300;
   font-family: "Raleway", sans-serif;

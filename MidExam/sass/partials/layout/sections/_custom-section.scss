@@ -2,6 +2,7 @@
   background-color: $color-black;
   grid-column: 1/-1;
   grid-row: 7 / 8;
+  width: 140rem;
   height: 32rem;
   display: grid;
   grid-template-columns: minmax(min-content, 14rem) minmax(min-content, 112rem) minmax(
@@ -10,7 +11,7 @@
     );
   grid-template-rows: auto auto;
   background-image: url('../../../../images/custom/u25_state0.png');
-  // background-origin: border-box;
+  background-origin: border-box;
   background-position: top;
   background-size: cover;
   opacity: 1.6;
@@ -39,7 +40,7 @@
 
     &-text {
       opacity: 0.8;
-      font-size: $font-big;
+      font-size: $font-medium;
       color: $color-white;
       font-weight: 300;
       font-family: $font-stack-headings;
