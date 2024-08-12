@@ -609,6 +609,39 @@ body {
   gap: 4rem;
   padding-bottom: 10rem;
 }
+.testimonials__card-info {
+  background-image: url("../../../../images/tesimonials/u229.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem 1rem 4rem 1rem;
+  width: 25.6rem;
+  height: 14.7rem;
+}
+.testimonials__card-text {
+  color: #86878b;
+  line-height: none;
+  font-style: italic;
+}
+.testimonials__card-testimonial {
+  color: #86878b;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.testimonials__card-image {
+  width: 7rem;
+  height: 7rem;
+}
+.testimonials__card-title {
+  line-height: 1.7rem;
+  color: #212121;
+  font-weight: 600;
+  text-align: start;
+  margin-bottom: 0.6rem;
+}
 
 .button {
   border: none;
