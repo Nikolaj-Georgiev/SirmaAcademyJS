@@ -570,7 +570,44 @@ body {
 }
 
 .testimonials {
-  background-color: royalblue;
+  background-color: #f5f5f5;
+  grid-column: 1/-1;
+  grid-row: 6/7;
+  background-color: #fff;
+  height: 59.1rem;
+  display: grid;
+  grid-template-columns: minmax(min-content, 14rem) minmax(min-content, 112rem) minmax(min-content, 14rem);
+  grid-template-rows: auto auto;
+}
+.testimonials__info {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8rem;
+  padding-top: 5rem;
+}
+.testimonials__info-heading {
+  color: #212121;
+  font-weight: 400;
+  text-align: center;
+}
+.testimonials__info-divider {
+  background-color: #ff8b38;
+}
+.testimonials__info-text {
+  color: #86878b;
+}
+.testimonials__cards {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 4rem;
+  padding-bottom: 10rem;
 }
 
 .button {
