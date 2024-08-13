@@ -109,11 +109,11 @@
         color: $color-white;
         font-weight: 600;
         text-transform: none;
+        border-bottom: none;
         & span {
           opacity: 0.502;
           font-style: italic;
         }
-        border-bottom: none;
       }
 
       &-img {

@@ -163,12 +163,6 @@ body {
 .contact-us__info-text {
   color: #86878b;
 }
-.contact-us__form {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 114rem;
-}
 .contact-us__form-container {
   grid-row: 2/3;
   grid-column: 2/3;
@@ -178,6 +172,12 @@ body {
   justify-content: center;
   gap: 3rem;
   padding-top: 3rem;
+}
+.contact-us__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 114rem;
 }
 .contact-us__form-inputs {
   display: flex;
