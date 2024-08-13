@@ -12,6 +12,21 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@media only screen and (max-width: 78.75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -37,6 +52,11 @@ body {
   display: grid;
   grid-template-columns: inherit;
   grid-template-rows: repeat(8, auto);
+}
+
+::selection {
+  background-color: #ff9b51;
+  color: #fff;
 }
 
 .footer {
