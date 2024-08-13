@@ -8,6 +8,11 @@
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4rem rgba(255, 139, 56, 0.4);
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

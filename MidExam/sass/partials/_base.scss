@@ -6,9 +6,10 @@
   box-sizing: inherit;
 }
 
-// *:focus {
-//   outline: none;
-// }
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4rem rgba($color-orange-dark, 0.4);
+}
 
 html {
   font-size: 62.5%;
