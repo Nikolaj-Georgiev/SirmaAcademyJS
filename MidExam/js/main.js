@@ -34,7 +34,7 @@ const sectionHeroEl = document.querySelector('.hero');
 const observer = new IntersectionObserver(function (entries) {
   const ent = entries[0];
   if (!ent.isIntersecting) {
-    console.log(ent);
+    // console.log(ent);
     header.classList.add('sticky');
   }
 
@@ -51,7 +51,6 @@ observer.observe(sectionHeroEl);
 
 //////////////////////////
 // Burger menu
-
 const checkbox = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.navbar__links');
 navLinks.addEventListener('click', (e) => {
