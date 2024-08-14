@@ -53,24 +53,24 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-rows: minmax(min-content, 7.2rem) 1fr minmax(min-content, 8rem);
-  grid-template-columns: repeat(10, minmax(min-content, 14rem));
+  grid-template-columns: minmax(min-content, 14rem) 1fr minmax(min-content, 14rem);
 }
 @media only screen and (max-width: 78.75em) {
   .container {
     max-width: 102.4rem;
-    grid-template-columns: repeat(10, minmax(min-content, 10rem));
+    grid-template-columns: minmax(min-content, 10rem) 1fr minmax(min-content, 10rem);
   }
 }
 @media only screen and (max-width: 48em) {
   .container {
     max-width: 76.8rem;
-    grid-template-columns: repeat(10, minmax(min-content, 8rem));
+    grid-template-columns: minmax(min-content, 8rem) 1fr minmax(min-content, 8rem);
   }
 }
 @media only screen and (max-width: 26.56em) {
   .container {
     max-width: 42.5rem;
-    grid-template-columns: repeat(10, minmax(min-content, 8rem));
+    grid-template-columns: minmax(min-content, 4rem) 1fr minmax(min-content, 4rem);
   }
 }
 
@@ -80,6 +80,24 @@ body {
   display: grid;
   grid-template-columns: minmax(min-content, 14rem) minmax(min-content, 112rem) minmax(min-content, 14rem);
   grid-template-rows: repeat(8, auto);
+}
+@media only screen and (max-width: 78.75em) {
+  .main {
+    max-width: 102.4rem;
+    grid-template-columns: minmax(min-content, 10rem) 1fr minmax(min-content, 10rem);
+  }
+}
+@media only screen and (max-width: 48em) {
+  .main {
+    max-width: 76.8rem;
+    grid-template-columns: minmax(min-content, 8rem) 1fr minmax(min-content, 8rem);
+  }
+}
+@media only screen and (max-width: 26.56em) {
+  .main {
+    max-width: 42.5rem;
+    grid-template-columns: minmax(min-content, 4rem) 1fr minmax(min-content, 4rem);
+  }
 }
 
 ::selection {
@@ -110,6 +128,7 @@ body {
 }
 
 .header {
+  width: 100%;
   grid-row: 1/2;
   grid-column: 1/-1;
   z-index: 99;
@@ -222,8 +241,8 @@ body {
 }
 
 .brand-bar {
-  width: 1400px;
-  height: 105px;
+  width: 100%;
+  height: 10.5rem;
   filter: drop-shadow(0px 1px 1.5px rgba(0, 0, 0, 0.38));
   background-color: #fff;
   grid-column: 1/-1;
@@ -527,6 +546,7 @@ body {
 
 .hero {
   background-color: #000;
+  width: 100%;
   height: 76.8rem;
   background-image: url("../../../../images/hero-section/background-image-large.png");
   background-origin: border-box;
@@ -541,6 +561,25 @@ body {
   grid-template-columns: minmax(min-content, 14rem) minmax(min-content, 56rem) minmax(min-content, 56rem) minmax(min-content, 14rem);
   grid-template-rows: auto auto;
   column-gap: 1rem;
+}
+@media only screen and (max-width: 78.75em) {
+  .hero {
+    max-width: 102.4rem;
+    grid-template-columns: minmax(min-content, 10rem) 1fr 1fr minmax(min-content, 10rem);
+  }
+}
+@media only screen and (max-width: 48em) {
+  .hero {
+    max-width: 76.8rem;
+    grid-template-columns: minmax(min-content, 8rem) 2fr 1fr minmax(min-content, 8rem);
+    gap: 0;
+  }
+}
+@media only screen and (max-width: 26.56em) {
+  .hero {
+    max-width: 42.5rem;
+    grid-template-columns: minmax(min-content, 4rem) 1fr 1fr minmax(min-content, 4rem);
+  }
 }
 .hero__left {
   grid-column: 2/3;
@@ -576,6 +615,20 @@ body {
   font-weight: 300;
   font-family: "Raleway", sans-serif;
   padding: 3rem 2rem 4rem 0;
+}
+@media only screen and (max-width: 78.75em) {
+  .hero__left {
+    padding: 3rem 0 0 0;
+  }
+  .hero__left--heading {
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .hero__left--heading {
+    font-size: 2.3rem;
+    line-height: 3rem;
+  }
 }
 .hero__right {
   grid-column: 3/4;
@@ -637,6 +690,29 @@ body {
 .hero__form--button:hover {
   background-color: #ff8b38;
   cursor: pointer;
+}
+@media only screen and (max-width: 78.75em) {
+  .hero__form {
+    max-width: 30rem;
+  }
+  .hero__form--heading {
+    padding: 2rem 2rem;
+  }
+  .hero__form--input {
+    width: 24rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .hero__form {
+    max-width: 25rem;
+  }
+  .hero__form--heading {
+    padding: 1rem 1.9rem;
+    font-size: 1.6rem;
+  }
+  .hero__form--input {
+    width: 18rem;
+  }
 }
 
 .about {
