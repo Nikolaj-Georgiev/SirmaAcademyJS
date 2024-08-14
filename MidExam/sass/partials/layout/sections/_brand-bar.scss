@@ -6,13 +6,17 @@
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-columns: subgrid;
+  grid-template-columns: minmax(min-content, 14rem) minmax(min-content, 36rem) 2fr minmax(
+      min-content,
+      14rem
+    );
   grid-template-rows: auto;
+  gap: 4rem;
 
   &__info {
-    grid-column: 2 / 5;
-    justify-self: center;
+    grid-column: 2 / 3;
     align-self: center;
+    width: 42rem;
 
     &--heading {
       color: $color-grey-dark;
@@ -30,7 +34,7 @@
   }
 
   &__social {
-    grid-column: 5 / -1;
+    grid-column: 3 / 4;
     justify-self: start;
     align-self: center;
   }
