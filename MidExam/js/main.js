@@ -1,37 +1,5 @@
-
 //////////////////////////////////////////////////////////////
-// Make mobile navigation work
-// const btnNavEl = document.querySelector('.btn-mobile-nav');
-// const headerEl = document.querySelector('.header');
-// btnNavEl.addEventListener('click', () => headerEl.classList.toggle('nav-open'));
-
-//////////////////////////////////////////////////////////////
-// smooth scrolling animation
-// const allLinks = [...document.querySelectorAll('a:link')];
-// allLinks.forEach((link) => link.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   const href = link.getAttribute('href');
-
-//   // Scroll back to top:
-//   if (href === '#') {
-//     window.scrollTo({
-//       top: 0,
-//       behavior: 'smooth',
-//     })
-//   }
-
-//   // Scroll to other links
-//   if (href !== '#' && href.startsWith('#')) {
-//     const sectionEl = document.querySelector(href);
-//     sectionEl.scrollIntoView({ behavior: 'smooth' });
-//   }
-
-// // Close mobile navigation
-// if (link.classList.contains('main-nav-link')) {
-//   headerEl.classList.toggle('nav-open')
-// }
-
-// }))
+// Smooth scrolling animation
 const links = document.querySelectorAll('a[href^="#"]');
 const header = document.querySelector('.header');
 const offset = 5 * parseFloat(getComputedStyle(document.documentElement).fontSize); // 5rem
@@ -41,7 +9,7 @@ links.forEach(link => {
     event.preventDefault();
     const targetId = this.getAttribute('href').substring(1);
     if (targetId === '') {
-      // Скрол до върха, ако href="#"
+      // scroll to top if href="#"
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
