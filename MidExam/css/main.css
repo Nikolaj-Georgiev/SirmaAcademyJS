@@ -89,6 +89,7 @@ body {
   display: flex;
   padding: 2.1rem 15rem;
   justify-content: space-between;
+  position: relative;
 }
 .navbar__links {
   display: flex;
@@ -111,6 +112,23 @@ body {
   max-width: 7.9rem;
   max-height: 2.7rem;
   overflow: hidden;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px;
+  transition: 0.3s;
 }
 
 .header.sticky {
@@ -845,6 +863,50 @@ body {
 .divider {
   width: 6.8rem;
   height: 0.22rem;
+}
+
+@media only screen and (max-width: 48em) {
+  .menu-icon {
+    display: flex;
+    z-index: 1000;
+  }
+  .navbar__links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    gap: 8rem;
+    justify-content: center;
+  }
+  .navbar__link, .navbar__link:link, .navbar__link:active {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+  .menu-toggle:checked + .menu-icon + .navbar__links {
+    display: flex;
+  }
+  .menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 1rem;
+  }
+  .menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -1rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

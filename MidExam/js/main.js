@@ -48,3 +48,15 @@ const observer = new IntersectionObserver(function (entries) {
   rootMargin: '-71px',
 });
 observer.observe(sectionHeroEl);
+
+//////////////////////////
+// Burger menu
+
+const checkbox = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.navbar__links');
+navLinks.addEventListener('click', (e) => {
+  const navLinkClass = e.target.classList[0];
+  if (navLinkClass === 'navbar__link') {
+    checkbox.checked = false;
+  }
+})
