@@ -1097,6 +1097,49 @@ body {
   flex-grow: 1;
   color: #fff;
 }
+@media (max-width: 1024px) {
+  .pricing {
+    grid-template-columns: minmax(min-content, 10rem) 1fr minmax(min-content, 10rem);
+  }
+}
+@media (max-width: 768px) {
+  .pricing {
+    grid-template-columns: minmax(min-content, 8rem) 1fr minmax(min-content, 8rem);
+  }
+}
+@media (max-width: 425px) {
+  .pricing {
+    grid-template-columns: minmax(min-content, 4rem) 1fr minmax(min-content, 4rem);
+  }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+  .pricing {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .pricing__cards {
+    gap: 2rem;
+  }
+  .pricing__card {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .pricing {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .pricing__card-lines {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) and (max-width: 425px) {
+  .pricing {
+    max-width: 425px;
+  }
+}
 
 .testimonials {
   background-color: #f5f5f5;
