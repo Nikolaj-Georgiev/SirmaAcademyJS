@@ -168,4 +168,37 @@
       }
     }
   }
+  @include responsive-grid-custom(
+    null,
+    minmax(min-content, 10rem) 1fr minmax(min-content, 10rem),
+    minmax(min-content, 8rem) 1fr minmax(min-content, 8rem),
+    minmax(min-content, 4rem) 1fr minmax(min-content, 4rem),
+    null,
+    null,
+    null
+  );
+
+  @include respond(laptop) {
+    @include max-width-custom(laptop);
+    &__panel {
+      &-2 {
+        padding: 0px 1rem;
+        gap: 2rem;
+      }
+
+      &-3 {
+        &-info {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @include respond(tablet) {
+    @include max-width-custom(tablet);
+  }
+
+  @include respond(phone) {
+    @include max-width-custom(phone);
+  }
 }

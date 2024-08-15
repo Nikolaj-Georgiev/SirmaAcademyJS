@@ -1,8 +1,6 @@
 .hero {
   background-color: $color-black;
   width: 100%;
-  // max-height: 93.3rem;
-  // max-width: 140rem;
   height: 76.8rem;
   background-image: url('../../../../images/hero-section/background-image-large.png');
   background-origin: border-box;
@@ -14,9 +12,6 @@
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   display: grid;
-  // grid-template-columns:
-  //   minmax(min-content, 14rem) auto auto
-  //   minmax(min-content, 14rem);
   grid-template-columns:
     minmax(min-content, 14rem) minmax(min-content, 56rem) minmax(
       min-content,
@@ -27,43 +22,29 @@
   grid-template-rows: auto auto;
   column-gap: 1rem;
 
-  // @include respond(laptop) {
-  //   grid-template-columns:
-  //     minmax(min-content, 10rem) minmax(min-content, 40rem) minmax(
-  //       min-content,
-  //       40rem
-  //     )
-  //     minmax(min-content, 10rem);
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  //   background-clip: border-box;
-  //   overflow: hidden;
-  // }
+  @include responsive-grid-custom(
+    null,
+    minmax(min-content, 10rem) 1fr 2fr minmax(min-content, 10rem),
+    minmax(min-content, 8rem) minmax(min-content, 1fr) 2fr
+      minmax(min-content, 8rem),
+    minmax(min-content, 1rem) 1fr minmax(min-content, 1rem),
+    null,
+    null,
+    null,
+    repeat(2, auto)
+  );
 
   @include respond(laptop) {
-    max-width: 102.4rem;
-    grid-template-columns: minmax(min-content, 10rem) 1fr 1fr minmax(
-        min-content,
-        10rem
-      );
+    @include max-width-custom(laptop);
   }
 
   @include respond(tablet) {
-    max-width: 76.8rem;
-    grid-template-columns: minmax(min-content, 8rem) 2fr 1fr minmax(
-        min-content,
-        8rem
-      );
+    @include max-width-custom(tablet);
     gap: 0;
   }
 
   @include respond(phone) {
-    max-width: 42.5rem;
-    grid-template-columns: minmax(min-content, 1rem) 1fr minmax(
-        min-content,
-        1rem
-      );
-    grid-template-rows: auto auto;
+    @include max-width-custom(phone);
   }
 
   &__left {

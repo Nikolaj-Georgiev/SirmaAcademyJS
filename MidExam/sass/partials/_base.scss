@@ -23,7 +23,7 @@ html {
   }
 
   @include respond(phone) {
-    font-size: 31.25%; // 1rem = 8px; 8/16 == 50%;
+    font-size: 31.25%; // 1rem = 5px; 5/16 == 31.25%;
   }
   @include respond(big-desktop) {
     font-size: 75%; // 1rem = 12px; 12/16 == 75%;
@@ -49,29 +49,26 @@ body {
       min-content,
       14rem
     );
+  @include responsive-grid-custom(
+    null,
+    minmax(min-content, 10rem) 1fr minmax(min-content, 10rem),
+    minmax(min-content, 8rem) 1fr minmax(min-content, 8rem),
+    minmax(min-content, 4rem) 1fr minmax(min-content, 4rem),
+    null,
+    null,
+    null
+  );
 
   @include respond(laptop) {
-    max-width: 102.4rem;
-    grid-template-columns: minmax(min-content, 10rem) 1fr minmax(
-        min-content,
-        10rem
-      );
+    @include max-width-custom(laptop);
   }
 
   @include respond(tablet) {
-    max-width: 76.8rem;
-    grid-template-columns: minmax(min-content, 8rem) 1fr minmax(
-        min-content,
-        8rem
-      );
+    @include max-width-custom(tablet);
   }
 
   @include respond(phone) {
-    max-width: 42.5rem;
-    grid-template-columns: minmax(min-content, 4rem) 1fr minmax(
-        min-content,
-        4rem
-      );
+    @include max-width-custom(phone);
   }
 }
 
@@ -84,28 +81,26 @@ body {
       14rem
     );
   grid-template-rows: repeat(8, auto);
+  @include responsive-grid-custom(
+    null,
+    minmax(min-content, 10rem) 1fr minmax(min-content, 10rem),
+    minmax(min-content, 8rem) 1fr minmax(min-content, 8rem),
+    minmax(min-content, 4rem) 1fr minmax(min-content, 4rem),
+    null,
+    null,
+    null
+  );
+
   @include respond(laptop) {
-    max-width: 102.4rem;
-    grid-template-columns: minmax(min-content, 10rem) 1fr minmax(
-        min-content,
-        10rem
-      );
+    @include max-width-custom(laptop);
   }
 
   @include respond(tablet) {
-    max-width: 76.8rem;
-    grid-template-columns: minmax(min-content, 8rem) 1fr minmax(
-        min-content,
-        8rem
-      );
+    @include max-width-custom(tablet);
   }
 
   @include respond(phone) {
-    max-width: 42.5rem;
-    grid-template-columns: minmax(min-content, 4rem) 1fr minmax(
-        min-content,
-        4rem
-      );
+    @include max-width-custom(phone);
   }
 }
 
