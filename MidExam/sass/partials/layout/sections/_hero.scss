@@ -143,6 +143,8 @@
     @include respond(phone) {
       grid-row: 2 / 3;
       grid-column: 2 / 3;
+      place-self: center;
+      margin-bottom: 0;
     }
   }
 
@@ -225,18 +227,6 @@
 
       &--input {
         width: 18rem;
-      }
-    }
-
-    @include respond(phone) {
-      max-width: 20rem;
-      &--heading {
-        padding: 0.5rem 1rem;
-        font-size: $font-standard;
-      }
-
-      &--input {
-        width: 15rem;
       }
     }
   }

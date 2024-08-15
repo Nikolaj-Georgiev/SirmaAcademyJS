@@ -658,6 +658,8 @@ body {
   .hero__right {
     grid-row: 2/3;
     grid-column: 2/3;
+    place-self: center;
+    margin-bottom: 0;
   }
 }
 .hero__form {
@@ -734,18 +736,6 @@ body {
   }
   .hero__form--input {
     width: 18rem;
-  }
-}
-@media only screen and (max-width: 26.56em) {
-  .hero__form {
-    max-width: 20rem;
-  }
-  .hero__form--heading {
-    padding: 0.5rem 1rem;
-    font-size: 1.4rem;
-  }
-  .hero__form--input {
-    width: 15rem;
   }
 }
 
