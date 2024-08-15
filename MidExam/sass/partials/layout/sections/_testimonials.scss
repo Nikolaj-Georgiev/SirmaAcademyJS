@@ -123,5 +123,10 @@
       padding-bottom: 8rem;
       gap: 2rem;
     }
+    &__card {
+      &-info {
+        width: 100%;
+      }
+    }
   }
 }

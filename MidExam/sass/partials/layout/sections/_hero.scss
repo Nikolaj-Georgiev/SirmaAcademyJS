@@ -24,9 +24,8 @@
 
   @include responsive-grid-custom(
     null,
-    minmax(min-content, 10rem) 1fr 2fr minmax(min-content, 10rem),
-    minmax(min-content, 8rem) minmax(min-content, 1fr) 2fr
-      minmax(min-content, 8rem),
+    minmax(min-content, 10rem) 1fr 1fr minmax(min-content, 10rem),
+    minmax(min-content, 8rem) 1fr 1fr minmax(min-content, 8rem),
     minmax(min-content, 1rem) 1fr minmax(min-content, 1rem),
     null,
     null,

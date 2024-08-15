@@ -98,19 +98,17 @@
     null
   );
 
+  @include respond(desktop) {
+    @include max-width-custom(desktop);
+  }
+
   @include respond(laptop) {
     @include max-width-custom(laptop);
     &__form {
       width: 100%;
       gap: 2rem;
-    }
-  }
-
-  @include respond(tablet) {
-    @include max-width-custom(tablet);
-    &__form {
       &-inputs {
-        width: 60%;
+        width: 59%;
       }
       &-textarea {
         width: 40%;
@@ -118,6 +116,13 @@
       &-input {
         width: 100%;
       }
+    }
+  }
+
+  @include respond(tablet) {
+    @include max-width-custom(tablet);
+    &__form {
+      width: 90%;
     }
   }
 

@@ -40,11 +40,6 @@ $color-orange-dark: #ff8b38;
 
 // Screen sizes
 
-$bp-phone: 26.56em; //425px;
-$bp-tablet: 48em; //768px;
-$bp-laptop: 78.75em; //1024px;
-$bp-big-desktop: 112.5em; //1800px;
-
 // Breakpoints
 // 1em == 16px for the media queries. And 16px is the default browser font-size. If user goes for 20px then 1em == 20px etc.
 // $breakpoints: (
@@ -52,9 +47,10 @@ $bp-big-desktop: 112.5em; //1800px;
 //   'laptop': 102.4rem,
 //   'tablet': 76.8rem,
 //   'phone': 42.5rem,
-// );
+// ); with my current design it is better to use pixels for the screen sizes.
 $breakpoints: (
   'large': 1800px,
+  'desktop': 1400px,
   'laptop': 1024px,
   'tablet': 768px,
   'phone': 425px,

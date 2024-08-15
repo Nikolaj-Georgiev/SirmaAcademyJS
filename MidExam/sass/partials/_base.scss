@@ -25,7 +25,7 @@ html {
   @include respond(phone) {
     font-size: 31.25%; // 1rem = 5px; 5/16 == 31.25%;
   }
-  @include respond(big-desktop) {
+  @include respond(large, min) {
     font-size: 75%; // 1rem = 12px; 12/16 == 75%;
   }
 }
@@ -38,37 +38,43 @@ body {
   font-weight: 400;
   line-height: $line-height-standard;
   background-color: rgba(0, 0, 0, 0.38);
-}
-
-.container {
-  max-width: 140rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-rows: minmax(min-content, 7.2rem) 1fr minmax(min-content, 8rem);
-  grid-template-columns: minmax(min-content, 14rem) 1fr minmax(
-      min-content,
-      14rem
+  &.container {
+    max-width: 140rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: minmax(min-content, 7.2rem) 1fr minmax(
+        min-content,
+        8rem
+      );
+    grid-template-columns: minmax(min-content, 14rem) 1fr minmax(
+        min-content,
+        14rem
+      );
+    @include responsive-grid-custom(
+      null,
+      minmax(min-content, 10rem) 1fr minmax(min-content, 10rem),
+      minmax(min-content, 8rem) 1fr minmax(min-content, 8rem),
+      minmax(min-content, 4rem) 1fr minmax(min-content, 4rem),
+      null,
+      null,
+      null
     );
-  @include responsive-grid-custom(
-    null,
-    minmax(min-content, 10rem) 1fr minmax(min-content, 10rem),
-    minmax(min-content, 8rem) 1fr minmax(min-content, 8rem),
-    minmax(min-content, 4rem) 1fr minmax(min-content, 4rem),
-    null,
-    null,
-    null
-  );
 
-  @include respond(laptop) {
-    @include max-width-custom(laptop);
-  }
+    @include respond(desktop) {
+      @include max-width-custom(desktop);
+    }
 
-  @include respond(tablet) {
-    @include max-width-custom(tablet);
-  }
+    @include respond(laptop) {
+      @include max-width-custom(laptop);
+    }
 
-  @include respond(phone) {
-    @include max-width-custom(phone);
+    @include respond(tablet) {
+      @include max-width-custom(tablet);
+    }
+
+    @include respond(phone) {
+      @include max-width-custom(phone);
+    }
   }
 }
 
@@ -76,7 +82,7 @@ body {
   grid-row: 2 / 3;
   grid-column: 1 /-1;
   display: grid;
-  grid-template-columns: minmax(min-content, 14rem) minmax(min-content, 112rem) minmax(
+  grid-template-columns: minmax(min-content, 14rem) 1fr minmax(
       min-content,
       14rem
     );
@@ -90,6 +96,10 @@ body {
     null,
     null
   );
+
+  @include respond(desktop) {
+    @include max-width-custom(desktop);
+  }
 
   @include respond(laptop) {
     @include max-width-custom(laptop);
