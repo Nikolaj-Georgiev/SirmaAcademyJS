@@ -59,10 +59,11 @@
 
   @include respond(phone) {
     max-width: 42.5rem;
-    grid-template-columns: minmax(min-content, 4rem) 1fr 1fr minmax(
+    grid-template-columns: minmax(min-content, 1rem) 1fr minmax(
         min-content,
-        4rem
+        1rem
       );
+    grid-template-rows: auto auto;
   }
 
   &__left {
@@ -116,6 +117,20 @@
         line-height: $line-height-big;
       }
     }
+
+    @include respond(phone) {
+      grid-row: 1/ 2;
+      padding: 1rem;
+      margin-top: 1.6rem;
+      &--logo {
+        max-width: 10rem;
+        max-height: 2rem;
+        padding-left: 0;
+      }
+      &--text {
+        padding: 1rem 1rem 1rem 1px;
+      }
+    }
   }
 
   &__right {
@@ -125,6 +140,10 @@
     border-bottom: 3px solid $color-orange-light;
     border-radius: 3px;
     margin-bottom: 5rem;
+    @include respond(phone) {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+    }
   }
 
   &__form {
@@ -206,6 +225,18 @@
 
       &--input {
         width: 18rem;
+      }
+    }
+
+    @include respond(phone) {
+      max-width: 20rem;
+      &--heading {
+        padding: 0.5rem 1rem;
+        font-size: $font-standard;
+      }
+
+      &--input {
+        width: 15rem;
       }
     }
   }

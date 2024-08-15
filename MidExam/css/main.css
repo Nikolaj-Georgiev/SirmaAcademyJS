@@ -578,7 +578,8 @@ body {
 @media only screen and (max-width: 26.56em) {
   .hero {
     max-width: 42.5rem;
-    grid-template-columns: minmax(min-content, 4rem) 1fr 1fr minmax(min-content, 4rem);
+    grid-template-columns: minmax(min-content, 1rem) 1fr minmax(min-content, 1rem);
+    grid-template-rows: auto auto;
   }
 }
 .hero__left {
@@ -630,6 +631,21 @@ body {
     line-height: 3rem;
   }
 }
+@media only screen and (max-width: 26.56em) {
+  .hero__left {
+    grid-row: 1/2;
+    padding: 1rem;
+    margin-top: 1.6rem;
+  }
+  .hero__left--logo {
+    max-width: 10rem;
+    max-height: 2rem;
+    padding-left: 0;
+  }
+  .hero__left--text {
+    padding: 1rem 1rem 1rem 1px;
+  }
+}
 .hero__right {
   grid-column: 3/4;
   place-self: end;
@@ -637,6 +653,12 @@ body {
   border-bottom: 3px solid #ff9b51;
   border-radius: 3px;
   margin-bottom: 5rem;
+}
+@media only screen and (max-width: 26.56em) {
+  .hero__right {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
 }
 .hero__form {
   max-width: 38rem;
@@ -712,6 +734,18 @@ body {
   }
   .hero__form--input {
     width: 18rem;
+  }
+}
+@media only screen and (max-width: 26.56em) {
+  .hero__form {
+    max-width: 20rem;
+  }
+  .hero__form--heading {
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+  }
+  .hero__form--input {
+    width: 15rem;
   }
 }
 
