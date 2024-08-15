@@ -1,5 +1,5 @@
 .brand-bar {
-  width: 100%;
+  width: 140rem;
   height: 10.5rem;
   filter: drop-shadow(0px 1px 1.5px rgba(0, 0, 0, 0.38));
   background-color: $color-white;
@@ -41,14 +41,17 @@
 
   @include responsive-grid-custom(
     null,
-    minmax(min-content, 10rem) minmax(min-content, 1fr) 2fr
+    minmax(min-content, 10rem) minmax(min-content, 1fr) 1fr
       minmax(min-content, 10rem),
-    minmax(min-content, 8rem) minmax(min-content, 1fr) 2fr
+    minmax(min-content, 8rem) minmax(min-content, 1fr) 1fr
       minmax(min-content, 8rem),
-    minmax(min-content, 4rem) minmax(min-content, 1fr) 2fr
+    minmax(min-content, 4rem) minmax(min-content, 1fr) 1fr
       minmax(min-content, 4rem)
   );
 
+  @include respond(desktop) {
+    @include max-width-custom(desktop);
+  }
   @include respond(laptop) {
     @include max-width-custom(laptop);
     gap: 0;
@@ -62,8 +65,14 @@
     }
 
     &__icons {
-      width: 50%;
+      width: 100%;
       margin: 3.4rem 0 0 0;
     }
+  }
+  @include respond(tablet) {
+    @include max-width-custom(tablet);
+  }
+  @include respond(phone) {
+    @include max-width-custom(phone);
   }
 }

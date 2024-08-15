@@ -383,7 +383,7 @@ body.container {
 }
 
 .brand-bar {
-  width: 100%;
+  width: 140rem;
   height: 10.5rem;
   filter: drop-shadow(0px 1px 1.5px rgba(0, 0, 0, 0.38));
   background-color: #fff;
@@ -418,17 +418,22 @@ body.container {
 }
 @media (max-width: 1024px) {
   .brand-bar {
-    grid-template-columns: minmax(min-content, 10rem) minmax(min-content, 1fr) 2fr minmax(min-content, 10rem);
+    grid-template-columns: minmax(min-content, 10rem) minmax(min-content, 1fr) 1fr minmax(min-content, 10rem);
   }
 }
 @media (max-width: 768px) {
   .brand-bar {
-    grid-template-columns: minmax(min-content, 8rem) minmax(min-content, 1fr) 2fr minmax(min-content, 8rem);
+    grid-template-columns: minmax(min-content, 8rem) minmax(min-content, 1fr) 1fr minmax(min-content, 8rem);
   }
 }
 @media (max-width: 425px) {
   .brand-bar {
-    grid-template-columns: minmax(min-content, 4rem) minmax(min-content, 1fr) 2fr minmax(min-content, 4rem);
+    grid-template-columns: minmax(min-content, 4rem) minmax(min-content, 1fr) 1fr minmax(min-content, 4rem);
+  }
+}
+@media (max-width: 1400px) and (max-width: 1400px) {
+  .brand-bar {
+    max-width: 1400px;
   }
 }
 @media (max-width: 1024px) {
@@ -451,8 +456,18 @@ body.container {
     align-self: center;
   }
   .brand-bar__icons {
-    width: 50%;
+    width: 100%;
     margin: 3.4rem 0 0 0;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .brand-bar {
+    max-width: 768px;
+  }
+}
+@media (max-width: 425px) and (max-width: 425px) {
+  .brand-bar {
+    max-width: 425px;
   }
 }
 
