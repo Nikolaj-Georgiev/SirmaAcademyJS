@@ -84,4 +84,39 @@
       margin-bottom: 0.6rem;
     }
   }
+  @include responsive-grid-custom(
+    null,
+    minmax(min-content, 10rem) 1fr minmax(min-content, 10rem),
+    minmax(min-content, 8rem) 1fr minmax(min-content, 8rem),
+    minmax(min-content, 4rem) 1fr minmax(min-content, 4rem),
+    null,
+    null,
+    null
+  );
+
+  @include respond(laptop) {
+    @include max-width-custom(laptop);
+  }
+
+  @include respond(tablet) {
+    @include max-width-custom(tablet);
+    &__card {
+      &-testimonial {
+        gap: 4rem;
+      }
+      &-image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include respond(phone) {
+    @include max-width-custom(phone);
+    &__cards {
+      padding-bottom: 8rem;
+      gap: 2rem;
+    }
+  }
 }

@@ -1214,6 +1214,50 @@ body {
   text-align: start;
   margin-bottom: 0.6rem;
 }
+@media (max-width: 1024px) {
+  .testimonials {
+    grid-template-columns: minmax(min-content, 10rem) 1fr minmax(min-content, 10rem);
+  }
+}
+@media (max-width: 768px) {
+  .testimonials {
+    grid-template-columns: minmax(min-content, 8rem) 1fr minmax(min-content, 8rem);
+  }
+}
+@media (max-width: 425px) {
+  .testimonials {
+    grid-template-columns: minmax(min-content, 4rem) 1fr minmax(min-content, 4rem);
+  }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+  .testimonials {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .testimonials {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .testimonials__card-testimonial {
+    gap: 4rem;
+  }
+  .testimonials__card-image img {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) and (max-width: 425px) {
+  .testimonials {
+    max-width: 425px;
+  }
+}
+@media (max-width: 425px) {
+  .testimonials__cards {
+    padding-bottom: 8rem;
+    gap: 2rem;
+  }
+}
 
 .button {
   border: none;
