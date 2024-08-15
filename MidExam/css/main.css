@@ -415,6 +415,53 @@ body {
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
 }
+@media (max-width: 1024px) {
+  .contact-us {
+    grid-template-columns: minmax(min-content, 10rem) 1fr minmax(min-content, 10rem);
+  }
+}
+@media (max-width: 768px) {
+  .contact-us {
+    grid-template-columns: minmax(min-content, 8rem) 1fr minmax(min-content, 8rem);
+  }
+}
+@media (max-width: 425px) {
+  .contact-us {
+    grid-template-columns: minmax(min-content, 4rem) 1fr minmax(min-content, 4rem);
+  }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+  .contact-us {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .contact-us__form {
+    width: 100%;
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .contact-us {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-us__form-inputs {
+    width: 60%;
+  }
+  .contact-us__form-textarea {
+    width: 40%;
+  }
+  .contact-us__form-input {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) and (max-width: 425px) {
+  .contact-us {
+    max-width: 425px;
+  }
+}
 
 .custom-section {
   background-color: #000;
@@ -1262,6 +1309,11 @@ body {
 @media (max-width: 1024px) and (max-width: 1024px) {
   .testimonials {
     max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .testimonials__card-testimonial {
+    gap: 2rem;
   }
 }
 @media (max-width: 768px) and (max-width: 768px) {

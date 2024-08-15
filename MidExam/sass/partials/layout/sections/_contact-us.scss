@@ -88,4 +88,40 @@
       font-family: $font-stack-main;
     }
   }
+  @include responsive-grid-custom(
+    null,
+    minmax(min-content, 10rem) 1fr minmax(min-content, 10rem),
+    minmax(min-content, 8rem) 1fr minmax(min-content, 8rem),
+    minmax(min-content, 4rem) 1fr minmax(min-content, 4rem),
+    null,
+    null,
+    null
+  );
+
+  @include respond(laptop) {
+    @include max-width-custom(laptop);
+    &__form {
+      width: 100%;
+      gap: 2rem;
+    }
+  }
+
+  @include respond(tablet) {
+    @include max-width-custom(tablet);
+    &__form {
+      &-inputs {
+        width: 60%;
+      }
+      &-textarea {
+        width: 40%;
+      }
+      &-input {
+        width: 100%;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    @include max-width-custom(phone);
+  }
 }

@@ -96,6 +96,11 @@
 
   @include respond(laptop) {
     @include max-width-custom(laptop);
+    &__card {
+      &-testimonial {
+        gap: 2rem;
+      }
+    }
   }
 
   @include respond(tablet) {
