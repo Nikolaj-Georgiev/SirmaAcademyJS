@@ -458,6 +458,36 @@ body {
   font-weight: 300;
   font-family: "Raleway", sans-serif;
 }
+@media (max-width: 1024px) {
+  .custom-section {
+    grid-template-columns: minmax(min-content, 10rem) 1fr minmax(min-content, 10rem);
+  }
+}
+@media (max-width: 768px) {
+  .custom-section {
+    grid-template-columns: minmax(min-content, 8rem) 1fr minmax(min-content, 8rem);
+  }
+}
+@media (max-width: 425px) {
+  .custom-section {
+    grid-template-columns: minmax(min-content, 4rem) 1fr minmax(min-content, 4rem);
+  }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+  .custom-section {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .custom-section {
+    max-width: 768px;
+  }
+}
+@media (max-width: 425px) and (max-width: 425px) {
+  .custom-section {
+    max-width: 425px;
+  }
+}
 
 .features {
   background-color: #f5f5f5;

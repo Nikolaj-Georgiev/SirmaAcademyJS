@@ -46,4 +46,25 @@
       font-family: $font-stack-headings;
     }
   }
+  @include responsive-grid-custom(
+    null,
+    minmax(min-content, 10rem) 1fr minmax(min-content, 10rem),
+    minmax(min-content, 8rem) 1fr minmax(min-content, 8rem),
+    minmax(min-content, 4rem) 1fr minmax(min-content, 4rem),
+    null,
+    null,
+    null
+  );
+
+  @include respond(laptop) {
+    @include max-width-custom(laptop);
+  }
+
+  @include respond(tablet) {
+    @include max-width-custom(tablet);
+  }
+
+  @include respond(phone) {
+    @include max-width-custom(phone);
+  }
 }
