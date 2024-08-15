@@ -945,6 +945,36 @@ body {
   text-align: center;
   padding: 0 1rem;
 }
+@media (max-width: 1024px) {
+  .about {
+    grid-template-columns: minmax(min-content, 10rem) 1fr minmax(min-content, 10rem);
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: minmax(min-content, 8rem) 1fr minmax(min-content, 8rem);
+  }
+}
+@media (max-width: 425px) {
+  .about {
+    grid-template-columns: minmax(min-content, 4rem) 1fr minmax(min-content, 4rem);
+  }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+  .about {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .about {
+    max-width: 768px;
+  }
+}
+@media (max-width: 425px) and (max-width: 425px) {
+  .about {
+    max-width: 425px;
+  }
+}
 
 .pricing {
   grid-column: 1/-1;
