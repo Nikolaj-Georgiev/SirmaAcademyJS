@@ -1,0 +1,11 @@
+<h1 class="heading">{{title}}</h1>
+<ul class="list">
+  {{#each items}}
+    {{!-- <li>{{this}}</li> --}}
+    {{>list-item baseUrl=../baseUrl}}
+  {{/each}}
+</ul>
+
+{{#if message}}
+  <div><p>{{message}}</p></div>
+{{/if}}

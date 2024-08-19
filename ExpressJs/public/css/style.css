@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.heading {
+  text-align: center;
+  margin: 50px auto;
+}
