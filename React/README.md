@@ -1,3 +1,3 @@
-# React + Vite
+# React workshop
 
-React workshop
+Sirma Academy React workshop
