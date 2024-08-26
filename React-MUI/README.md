@@ -8,3 +8,6 @@ Sirma Academy React workshop
 2. Initiate Vite Project
 3. Add MUI component library
 4. Add React router
+
+- setup react-router-dom
+- add routs
