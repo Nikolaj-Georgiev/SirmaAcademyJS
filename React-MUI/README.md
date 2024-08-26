@@ -6,4 +6,5 @@ Sirma Academy React workshop
 
 1. Create Github Repo
 2. Initiate Vite Project
-3. Add UI component library
+3. Add MUI component library
+4. Add React router
