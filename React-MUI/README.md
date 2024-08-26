@@ -12,3 +12,9 @@ Sirma Academy React workshop
 - setup react-router-dom
 - add routs
 - change links (without page reload)
+
+## Technologies
+
+1. React Router
+2. MUI
+3. REST API - https://dummyjson.com/
