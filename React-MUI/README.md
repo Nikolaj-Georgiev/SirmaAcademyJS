@@ -11,3 +11,4 @@ Sirma Academy React workshop
 
 - setup react-router-dom
 - add routs
+- change links (without page reload)
