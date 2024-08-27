@@ -8,6 +8,7 @@ export default function useTodosQuery() {
     queryFn: getTodos,
     staleTime: 5 * 60 * 1000,
     retry: 0,
+    initialData: [],
   });
   return todosQuery;
 }

@@ -15,6 +15,7 @@ export default function CreateTodo() {
     // onSuccess: () => {
     //   queryClient.invalidateQueries(todosKeys.all());
     // },
+    // update cash manually from response
     onSuccess: (data) => {
       queryClient.setQueryData(todosKeys.all(), (oldCash) => {
         const newData = [...oldCash, data];
