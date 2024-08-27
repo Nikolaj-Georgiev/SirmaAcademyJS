@@ -17,5 +17,8 @@ export default {
     const result = await axios.put(`${baseUrl}/${id}`, data)
     return result;
   },
+  async delete(todoId) {
+    return await axios.delete(`${baseUrl}/${todoId}`)
+  }
 }
 

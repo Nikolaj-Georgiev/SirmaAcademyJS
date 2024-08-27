@@ -6,13 +6,33 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useGetTodo } from '../queries/useGetTodo';
 import { Switch } from '@mui/material';
+import { useTodoUpdate } from '../queries/useTodoUpdate';
+import useDeleteTodo from '../queries/useDeleteTodo';
 
 export default function TodoDetails() {
+  const navigate = useNavigate();
   const { todoId } = useParams();
   const todoQuery = useGetTodo(todoId);
+  const updateTodo = useTodoUpdate(todoId);
+  const deleteTodo = useDeleteTodo();
+
+  const todoClickHandler = () => {
+    const updatedTodo = {
+      ...todoQuery.data,
+      completed: !todoQuery.data.completed,
+    };
+    console.log(updatedTodo);
+    updateTodo.mutate(updatedTodo);
+  };
+
+  const deleteTodoHandler = async () => {
+    await deleteTodo.mutate(todoId);
+
+    navigate('/todos');
+  };
 
   return (
     <>
@@ -38,14 +58,19 @@ export default function TodoDetails() {
               sx={{ color: 'text.secondary' }}
             >
               <Switch
-                disabled
                 checked={todoQuery.data.completed}
+                onClick={todoClickHandler}
               />
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size='small'>Share</Button>
-            <Button size='small'>Learn More</Button>
+            <Button
+              onClick={deleteTodoHandler}
+              size='small'
+            >
+              Delete
+            </Button>
+            {/* <Button size='small'>Edit</Button> */}
           </CardActions>
         </Card>
       )}

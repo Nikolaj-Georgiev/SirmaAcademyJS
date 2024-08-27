@@ -12,16 +12,19 @@ export default function CreateTodo() {
   const createTodoMutation = useMutation({
     mutationFn: createTodo,
     mutationKey: todosKeys.create(),
-    // onSuccess: () => {
-    //   queryClient.invalidateQueries(todosKeys.all());
-    // },
-    // update cash manually from response
-    onSuccess: (data) => {
-      queryClient.setQueryData(todosKeys.all(), (oldCash) => {
-        const newData = [...oldCash, data];
-        return newData;
-      }); //супер як метод да си опресниш локално тодотата, без да правиш нова заявка!!!
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: todosKeys.all(),
+        exact: true,
+      });
     },
+    // update cash manually from response
+    // onSuccess: (data) => {
+    //   queryClient.setQueryData(todosKeys.all(), (oldCash) => {
+    //     const newData = [...oldCash, data];
+    //     return newData;
+    //   }); //супер як метод да си опресниш локално тодотата, без да правиш нова заявка!!!
+    // },
   });
   const navigate = useNavigate();
 
