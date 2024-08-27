@@ -11,7 +11,7 @@ export default function CreateTodo() {
   const queryClient = useQueryClient();
   const createTodoMutation = useMutation({
     mutationFn: createTodo,
-    mutationKey: ['new-todo'],
+    mutationKey: todosKeys.newTodo(),
     // onSuccess: () => {
     //   queryClient.invalidateQueries(todosKeys.all());
     // },
