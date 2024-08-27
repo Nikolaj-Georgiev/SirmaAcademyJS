@@ -10,7 +10,13 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './main.css';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000,
+    },
+  },
+});
 
 createRoot(document.getElementById('root')).render(
   <QueryClientProvider client={queryClient}>

@@ -26,5 +26,5 @@ Sirma Academy React workshop
    `npm i -D @tanstack/eslint-plugin-query`
    `npm i @tanstack/react-query-devtools`
 2. Config eslint plugin
-3. Config React Query client
+3. Config React Query client and provider
 4. Config React Query Devtools
