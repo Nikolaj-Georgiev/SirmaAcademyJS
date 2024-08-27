@@ -7,6 +7,7 @@ import Pricing from './components/Pricing';
 import Login from './components/Login';
 import Register from './components/Register';
 import TodoList from './components/TodoList';
+import CreateTodo from './components/CreateTodo';
 function App() {
   return (
     <AuthContextProvider>
@@ -31,6 +32,10 @@ function App() {
         <Route
           path='/register'
           element={<Register />}
+        />
+        <Route
+          path='/todos/add'
+          element={<CreateTodo />}
         />
       </Routes>
     </AuthContextProvider>

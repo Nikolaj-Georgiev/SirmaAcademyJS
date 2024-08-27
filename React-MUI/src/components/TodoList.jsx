@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useQuery } from '@tanstack/react-query';
 
 import { Container, CssBaseline } from '@mui/material';
 import List from '@mui/material/List';
@@ -10,15 +9,12 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
-import axios from 'axios';
+import useTodosQuery from '../queries/useTodosQuery';
 
 export default function TodoList() {
   // const [todos, setTodos] = useGetTodos();
-  const todosQuery = useQuery({
-    queryKey: ['todos'],
-    queryFn: getTodos,
-    staleTime: 10 * 1000,
-  });
+
+  const todosQuery = useTodosQuery();
   const [checked, setChecked] = React.useState([0]);
 
   const handleToggle = (todo) => () => {
@@ -95,13 +91,6 @@ export default function TodoList() {
       )}
     </Container>
   );
-}
-
-async function getTodos() {
-  const result = await axios.get('https://dummyjson.com/todos');
-  // const response = await fetch('https://dummyjson.com/todos');
-  // const result = await response.json();
-  return result.data.todos;
 }
 
 // const useGetTodos = () => {
