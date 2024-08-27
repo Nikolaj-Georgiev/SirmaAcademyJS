@@ -1,6 +1,6 @@
-import useTodosQuery from '../queries/useTodosQuery';
+import useGerTodos from '../queries/useGetTodos';
 
 export default function Pricing() {
-  const todosQuery = useTodosQuery();
+  const todosQuery = useGerTodos();
   return <h1>Pricing</h1>;
 }

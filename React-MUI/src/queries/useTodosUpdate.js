@@ -7,10 +7,9 @@ export function useTodosUpdate() {
   const queryClient = useQueryClient();
 
   const todoMutation = useMutation({
-    mutationFn: todoService.updateTodo,
+    mutationFn: todoService.update,
     mutationKey: todosKeys.update(),
     onSuccess: ({ data }) => {
-      console.log(data);
       queryClient.setQueryData(todosKeys.all(), (oldTodos) =>
         oldTodos.map(todo => todo.id === data.id ? data : todo)
       );

@@ -39,7 +39,7 @@ export default function Login() {
     // console.log(response);
 
     const result = await response.json();
-    console.log(result);
+    // console.log(result);
     if (response.ok) {
       login(result);
       return navigate('/');

@@ -2,21 +2,20 @@ import * as React from 'react';
 
 import List from '@mui/material/List';
 
-import useTodosQuery from '../queries/useTodosQuery';
+import useGerTodos from '../queries/useGetTodos';
 import { useTodosUpdate } from '../queries/useTodosUpdate';
 import TodoListItem from './TodoListItem';
 
 export default function TodoList() {
   // const [todos, setTodos] = useGetTodos();
 
-  const todosQuery = useTodosQuery();
+  const todosQuery = useGerTodos();
   const todoMutation = useTodosUpdate();
 
   const todoClickHandler = (todo) => {
     const updatedTodo = { ...todo, completed: !todo.completed };
     todoMutation.mutate(updatedTodo);
   };
-
   return (
     <>
       <h1>Todo list</h1>
