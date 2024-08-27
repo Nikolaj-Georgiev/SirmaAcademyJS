@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import { Container, CssBaseline } from '@mui/material';
 import List from '@mui/material/List';
 
 import useTodosQuery from '../queries/useTodosQuery';
@@ -19,11 +18,7 @@ export default function TodoList() {
   };
 
   return (
-    <Container
-      component='main'
-      maxWidth='xs'
-    >
-      <CssBaseline />
+    <>
       <h1>Todo list</h1>
       {todosQuery.isError ? (
         <div>{todosQuery.error.message}</div>
@@ -42,7 +37,7 @@ export default function TodoList() {
           ))}
         </List>
       )}
-    </Container>
+    </>
   );
 }
 

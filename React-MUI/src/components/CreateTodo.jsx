@@ -1,4 +1,4 @@
-import { Container, CssBaseline, TextField } from '@mui/material';
+import TextField from '@mui/material/TextField';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useAuthContext } from '../contexts/AuthContext';
@@ -34,27 +34,21 @@ export default function CreateTodo() {
     navigate('/todos');
   }
   return (
-    <Container
-      component='main'
-      maxWidth='xs'
-    >
-      <CssBaseline />
-      <form onSubmit={formSubmitHandler}>
-        <TextField
-          id='standard-basic'
-          label='Title'
-          name='title'
-          variant='standard'
-        />
-        <LoadingButton
-          type='submit'
-          loading={createTodoMutation.isPending ? true : false}
-          variant='outlined'
-        >
-          <span>Create</span>
-        </LoadingButton>
-      </form>
-    </Container>
+    <form onSubmit={formSubmitHandler}>
+      <TextField
+        id='standard-basic'
+        label='Title'
+        name='title'
+        variant='standard'
+      />
+      <LoadingButton
+        type='submit'
+        loading={createTodoMutation.isPending ? true : false}
+        variant='outlined'
+      >
+        <span>Create</span>
+      </LoadingButton>
+    </form>
   );
 }
 

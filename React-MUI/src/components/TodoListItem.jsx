@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -5,7 +6,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
-import CommentIcon from '@mui/icons-material/Comment';
 import PageviewIcon from '@mui/icons-material/Pageview';
 
 export default function TodoListItem({ todo, clickHandler }) {
@@ -18,6 +18,8 @@ export default function TodoListItem({ todo, clickHandler }) {
         <IconButton
           edge='end'
           aria-label='details'
+          component={Link}
+          to={`/todos/${todo.id}`}
         >
           <PageviewIcon />
         </IconButton>
