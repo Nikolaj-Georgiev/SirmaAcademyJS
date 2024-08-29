@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/express-mongodb-app');
+    await mongoose.connect('mongodb://127.0.0.1:27017/express-mongodb-app');
 
     console.log('MongoDB connected!');
   } catch (error) {
