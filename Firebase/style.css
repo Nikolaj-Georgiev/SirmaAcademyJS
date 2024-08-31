@@ -1,0 +1,44 @@
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.auth-section {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0e4bb4;
+  color: #fff;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ae4bb4;
+}

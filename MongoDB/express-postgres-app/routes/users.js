@@ -1,7 +1,6 @@
 import express from 'express';
 const router = express.Router();
 import { User } from '../models/User.js';
-import { where } from 'sequelize';
 
 router.get('/', async (req, res) => {
   const users = await User.findAll();
