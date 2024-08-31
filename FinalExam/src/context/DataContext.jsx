@@ -4,10 +4,10 @@ import useCSVData from '../hooks/useCSVDAta';
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const teamsData = useCSVData('../../public/teams.csv');
-  const matchesData = useCSVData('../../public/matches.csv');
-  const playersData = useCSVData('../../public/players.csv');
-  const recordsData = useCSVData('../../public/records.csv');
+  const teamsData = useCSVData('/teams.csv');
+  const matchesData = useCSVData('/matches.csv');
+  const playersData = useCSVData('/players.csv');
+  const recordsData = useCSVData('/records.csv');
 
   return (
     <DataContext.Provider
