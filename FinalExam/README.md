@@ -36,3 +36,56 @@ A CSV files with data in the following format:
 1, 1, 1, 0, NULL  
 2, 2, 1, 0, 90  
 ...
+
+## Requirements
+
+1. **Data Loading**:
+
+   - All data must be loaded from CSV files without using external libraries for CSV parsing.
+
+2. **Match Sorting**:
+
+   - Matches should be sorted by date and organized into a tournament bracket.
+
+3. **Date Formats**:
+
+   - The application should support multiple date formats. Extra points for supporting all possible formats.
+
+4. **Visualization**:
+
+   - Create a user interface using React that includes:
+     - A Homepage with a visualization of the tournament bracket.
+     - A Match Details page showing the formations and the result of each match.
+     - A Team Details page that includes a roster view of all players in the team.
+
+5. **Clean Code**:
+
+   - Follow best practices for clean code.
+
+6. **README File**:
+   - This README file should explain the task and describe the algorithm used to implement the functionalities.
+
+## Project Architecture
+
+The project is structured as follows:
+
+- **App**: The main component that manages the routing of the application.
+- **Homepage**: The component that visualizes the tournament bracket and all matches.
+- **MatchDetails**: The component for match details, displaying formations and results.
+- **TeamDetails**: The component for team details, including a roster of all players.
+- **PlayerList**: A subcomponent of TeamDetails that displays a list of players.
+- **Player**: A component that displays a single player.
+
+## Implementation Algorithm
+
+### Loading CSV Files
+
+CSV files are loaded using JavaScript's `fetch` function and are manually parsed into appropriate objects.
+
+### Match Sorting
+
+Matches are sorted by date. The tournament bracket is organized by stages (group stage, knockout stage, etc.).
+
+### Visualization
+
+React is used to create components that visualize different aspects of the tournament. The structure is designed to be responsive and easy to use.
