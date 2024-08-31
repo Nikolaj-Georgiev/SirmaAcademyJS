@@ -1,0 +1,25 @@
+<svg width="375" height="629" viewBox="0 0 375 629" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="375" height="628" fill="#5A9A61"/>
+<rect width="375" height="70" fill="#5A9A61"/>
+<rect y="70" width="375" height="70" fill="#61A669"/>
+<rect y="140" width="375" height="70" fill="#5A9A61"/>
+<rect y="210" width="375" height="70" fill="#61A669"/>
+<rect y="280" width="375" height="35" fill="#5A9A61"/>
+<line y1="0.5" x2="375" y2="0.5" stroke="#9CC2A0"/>
+<line y1="314.5" x2="375" y2="314.5" stroke="#9CC2A0"/>
+<rect x="63.5" y="0.5" width="248" height="79" stroke="#9CC2A0"/>
+<rect x="141.5" y="0.5" width="93" height="38" stroke="#9CC2A0"/>
+<path d="M157.497 79.5C164.339 88.6083 175.231 94.5 187.5 94.5C199.769 94.5 210.661 88.6083 217.503 79.5" stroke="#9CC2A0"/>
+<rect width="375" height="70" transform="matrix(1 0 0 -1 0 629)" fill="#5A9A61"/>
+<rect width="375" height="70" transform="matrix(1 0 0 -1 0 559)" fill="#61A669"/>
+<rect width="375" height="70" transform="matrix(1 0 0 -1 0 489)" fill="#5A9A61"/>
+<rect width="375" height="70" transform="matrix(1 0 0 -1 0 419)" fill="#61A669"/>
+<rect width="375" height="35" transform="matrix(1 0 0 -1 0 349)" fill="#5A9A61"/>
+<line y1="-0.5" x2="375" y2="-0.5" transform="matrix(1 0 0 -1 0 628)" stroke="#9CC2A0"/>
+<line y1="-0.5" x2="375" y2="-0.5" transform="matrix(1 0 0 -1 0 314)" stroke="#9CC2A0"/>
+<rect x="0.5" y="-0.5" width="248" height="79" transform="matrix(1 0 0 -1 63 628)" stroke="#9CC2A0"/>
+<rect x="0.5" y="-0.5" width="93" height="38" transform="matrix(1 0 0 -1 141 628)" stroke="#9CC2A0"/>
+<path d="M157.497 549.5C164.339 540.392 175.231 534.5 187.5 534.5C199.769 534.5 210.661 540.392 217.503 549.5" stroke="#9CC2A0"/>
+<circle cx="188" cy="314" r="64.5" stroke="#9CC2A0"/>
+<circle cx="188" cy="314.5" r="3" fill="#9CC2A0"/>
+</svg>

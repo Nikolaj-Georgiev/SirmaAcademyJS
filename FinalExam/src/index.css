@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#bracket {
+  display: flex;
+  justify-content: space-around;
+}
+
+.round {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.matchup {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
