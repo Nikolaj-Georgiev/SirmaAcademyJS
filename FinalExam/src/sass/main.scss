@@ -1,0 +1,19 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/button';
+@import 'components/card';
+@import 'components/table';
+
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/container';
+
+@import 'pages/homePage';
+@import 'pages/matchDetails';
+@import 'pages/teamDetails';
