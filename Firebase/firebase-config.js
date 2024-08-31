@@ -9,14 +9,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-aut
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyCltzMJnS3n6LJ4o1obLpu526WZdHixjwk",
-  authDomain: "fir-sirmaacademy.firebaseapp.com",
-  projectId: "fir-sirmaacademy",
-  storageBucket: "fir-sirmaacademy.appspot.com",
-  messagingSenderId: "995403328988",
-  appId: "1:995403328988:web:274a995504ea5606bc7319"
-};
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
