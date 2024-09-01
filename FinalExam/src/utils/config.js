@@ -1,6 +1,6 @@
 export const CUTOFF_DATE = '6/26/2024';
 
-const TEAMS = [
+export const TEAMS = [
   { name: 'Germany', code: 'de' },
   { name: 'Scotland', code: 'gb-sct' },
   { name: 'Hungary', code: 'hu' },

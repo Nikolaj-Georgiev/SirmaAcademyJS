@@ -1,11 +1,14 @@
 import { createContext, useContext } from 'react';
 import useCSVData from '../hooks/useCSVData';
+import useGetTeamsFlags from '../hooks/useGetTeamsFlags';
+import { TEAMS } from '../utils/config';
 
 const DataContext = createContext({
   playersData: [],
   teamsData: [],
   recordsData: [],
   matchesData: [],
+  flagUrls: {},
 });
 
 export const DataProvider = ({ children }) => {
@@ -13,7 +16,9 @@ export const DataProvider = ({ children }) => {
   const teamsData = useCSVData('/teams.csv');
   const recordsData = useCSVData('/records.csv');
   const matchesData = useCSVData('/matches.csv');
-  console.log(matchesData);
+
+  const flagUrls = useGetTeamsFlags(TEAMS);
+  console.log(flagUrls);
 
   return (
     <DataContext.Provider
