@@ -1,5 +1,9 @@
 import { useData } from '../context/DataContext';
-import { getMatchesByDate, getSortedMatchesByDate } from '../utils/dataUtils';
+import {
+  getGroupedMatchesByDate,
+  getMatchesByDate,
+  getSortedMatchesByDate,
+} from '../utils/dataUtils';
 import { CUTOFF_DATE } from '../utils/config';
 
 export default function HomePage() {
@@ -13,8 +17,7 @@ export default function HomePage() {
 
   console.log(groupPhaseMatches);
 
-  const { date, onDateMatches } = getMatchesByDate(groupPhaseMatches);
-  console.log(date);
-  console.log(onDateMatches);
+  console.log(getGroupedMatchesByDate(ascendingSortedMatches));
+
   return <h1>This is a home page</h1>;
 }

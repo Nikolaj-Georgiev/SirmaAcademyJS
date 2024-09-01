@@ -69,10 +69,41 @@ export const getMatchesByDate = (matches) => {
 
 export function getGroupedMatchesByDate(matches) {
   return matches.reduce((groupedMatches, match) => {
-    if (!groupedMatches[match.data]) {
-      groupedMatches[match.data] = [];
+    if (!groupedMatches[match.date]) {
+      groupedMatches[match.date] = [];
     }
-    groupedMatches[match.data].push(match);
+    groupedMatches[match.date].push(match);
     return groupedMatches;
   }, {});
+}
+
+export function divideMatchesByStage(matches, cutOffDate) {
+  const stages = {
+    groupPhase: [],
+    roundOf16: [],
+    quarterFinals: [],
+    semiFinals: [],
+    final: []
+  };
+
+  let phaseIndex = 0;
+  const phaseMatchCounts = [8, 4, 2, 1];
+  const phaseOrder = ['roundOf16', 'quarterFinals', 'semiFinals', 'final'];
+
+  matches.forEach((match) => {
+    //
+    const matchDate = new Date(match.date);
+    if (match.date <= cutOffDate) {
+      stages.groupPhase.push(match);
+    } else {
+      if (stages[phaseOrder[phaseIndex]].length < phaseMatchCounts[phaseIndex]) {
+        stages[phaseOrder[phaseIndex]].push(match);
+      } else {
+        phaseIndex++;
+        stages[phaseOrder[phaseIndex]].push(match);
+      }
+    }
+  });
+
+  return stages;
 }
