@@ -33,22 +33,31 @@ export default function HomePage() {
     <section className='home'>
       <h1 className='home__heading-primary'>Tournament Stages</h1>
 
-      <div>
+      <div className='home__phase'>
         <h2 className='home__heading-secondary'>Group Phase</h2>
+        <span></span>
         {renderMatches(groupedGroupPhaseMatches, 'Group Phase')}
       </div>
-
-      <h2 className='home__heading-secondary'>Round of 16</h2>
-      {renderMatches(groupedRoundOf16Matches, 'Round of 16')}
-
-      <h2 className='home__heading-secondary'>Quarter Finals</h2>
-      {renderMatches(groupedQuarterFinalsMatches, 'Quarter Finals')}
-
-      <h2 className='home__heading-secondary'>Semi Finals</h2>
-      {renderMatches(groupedSemiFinalsMatches, 'Semi Finals')}
-
-      <h2 className='home__heading-secondary'>Final</h2>
-      {renderMatches(groupedFinalMatches, 'Final')}
+      <dir className='home__phase'>
+        <h2 className='home__heading-secondary'>Round of 16</h2>
+        <span></span>
+        {renderMatches(groupedRoundOf16Matches, 'Round of 16')}
+      </dir>
+      <dir className='home__phase'>
+        <h2 className='home__heading-secondary'>Quarter Finals</h2>
+        <span></span>
+        {renderMatches(groupedQuarterFinalsMatches, 'Quarter Finals')}
+      </dir>
+      <dir className='home__phase'>
+        <h2 className='home__heading-secondary'>Semi Finals</h2>
+        <span></span>
+        {renderMatches(groupedSemiFinalsMatches, 'Semi Finals')}
+      </dir>
+      <dir className='home__phase'>
+        <h2 className='home__heading-secondary'>Final</h2>
+        <span></span>
+        {renderMatches(groupedFinalMatches, 'Final')}
+      </dir>
     </section>
   );
 }
