@@ -52,3 +52,7 @@ export function getTeamByName(teams, name) {
 export function getMatchById(matches, id) {
   return matches.find(match => match?.id === parseInt(id, 10));
 }
+
+export function getPlayersFromTeam(teamId, players) {
+  return players.filter(player => player.teamid === teamId);
+}
