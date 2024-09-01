@@ -8,6 +8,7 @@ export const DataProvider = ({ children }) => {
   const teamsData = useCSVData('/teams.csv');
   const recordsData = useCSVData('/records.csv');
   const matchesData = useCSVData('/matches.csv');
+  console.log(matchesData);
 
   return (
     <DataContext.Provider

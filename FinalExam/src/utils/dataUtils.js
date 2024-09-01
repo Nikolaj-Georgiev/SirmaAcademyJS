@@ -56,3 +56,23 @@ export function getMatchById(matches, id) {
 export function getPlayersFromTeam(teamId, players) {
   return players.filter(player => player.teamid === teamId);
 }
+
+export function getSortedMatchesByDate(matches) {
+  return [...matches].sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+export const getMatchesByDate = (matches) => {
+  const date = matches[0]?.date;
+  const onDateMatches = matches.filter((match) => match.date === date);
+  return { date, onDateMatches };
+};
+
+export function getGroupedMatchesByDate(matches) {
+  return matches.reduce((groupedMatches, match) => {
+    if (!groupedMatches[match.data]) {
+      groupedMatches[match.data] = [];
+    }
+    groupedMatches[match.data].push(match);
+    return groupedMatches;
+  }, {});
+}
