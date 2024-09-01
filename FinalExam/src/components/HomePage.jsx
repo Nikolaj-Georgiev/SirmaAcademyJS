@@ -6,6 +6,7 @@ import {
 } from '../utils/dataUtils';
 import { CUTOFF_DATE } from '../utils/config';
 import Match from './Match';
+import Loader from './Loader';
 
 export default function HomePage() {
   const { matchesData } = useData();
@@ -15,7 +16,7 @@ export default function HomePage() {
     !matchesData.data ||
     matchesData.data.length === 0
   ) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
   const ascendingSortedMatches = getSortedMatchesByDate(matchesData.data);
   console.log(ascendingSortedMatches);

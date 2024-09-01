@@ -22,7 +22,7 @@ export const DataProvider = ({ children }) => {
 
   return (
     <DataContext.Provider
-      value={{ teamsData, matchesData, playersData, recordsData }}
+      value={{ teamsData, matchesData, playersData, recordsData, flagUrls }}
     >
       {children}
     </DataContext.Provider>

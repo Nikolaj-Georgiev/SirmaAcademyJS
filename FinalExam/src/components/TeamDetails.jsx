@@ -8,7 +8,7 @@ function TeamDetails() {
   console.log(teamsData);
   console.log(playersData);
 
-  if (teamsData?.loading) return <div>Loading...</div>;
+  if (teamsData?.loading) return <span class='loader'></span>;
   if (teamsData?.error) return <div>Error: {teamsData.error}</div>;
 
   const team = getTeamByName(teamsData.data, 'Germany');
