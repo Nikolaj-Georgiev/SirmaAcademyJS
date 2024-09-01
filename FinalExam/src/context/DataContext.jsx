@@ -1,7 +1,12 @@
 import { createContext, useContext } from 'react';
 import useCSVData from '../hooks/useCSVData';
 
-const DataContext = createContext();
+const DataContext = createContext({
+  playersData: [],
+  teamsData: [],
+  recordsData: [],
+  matchesData: [],
+});
 
 export const DataProvider = ({ children }) => {
   const playersData = useCSVData('/players.csv');

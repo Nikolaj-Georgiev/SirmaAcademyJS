@@ -49,6 +49,10 @@ export function getTeamByName(teams, name) {
   return teams.find(team => team?.name === name)
 }
 
+export function getTeamById(teams, id) {
+  return teams.find(team => team?.id === id)
+}
+
 export function getMatchById(matches, id) {
   return matches.find(match => match?.id === id);
 }
