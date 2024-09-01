@@ -17,21 +17,25 @@ export default function Match({ match }) {
   const teamB = getTeamById(teamsData.data, match.bteamid);
 
   return (
-    <div>
-      <p>{`${teamA.name}`}</p>
+    <li className='home__list-item'>
+      <p className='home__heading-tertiary'>{`${teamA.name}`}</p>
       <img
         src={flagUrls.flagUrls[teamA.name]}
         alt={`${teamA.name} flag`}
-        width='100'
+        width='40'
+        height='40'
+        className='home__list-item--img'
       />
       <p> vs </p>
-      <p>{`${teamB.name}`}</p>
+      <p className='home__heading-tertiary'>{`${teamB.name}`}</p>
       <img
         src={flagUrls.flagUrls[teamB.name]}
         alt={`${teamA.name} flag`}
-        width='100'
+        width='40'
+        height='40'
+        className='home__list-item--img'
       />
-      <p>{` Score: ${match.score}`}</p>
-    </div>
+      <p className='home__list-item--text'>{` Score: ${match.score}`}</p>
+    </li>
   );
 }

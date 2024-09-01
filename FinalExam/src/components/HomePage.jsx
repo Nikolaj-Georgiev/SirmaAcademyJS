@@ -19,37 +19,35 @@ export default function HomePage() {
     return <Loader />;
   }
   const ascendingSortedMatches = getSortedMatchesByDate(matchesData.data);
-  console.log(ascendingSortedMatches);
 
   const { groupPhase, roundOf16, quarterFinals, semiFinals, final } =
     divideMatchesByStage(ascendingSortedMatches, CUTOFF_DATE);
 
   const groupedGroupPhaseMatches = getGroupedMatchesByDate(groupPhase);
-  console.log('Groupe Phase:', groupedGroupPhaseMatches);
   const groupedRoundOf16Matches = getGroupedMatchesByDate(roundOf16);
-  console.log('round of 16:', groupedRoundOf16Matches);
   const groupedQuarterFinalsMatches = getGroupedMatchesByDate(quarterFinals);
-  console.log('quarter final:', groupedQuarterFinalsMatches);
   const groupedSemiFinalsMatches = getGroupedMatchesByDate(semiFinals);
-  console.log('semi final:', groupedSemiFinalsMatches);
   const groupedFinalMatches = getGroupedMatchesByDate(final);
-  console.log('final:', groupedFinalMatches);
 
   return (
-    <section>
-      <h2>Group Phase</h2>
-      {renderMatches(groupedGroupPhaseMatches, 'Group Phase')}
+    <section className='home'>
+      <h1 className='home__heading-primary'>Tournament Stages</h1>
 
-      <h2>Round of 16</h2>
+      <div>
+        <h2 className='home__heading-secondary'>Group Phase</h2>
+        {renderMatches(groupedGroupPhaseMatches, 'Group Phase')}
+      </div>
+
+      <h2 className='home__heading-secondary'>Round of 16</h2>
       {renderMatches(groupedRoundOf16Matches, 'Round of 16')}
 
-      <h2>Quarter Finals</h2>
+      <h2 className='home__heading-secondary'>Quarter Finals</h2>
       {renderMatches(groupedQuarterFinalsMatches, 'Quarter Finals')}
 
-      <h2>Semi Finals</h2>
+      <h2 className='home__heading-secondary'>Semi Finals</h2>
       {renderMatches(groupedSemiFinalsMatches, 'Semi Finals')}
 
-      <h2>Final</h2>
+      <h2 className='home__heading-secondary'>Final</h2>
       {renderMatches(groupedFinalMatches, 'Final')}
     </section>
   );
@@ -60,13 +58,15 @@ function renderMatches(groupedMatches, stageName) {
   return Object.keys(groupedMatches).map((date) => {
     return (
       <div key={date}>
-        <h3>{`${stageName} - ${date}`}</h3>
-        {groupedMatches[date].map((match) => (
-          <Match
-            key={match.id}
-            match={match}
-          />
-        ))}
+        <h3 className='home__heading-tertiary'>{`${stageName} - ${date}`}</h3>
+        <ul className='home__list'>
+          {groupedMatches[date].map((match) => (
+            <Match
+              key={match.id}
+              match={match}
+            />
+          ))}
+        </ul>
       </div>
     );
   });

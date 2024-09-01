@@ -1,4 +1,4 @@
-export default function Loader({ text = 'Loading...' }) {
+export default function Loader({ text = 'Loading . . .' }) {
   return (
     <div className='loader__container'>
       <span className='loader'></span>
