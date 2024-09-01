@@ -46,11 +46,11 @@ export function parseCSVData(data) {
 }
 
 export function getTeamByName(teams, name) {
-  return teams.find(team => team?.name.toLocaleLowerCase() === name.toLocaleLowerCase())
+  return teams.find(team => team?.name === name)
 }
 
 export function getMatchById(matches, id) {
-  return matches.find(match => match?.id === parseInt(id, 10));
+  return matches.find(match => match?.id === id);
 }
 
 export function getPlayersFromTeam(teamId, players) {
