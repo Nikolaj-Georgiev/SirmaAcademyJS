@@ -18,14 +18,14 @@ export default function Header() {
         <h2>Football tournament</h2>
       </div>
       <ul>
-        {pages.map(({ title, path }) => {
+        {pages.map(({ title, path }) => (
           <Link
             to={path}
             key={title}
           >
             {title}
-          </Link>;
-        })}
+          </Link>
+        ))}
       </ul>
     </header>
   );
