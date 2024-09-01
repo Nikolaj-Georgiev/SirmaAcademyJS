@@ -6,10 +6,7 @@ export default function useCSVData(url) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  console.log('ima li nqkoj?');
-
   useEffect(() => {
-    console.log('hujnja');
     const loadData = async () => {
       try {
         const csvData = await fetchCSV(url);

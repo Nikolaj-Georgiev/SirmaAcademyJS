@@ -27,7 +27,7 @@ export function parseCSVData(data) {
       throw new Error('CSV data is empty :(')
     }
 
-    const headers = lines[0].slit(',').map(header => header.trim());
+    const headers = lines[0].split(',').map(header => header.trim());
 
     return lines.slice(1).map(line => {
       const values = line.split(',').map(value => value.trim());
