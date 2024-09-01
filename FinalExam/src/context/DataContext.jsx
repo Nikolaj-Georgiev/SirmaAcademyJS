@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import useCSVData from '../hooks/useCSVDAta';
+import useCSVData from '../hooks/useCSVData';
 
 const DataContext = createContext();
 
@@ -11,11 +11,14 @@ export const DataProvider = ({ children }) => {
 
   return (
     <DataContext.Provider
-      value={(teamsData, matchesData, playersData, recordsData)}
+      value={{ teamsData, matchesData, playersData, recordsData }}
     >
       {children}
     </DataContext.Provider>
   );
 };
 
-export const useData = () => useContext(DataContext);
+export const useData = () => {
+  const contextData = useContext(DataContext);
+  return contextData;
+};

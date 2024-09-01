@@ -1,7 +1,11 @@
+import TeamDetails from './components/TeamDetails';
+
 function App() {
+  console.log('hujnja1');
+
   return (
     <>
-      <h1>Football EURO 2024</h1>
+      <TeamDetails />
     </>
   );
 }

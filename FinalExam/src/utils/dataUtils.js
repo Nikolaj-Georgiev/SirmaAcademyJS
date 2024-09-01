@@ -2,12 +2,15 @@
 export async function fetchCSV(url) {
   try {
     const response = await fetch(url);
+    console.log(response);
+    console.log('Babaluga');
 
     if (!response.ok) {
       throw new Error(`Couldn't fetch! Status: ${response.status}`);
     }
 
     const data = await response.text();
+    console.log(data);
     return data;
   } catch (err) {
     console.error('Error fetching CSV:', err);
@@ -44,7 +47,7 @@ export function parseCSVData(data) {
   }
 }
 
-export function getTeamsByName(teams, name) {
+export function getTeamByName(teams, name) {
   return teams.find(team => team.name.toLocaleLowerCase() === name.toLocaleLowerCase())
 }
 
