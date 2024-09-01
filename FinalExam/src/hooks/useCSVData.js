@@ -10,10 +10,8 @@ export default function useCSVData(url) {
     const loadData = async () => {
       try {
         const csvData = await fetchCSV(url);
-        console.log(csvData);
         const parsedData = parseCSVData(csvData);
         setData(parsedData);
-        console.log(parsedData);
       } catch (err) {
         setError(err.message);
       } finally {

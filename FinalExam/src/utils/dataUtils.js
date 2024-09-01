@@ -2,15 +2,13 @@
 export async function fetchCSV(url) {
   try {
     const response = await fetch(url);
-    console.log(response);
-    console.log('Babaluga');
+    // console.log(response);
 
     if (!response.ok) {
       throw new Error(`Couldn't fetch! Status: ${response.status}`);
     }
 
     const data = await response.text();
-    console.log(data);
     return data;
   } catch (err) {
     console.error('Error fetching CSV:', err);
@@ -27,7 +25,7 @@ export function parseCSVData(data) {
       throw new Error('CSV data is empty :(')
     }
 
-    const headers = lines[0].split(',').map(header => header.trim());
+    const headers = lines[0].split(',').map(header => header.trim().toLocaleLowerCase());
 
     return lines.slice(1).map(line => {
       const values = line.split(',').map(value => value.trim());
@@ -48,9 +46,9 @@ export function parseCSVData(data) {
 }
 
 export function getTeamByName(teams, name) {
-  return teams.find(team => team.name.toLocaleLowerCase() === name.toLocaleLowerCase())
+  return teams.find(team => team?.name.toLocaleLowerCase() === name.toLocaleLowerCase())
 }
 
 export function getMatchById(matches, id) {
-  return matches.find(match => match.id === parseInt(id, 10));
+  return matches.find(match => match?.id === parseInt(id, 10));
 }
