@@ -1,5 +1,6 @@
 import { useData } from '../context/DataContext';
 import { getPlayersFromTeam, getTeamByName } from '../utils/dataUtils';
+import Player from './Player';
 
 function TeamDetails() {
   const { teamsData } = useData();
@@ -21,7 +22,11 @@ function TeamDetails() {
     <div>
       <ul>
         {players.map((player) => (
-          <li key={player.id}>{player.fullname}</li>
+          // <li key={player.id}>{player.fullname}</li>
+          <Player
+            key={player.id}
+            player={player}
+          />
         ))}
       </ul>
     </div>
