@@ -52,67 +52,100 @@ export default function MatchDetails() {
   if (!match) {
     return <ErrorComponent />;
   }
-  console.log(match);
+  // console.log(match);
 
-  console.log(
-    match.teamB.players.map(
-      (player) =>
-        player.playingTime.length === 0
-          ? console.log('check this player', player)
-          : ''
-
-      // return player.playingTime.map((playingTime) =>
-      //   console.log(playingTime.tominutes == playingTime.fromminutes)
-      // );
-    )
-  );
-
-  return <div className=''>test</div>;
-  // (
-  //   <section className='match'>
-  //     <div className='match__container'>
-  //       <h1 className='match__heading-primary'>This is Match details page</h1>
-  //       <div className='match__details'>
-  //         <div className='match__team-info'>
-  //           <div className='match__team-name'>Pesho</div>
-  //           <div className='match__team-flag'></div>
-  //           <ul className='match__team-a'>
-  //             <li className='match__team-a-players'>1</li>
-  //             <li className='match__team-a-players'>1</li>
-  //             <li className='match__team-a-players'>1</li>
-  //             <li className='match__team-a-players'>1</li>
-  //             <li className='match__team-a-players'>1</li>
-  //             <li className='match__team-a-players'>1</li>
-  //             <li className='match__team-a-players'>1</li>
-  //             <li className='match__team-a-players'>1</li>
-  //             <li className='match__team-a-players'>1</li>
-  //             <li className='match__team-a-players'>1</li>
-  //             <li className='match__team-a-players'>1</li>
-  //           </ul>
-  //         </div>
-  //         <div className='match__field-view'>
-  //           <div className='match__field-view--team1'></div>
-  //           <div className='match__field-view--team2'></div>
-  //         </div>
-  //         <div className='match__team-info'>
-  //           <div className='match__team-name'>Gosho</div>
-  //           <div className='match__team-flag'></div>
-  //           <ul className='match__team-b'>
-  //             <li className='match__team-b-players'>2</li>
-  //             <li className='match__team-b-players'>2</li>
-  //             <li className='match__team-b-players'>2</li>
-  //             <li className='match__team-b-players'>2</li>
-  //             <li className='match__team-b-players'>2</li>
-  //             <li className='match__team-b-players'>2</li>
-  //             <li className='match__team-b-players'>2</li>
-  //             <li className='match__team-b-players'>2</li>
-  //             <li className='match__team-b-players'>2</li>
-  //             <li className='match__team-b-players'>2</li>
-  //             <li className='match__team-b-players'>2</li>
-  //           </ul>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </section>
+  // console.log(
+  //   match.teamB.players.map((player) =>
+  //     player.playingTime.length === 0
+  //       ? console.log('check this player', player)
+  //       : ''
+  //   )
   // );
+
+  return (
+    <section className='match'>
+      <div className='match__container'>
+        <aside className='match__team'>
+          <div className='match__team-info'>
+            <div className='match__team-name'>Pesho</div>
+            <div className='match__team-flag'></div>
+            <ul className='match__team-list'>
+              <li className='match__team-players'>1</li>
+              <li className='match__team-players'>1</li>
+              <li className='match__team-players'>1</li>
+              <li className='match__team-players'>1</li>
+              <li className='match__team-players'>1</li>
+              <li className='match__team-players'>1</li>
+              <li className='match__team-players'>1</li>
+              <li className='match__team-players'>1</li>
+              <li className='match__team-players'>1</li>
+              <li className='match__team-players'>1</li>
+              <li className='match__team-players'>1</li>
+            </ul>
+          </div>
+        </aside>
+        <div className='match__details'>
+          <div className='match__info'>
+            <div className='match__flag'>flag</div>
+            <div className='match__team-name'>Name</div>
+            <div className='match__info'>SCORE</div>
+            <div className='match__info'>-</div>
+            <div className='match__info'>SCORE</div>
+            <div className='match__info'>flag</div>
+            <div className='match__info'>Name</div>
+          </div>
+          <div>Phase</div>
+          <ul>
+            <li>Goal</li>
+            <li>Goal</li>
+            <li>Goal</li>
+            <li>Goal</li>
+          </ul>
+          <div>Ball</div>
+          <ul>
+            <li>Goal</li>
+            <li>Goal</li>
+            <li>Goal</li>
+            <li>Goal</li>
+          </ul>
+        </div>
+
+        <div className='match__field-view'>
+          <div className='match__field-view--team1'>
+            <div>player</div>
+            <div>player</div>
+            <div>player</div>
+            <div>player</div>
+            <div>player</div>
+          </div>
+          <div className='match__field-view--team2'>
+            <div>player</div>
+            <div>player</div>
+            <div>player</div>
+            <div>player</div>
+            <div>player</div>
+          </div>
+        </div>
+        <aside className='match__team'>
+          <div className='match__team-info'>
+            <div className='match__team-name'>Gosho</div>
+            <div className='match__team-flag'></div>
+            <ul className='match__team-list'>
+              <li className='match__team-players'>2</li>
+              <li className='match__team-players'>2</li>
+              <li className='match__team-players'>2</li>
+              <li className='match__team-players'>2</li>
+              <li className='match__team-players'>2</li>
+              <li className='match__team-players'>2</li>
+              <li className='match__team-players'>2</li>
+              <li className='match__team-players'>2</li>
+              <li className='match__team-players'>2</li>
+              <li className='match__team-players'>2</li>
+              <li className='match__team-players'>2</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  );
 }
