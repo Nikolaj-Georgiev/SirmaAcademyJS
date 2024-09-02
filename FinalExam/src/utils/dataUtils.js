@@ -1,4 +1,3 @@
-//fetch the data from the csv
 export async function fetchCSV(url) {
   try {
     const response = await fetch(url);
@@ -16,7 +15,6 @@ export async function fetchCSV(url) {
   }
 }
 
-//parse the data from the CSV
 export function parseCSVData(data) {
   try {
     const lines = data.split('\n').filter(line => line.trim() !== '');

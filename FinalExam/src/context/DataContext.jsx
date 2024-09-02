@@ -4,6 +4,7 @@ import useGetTeamsFlags from '../hooks/useGetTeamsFlags';
 import { TEAMS } from '../utils/config';
 import Error from '../components/Error';
 import Loader from '../components/Loader';
+import { createRecordsIndexObj } from '../utils/dataUtils';
 
 const DataContext = createContext({
   playersData: [],
@@ -38,9 +39,19 @@ export const DataProvider = ({ children }) => {
   ) {
     return <Error />;
   }
+
+  const recordsIndexObject = createRecordsIndexObj(recordsData.data);
+
   return (
     <DataContext.Provider
-      value={{ teamsData, matchesData, playersData, recordsData, flagUrls }}
+      value={{
+        teamsData,
+        matchesData,
+        playersData,
+        recordsData,
+        flagUrls,
+        recordsIndexObject,
+      }}
     >
       {children}
     </DataContext.Provider>
