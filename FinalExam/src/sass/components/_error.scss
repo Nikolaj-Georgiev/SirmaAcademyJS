@@ -4,8 +4,9 @@
   height: 78px;
   border-radius: 50%;
   box-sizing: border-box;
-  background: #fff;
+  background: $color-text-light;
   border: 8px solid #131a1d;
+  // border: 8px solid $color-secondary-04;
   overflow: hidden;
   box-sizing: border-box;
 
@@ -28,7 +29,8 @@
   top: -50%;
   width: 100%;
   height: 100%;
-  background: #263238;
+  // background: #263238;
+  background: $color-data-01;
   z-index: 5;
   border-bottom: 8px solid #131a1d;
   box-sizing: border-box;
