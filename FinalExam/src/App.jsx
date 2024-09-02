@@ -9,6 +9,7 @@ import HomePage from './components/HomePage';
 function App() {
   return (
     <>
+      {/* TODO: made button to HOME TEAMS PLAYERS the rest will be handled by links and clicks */}
       <Header />
       <Routes>
         <Route
@@ -16,7 +17,7 @@ function App() {
           element={<HomePage />}
         />
         <Route
-          path='/matches'
+          path='/matches/:id'
           element={<MatchDetails />}
         />
         <Route

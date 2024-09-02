@@ -56,6 +56,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem 1rem;
+    transition: all 0.2s ease-in;
+    border-radius: 2rem;
+    margin-top: 2rem;
+
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      box-shadow: rgba(34, 66, 211, 0.35) 0px 5px 15px;
+    }
   }
 
   &__team-name {

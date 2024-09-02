@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
 
 export default function Header() {
+  {
+    /* TODO: made button to HOME TEAMS PLAYERS the rest will be handled by links and clicks */
+  }
+
   const pages = [
     { title: 'Home', path: '/' },
-    { title: 'Matches Details', path: '/matches' },
-    { title: 'Team Details', path: '/teams' },
+    // { title: 'Matches Details', path: '/matches' },
+    { title: 'Teams', path: '/teams' },
     { title: 'Players', path: '/players' },
   ];
 

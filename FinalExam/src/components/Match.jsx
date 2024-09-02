@@ -1,8 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import { useData } from '../context/DataContext';
 import { getTeamById } from '../utils/dataUtils';
 
 export default function Match({ match }) {
   const { teamsData, flagUrls } = useData();
+  const navigate = useNavigate();
+
+  function handleSelectMatch(matchId) {
+    navigate(`/matches/${matchId}`);
+  }
 
   if (teamsData.loading) {
     return <span class='loader'></span>;
@@ -15,8 +21,13 @@ export default function Match({ match }) {
   const teamA = getTeamById(teamsData.data, match.ateamid);
   const teamB = getTeamById(teamsData.data, match.bteamid);
 
+  console.log(match);
+
   return (
-    <li className='home__list-item'>
+    <li
+      className='home__list-item'
+      onClick={() => handleSelectMatch(match.id)}
+    >
       <div className='home__team-card'>
         <p className='home__heading-tertiary home__team-name'>{`${teamA.name}`}</p>
         <img
