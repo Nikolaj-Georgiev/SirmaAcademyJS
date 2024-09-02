@@ -17,7 +17,7 @@ function App() {
           element={<HomePage />}
         />
         <Route
-          path='/matches/:id'
+          path='/matches/:matchId'
           element={<MatchDetails />}
         />
         <Route

@@ -1,4 +1,31 @@
+import { useParams } from 'react-router-dom';
+import { useData } from '../context/DataContext';
+import Loader from './Loader';
+
 export default function MatchDetails() {
+  const { matchesData, flagUrls, teamsData, playersData, recordsData } =
+    useData();
+
+  const { matchId } = useParams();
+  console.log(matchId);
+
+  // TODO:
+  // 1. add logic for extracting the teams and players with their records
+  // 2. visualize teams on both size of the fields with names and records
+  // 3. add data to visualize the players on their corresponding fields
+
+  if (
+    matchesData.loading ||
+    flagUrls.loading ||
+    playersData.loading ||
+    teamsData.loading ||
+    recordsData.loading
+  ) {
+    return <Loader text='Match details are loading..' />;
+  }
+
+  // console.log(matchesData, flagUrls, playersData, teamsData, recordsData);
+
   return (
     <section className='match'>
       <div className='match__container'>
