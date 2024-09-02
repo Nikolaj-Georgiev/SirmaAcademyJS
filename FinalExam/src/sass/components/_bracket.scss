@@ -1,0 +1,30 @@
+// TODO:
+// 1. to add grid for 0 matches 1 bracket
+// 2. to add 'proper' styling for games and lines
+
+.bracket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.match {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.team {
+  width: 90px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.bracket-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
