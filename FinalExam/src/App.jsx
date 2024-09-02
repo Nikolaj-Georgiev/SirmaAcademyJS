@@ -5,6 +5,7 @@ import MatchDetails from './components/MatchDetails';
 import Header from './components/Header';
 import Players from './components/Players';
 import HomePage from './components/HomePage';
+import Groups from './components/Groups';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
         <Route
           path='/matches/:matchId'
           element={<MatchDetails />}
+        />
+        <Route
+          path='/groups'
+          element={<Groups />}
         />
         <Route
           path='/teams'

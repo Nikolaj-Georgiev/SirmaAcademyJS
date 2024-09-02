@@ -7,7 +7,7 @@ export default function Header() {
 
   const pages = [
     { title: 'Home', path: '/' },
-    // { title: 'Matches Details', path: '/matches' },
+    { title: 'Groups', path: '/groups' },
     { title: 'Teams', path: '/teams' },
     { title: 'Players', path: '/players' },
   ];

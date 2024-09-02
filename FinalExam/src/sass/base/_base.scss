@@ -14,11 +14,12 @@ body {
   font-family: $font-stack-main;
   font-weight: 400;
   font-size: 1.8rem;
-  background-image: linear-gradient(
-    to bottom,
-    $color-primary-01,
-    $color-primary-02
-  );
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   $color-primary-01,
+  //   $color-primary-02
+  // );
+  background-color: $color-primary-01;
 }
 
 a {

@@ -24,7 +24,11 @@ export default function MatchDetails() {
     return <Loader text='Match details are loading..' />;
   }
 
-  // console.log(matchesData, flagUrls, playersData, teamsData, recordsData);
+  console.log(matchesData);
+  console.log(flagUrls);
+  console.log(playersData);
+  console.log(teamsData);
+  console.log(recordsData);
 
   return (
     <section className='match'>
