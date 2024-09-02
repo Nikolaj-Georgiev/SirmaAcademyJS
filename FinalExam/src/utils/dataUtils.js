@@ -157,7 +157,7 @@ export function getMatchDetailsById(matchId, matches, teams, players, recordsInd
     toMinutes: record.tominutes !== 'NULL' ? record.tominutes : '90',
   }));
 
-  const [teamAScore, teamBScore] =
+  const [teamAScore, teamBScore] = match.score.split('-');
   // console.log(goals);
 
   const teamAWithPlayingTime = addPlayingTimeToPlayers(teamAPlayers, playingTime);
@@ -174,13 +174,15 @@ export function getMatchDetailsById(matchId, matches, teams, players, recordsInd
       name: teamA.name,
       manager: teamA.managerfullname,
       flag: flagsUrl[teamA.name],
-      players: teamAWithPlayingTime
+      players: teamAWithPlayingTime,
+      teamScore: teamAScore,
     },
     teamB: {
       name: teamB.name,
       manager: teamB.managerfullname,
       flag: flagsUrl[teamB.name],
-      players: teamBWithPlayingTime
+      players: teamBWithPlayingTime,
+      teamAScore: teamBScore,
     }
   }
 }
