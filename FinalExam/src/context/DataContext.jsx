@@ -20,7 +20,6 @@ export const DataProvider = ({ children }) => {
   const matchesData = useCSVData('/matches.csv');
 
   const flagUrls = useGetTeamsFlags(TEAMS);
-  console.log(flagUrls);
 
   if (
     playersData.loading ||
