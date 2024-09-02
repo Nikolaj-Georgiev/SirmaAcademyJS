@@ -3,6 +3,7 @@ import { useData } from '../context/DataContext';
 import Loader from './Loader';
 import { getMatchDetailsById } from '../utils/dataUtils';
 import Error from './ErrorComponent';
+import Player from './Player';
 
 export default function MatchDetails() {
   const { matchesData, flagUrls, teamsData, playersData, recordsIndexObject } =
@@ -52,7 +53,7 @@ export default function MatchDetails() {
   if (!match) {
     return <ErrorComponent />;
   }
-  // console.log(match);
+  console.log(match);
 
   // console.log(
   //   match.teamB.players.map((player) =>
@@ -67,20 +68,21 @@ export default function MatchDetails() {
       <div className='match__container'>
         <aside className='match__team'>
           <div className='match__team-info'>
-            <div className='match__team-name'>Pesho</div>
-            <div className='match__team-flag'></div>
+            <div className='match__team-name'>{match.teamA.name}</div>
+            <div className='match__team-flag'>
+              <img
+                src={match.teamA.flag}
+                alt={`flag of ${match.teamA.name}`}
+              />
+            </div>
             <ul className='match__team-list'>
-              <li className='match__team-players'>1</li>
-              <li className='match__team-players'>1</li>
-              <li className='match__team-players'>1</li>
-              <li className='match__team-players'>1</li>
-              <li className='match__team-players'>1</li>
-              <li className='match__team-players'>1</li>
-              <li className='match__team-players'>1</li>
-              <li className='match__team-players'>1</li>
-              <li className='match__team-players'>1</li>
-              <li className='match__team-players'>1</li>
-              <li className='match__team-players'>1</li>
+              {match.teamA.players.map((player) => (
+                <Player
+                  key={player.id}
+                  player={player}
+                  cssClass={'match__team-player'}
+                />
+              ))}
             </ul>
           </div>
         </aside>

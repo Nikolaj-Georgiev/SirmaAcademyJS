@@ -18,10 +18,10 @@ export default function Header() {
       <div className='header__logo-container'>
         <img
           className='header__logo-container--img'
-          src='/euro-2024.ico'
+          src='/goal_icon.ico'
           alt='Icon of football tournament'
         />
-        <h2 className='header__logo-container--text'>Football Tournament</h2>
+        <h2 className='header__logo-container--text'>Tournament</h2>
       </div>
       <nav className='header__nav'>
         <ul className='header__nav-list'>

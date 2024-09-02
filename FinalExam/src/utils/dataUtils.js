@@ -157,6 +157,7 @@ export function getMatchDetailsById(matchId, matches, teams, players, recordsInd
     toMinutes: record.tominutes !== 'NULL' ? record.tominutes : '90',
   }));
 
+  const [teamAScore, teamBScore] =
   // console.log(goals);
 
   const teamAWithPlayingTime = addPlayingTimeToPlayers(teamAPlayers, playingTime);
