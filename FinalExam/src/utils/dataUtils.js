@@ -111,3 +111,14 @@ export function divideMatchesByStage(matches, cutOffDate) {
 
   return stages;
 }
+
+export function createRecordsIndexObj(records) {
+  return records.reduce((indexObj, record) => {
+    if (!indexObj[record.matchid]) {
+      indexObj[record.matchid] = [];
+    }
+
+    indexObj[record.matchid].push(record);
+    return indexObj
+  }, {});
+}
