@@ -2,7 +2,7 @@ import { createContext, useContext } from 'react';
 import useCSVData from '../hooks/useCSVData';
 import useGetTeamsFlags from '../hooks/useGetTeamsFlags';
 import { TEAMS } from '../utils/config';
-import Error from '../components/Error';
+import ErrorComponent from '../components/ErrorComponent';
 import Loader from '../components/Loader';
 import { createRecordsIndexObj } from '../utils/dataUtils';
 
@@ -12,6 +12,7 @@ const DataContext = createContext({
   recordsData: [],
   matchesData: [],
   flagUrls: {},
+  recordsIndexObject: {},
 });
 
 export const DataProvider = ({ children }) => {
@@ -37,7 +38,7 @@ export const DataProvider = ({ children }) => {
     recordsData.error ||
     matchesData.error
   ) {
-    return <Error />;
+    return <ErrorComponent />;
   }
 
   const recordsIndexObject = createRecordsIndexObj(recordsData.data);

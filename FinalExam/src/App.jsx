@@ -11,15 +11,14 @@ import Bracket from './components/Bracket';
 function App() {
   // TODO: - deside should you pass data to the bracket from here, or get it in the component.!!(Second is better I think)
   const matches = [
-    { team1: 'Team A', team2: 'Team B' },
-    { team1: 'Team C', team2: 'Team D' },
-    { team1: 'Team A', team1: 'Team B' },
-    { team1: 'Team A', team1: 'Team B' },
+    { team1: 'Team A', team5: 'Team B' },
+    { team2: 'Team C', team6: 'Team D' },
+    { team3: 'Team A', team7: 'Team B' },
+    { team4: 'Team A', team8: 'Team B' },
   ];
 
   return (
     <>
-      {/* TODO: made button to HOME TEAMS PLAYERS the rest will be handled by links and clicks */}
       <Header />
       <Routes>
         <Route

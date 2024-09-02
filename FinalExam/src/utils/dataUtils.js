@@ -120,3 +120,66 @@ export function createRecordsIndexObj(records) {
     return indexObj
   }, {});
 }
+
+export function addPlayingTimeToPlayers(teamPlayers, playingTime) {
+  return teamPlayers.map((player) => {
+    const playerPlayingTime = playingTime
+      .filter(playing => playing.playerId === player.id)
+      .map(playing => ({ fromminutes: playing.fromMinutes, tominutes: playing.toMinutes }))
+    return {
+      ...player,
+      playingTime: playerPlayingTime,
+    };
+  });
+}
+
+export function getMatchDetailsById(matchId, matches, teams, players, recordsIndexObj, flagsUrl) {
+  const match = getMatchById(matches, matchId);
+  if (!match) return null;
+
+  const teamA = getTeamById(teams, match.ateamid);
+  const teamB = getTeamById(teams, match.bteamid);
+
+  // console.log(teamA);
+  // console.log(teamB);
+
+  const teamAPlayers = getPlayersFromTeam(teamA.id, players);
+  const teamBPlayers = getPlayersFromTeam(teamB.id, players);
+
+  // console.log(teamAPlayers);
+  // console.log(teamBPlayers);
+
+  // console.log(recordsIndexObj);
+
+  const playingTime = (recordsIndexObj[matchId] || []).map(record => ({
+    playerId: record.playerid,
+    fromMinutes: record.fromminutes,
+    toMinutes: record.tominutes !== 'NULL' ? record.tominutes : '90',
+  }));
+
+  // console.log(goals);
+
+  const teamAWithPlayingTime = addPlayingTimeToPlayers(teamAPlayers, playingTime);
+  const teamBWithPlayingTime = addPlayingTimeToPlayers(teamBPlayers, playingTime);
+
+  // console.log(teamAWithGoals);
+  // console.log(teamBWithGoals);
+
+  return {
+    matchId,
+    date: match.date,
+    score: match.score,
+    teamA: {
+      name: teamA.name,
+      manager: teamA.managerfullname,
+      flag: flagsUrl[teamA.name],
+      players: teamAWithPlayingTime
+    },
+    teamB: {
+      name: teamB.name,
+      manager: teamB.managerfullname,
+      flag: flagsUrl[teamB.name],
+      players: teamBWithPlayingTime
+    }
+  }
+}

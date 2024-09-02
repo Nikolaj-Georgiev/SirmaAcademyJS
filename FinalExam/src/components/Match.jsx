@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useData } from '../context/DataContext';
 import { getTeamById } from '../utils/dataUtils';
+import Loader from './Loader';
 
 export default function Match({ match }) {
   const { teamsData, flagUrls } = useData();
@@ -10,18 +11,12 @@ export default function Match({ match }) {
     navigate(`/matches/${matchId}`);
   }
 
-  if (teamsData.loading) {
-    return <span class='loader'></span>;
-  }
-
-  if (flagUrls.loading) {
-    return <span class='loader'></span>;
+  if (teamsData.loading || flagUrls.loading) {
+    return <Loader />;
   }
 
   const teamA = getTeamById(teamsData.data, match.ateamid);
   const teamB = getTeamById(teamsData.data, match.bteamid);
-
-  console.log(match);
 
   return (
     <li
