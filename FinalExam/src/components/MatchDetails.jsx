@@ -135,7 +135,7 @@ export default function MatchDetails() {
               ))}
             </ul>
             <ul className='match-details__field-view-list-team'>
-              {renderedTeamB.map((playersInPosition, index) => (
+              {[...renderedTeamB].reverse().map((playersInPosition, index) => (
                 <li
                   key={index}
                   className='match-details__field-view-list-team--line'
