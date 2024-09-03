@@ -9,6 +9,7 @@ import Error from './ErrorComponent';
 import Player from './Player';
 import { FIELD_SCHEMA } from '../utils/config';
 import PlayerMini from './PlayerMini';
+import useTeamFieldSchema from '../hooks/useTeamFieldSchema';
 
 export default function MatchDetails() {
   const { matchesData, flagUrls, teamsData, playersData, recordsIndexObject } =
@@ -70,6 +71,12 @@ export default function MatchDetails() {
   );
   console.log(teamAFieldSchema);
   console.log(teamBFieldSchema);
+
+  const renderedTeamA = useTeamFieldSchema(
+    teamAFieldSchema,
+    match.teamA.players
+  );
+  console.log(renderedTeamA);
 
   // console.log(
   //   match.teamB.players.map((player) =>

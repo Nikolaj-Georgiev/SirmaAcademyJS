@@ -56,4 +56,5 @@ export const FIELD_SCHEMA = [
   { name: 'Czech Republic', schema: [1, 4, 2, 3, 1] }
 ]
 
+// for the app logic it is important to keep the order in the POSITIONS array!
 export const POSITIONS = ['GK', 'DF', 'MF', 'FW'];
