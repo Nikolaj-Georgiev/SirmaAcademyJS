@@ -182,7 +182,19 @@ export function getMatchDetailsById(matchId, matches, teams, players, recordsInd
       manager: teamB.managerfullname,
       flag: flagsUrl[teamB.name],
       players: teamBWithPlayingTime,
-      teamAScore: teamBScore,
+      teamScore: teamBScore,
     }
   }
+}
+
+export function getTeamFieldSchemaByTeamName(teamName, fieldSchemasArray) {
+  const teamSchema = fieldSchemasArray.find((fieldSchema) => fieldSchema.name === teamName);
+  return teamSchema ? teamSchema.schema : null;
+}
+
+export function getPlayersByPosition(players, positions) {
+  return positions.reduce((playersByPositionAccumulator, position) => {
+    playersByPositionAccumulator[position] = players.filter(player => player.position === position);
+    return playersByPositionAccumulator;
+  }, {})
 }

@@ -1,9 +1,14 @@
 import { useParams } from 'react-router-dom';
 import { useData } from '../context/DataContext';
 import Loader from './Loader';
-import { getMatchDetailsById } from '../utils/dataUtils';
+import {
+  getMatchDetailsById,
+  getTeamFieldSchemaByTeamName,
+} from '../utils/dataUtils';
 import Error from './ErrorComponent';
 import Player from './Player';
+import { FIELD_SCHEMA } from '../utils/config';
+import PlayerMini from './PlayerMini';
 
 export default function MatchDetails() {
   const { matchesData, flagUrls, teamsData, playersData, recordsIndexObject } =
@@ -55,6 +60,17 @@ export default function MatchDetails() {
   }
   console.log(match);
 
+  const teamAFieldSchema = getTeamFieldSchemaByTeamName(
+    match.teamA.name,
+    FIELD_SCHEMA
+  );
+  const teamBFieldSchema = getTeamFieldSchemaByTeamName(
+    match.teamB.name,
+    FIELD_SCHEMA
+  );
+  console.log(teamAFieldSchema);
+  console.log(teamBFieldSchema);
+
   // console.log(
   //   match.teamB.players.map((player) =>
   //     player.playingTime.length === 0
@@ -68,13 +84,13 @@ export default function MatchDetails() {
       <div className='match__container'>
         <aside className='match__team'>
           <div className='match__team-info'>
-            <div className='match__team-name'>{match.teamA.name}</div>
             <div className='match__team-flag'>
               <img
                 src={match.teamA.flag}
                 alt={`flag of ${match.teamA.name}`}
               />
             </div>
+            <h3 className='match__team-manager'>{`Team Manager: ${match.teamA.manager}`}</h3>
             <ul className='match__team-list'>
               {match.teamA.players.map((player) => (
                 <Player
@@ -88,15 +104,14 @@ export default function MatchDetails() {
         </aside>
         <div className='match__details'>
           <div className='match__info'>
-            <div className='match__flag'>flag</div>
-            <div className='match__team-name'>Name</div>
-            <div className='match__info'>SCORE</div>
-            <div className='match__info'>-</div>
-            <div className='match__info'>SCORE</div>
-            <div className='match__info'>flag</div>
-            <div className='match__info'>Name</div>
+            <div className='match__team-name'>{match.teamA.name}</div>
+            <div className='match__team-score'>{match.teamA.teamScore}</div>
+            <div className='match__team-delimiter'>-</div>
+            <div className='match__team-score'>{match.teamB.teamScore}</div>
+            <div className='match__team-name'>{match.teamB.name}</div>
           </div>
-          <div>Phase</div>
+          {/* TODO: If there are goals I can add goals and also the phase of the match */}
+          {/* <div>Phase</div>
           <ul>
             <li>Goal</li>
             <li>Goal</li>
@@ -109,17 +124,22 @@ export default function MatchDetails() {
             <li>Goal</li>
             <li>Goal</li>
             <li>Goal</li>
-          </ul>
+          </ul> */}
         </div>
 
         <div className='match__field-view'>
-          <div className='match__field-view--team1'>
-            <div>player</div>
-            <div>player</div>
-            <div>player</div>
-            <div>player</div>
-            <div>player</div>
-          </div>
+          <ul className='match__field-view--team1-list'>
+            {teamAFieldSchema.map((numPlayers, index) => (
+              <li key={index}>
+                {Array.from({ length: numPlayers }).map((_, playerIndex) => (
+                  <PlayerMini
+                    key={playerIndex}
+                    cssClass={'match__field-view--team1-list-item'}
+                  />
+                ))}
+              </li>
+            ))}
+          </ul>
           <div className='match__field-view--team2'>
             <div>player</div>
             <div>player</div>
