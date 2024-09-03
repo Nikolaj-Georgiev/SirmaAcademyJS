@@ -58,3 +58,5 @@ export const FIELD_SCHEMA = [
 
 // for the app logic it is important to keep the order in the POSITIONS array!
 export const POSITIONS = ['GK', 'DF', 'MF', 'FW'];
+
+export const PHASE_NAMES = ['RoundOf16', 'Quarter Final', 'Semi Final', 'Final'];
