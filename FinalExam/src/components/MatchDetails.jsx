@@ -20,8 +20,9 @@ export default function MatchDetails() {
 
   // TODO:
   // 1. add logic for extracting the teams and players with their records - done
-  // 2. visualize teams on both size of the fields with names and records
-  // 3. add data to visualize the players on their corresponding fields
+  // 2. visualize teams on both size of the fields with names and records - done
+  // 3. add data to visualize the players on their corresponding fields - done
+  // 4. style the component
 
   if (
     matchesData.loading ||
@@ -40,12 +41,6 @@ export default function MatchDetails() {
   ) {
     return <Error />;
   }
-
-  // console.log(matchesData);
-  // console.log(flagUrls);
-  // console.log(playersData);
-  // console.log(teamsData);
-  // console.log(recordsData);
 
   const match = getMatchDetailsById(
     matchId,
@@ -76,15 +71,12 @@ export default function MatchDetails() {
     teamAFieldSchema,
     match.teamA.players
   );
+  const renderedTeamB = useTeamFieldSchema(
+    teamAFieldSchema,
+    match.teamB.players
+  );
   console.log(renderedTeamA);
-
-  // console.log(
-  //   match.teamB.players.map((player) =>
-  //     player.playingTime.length === 0
-  //       ? console.log('check this player', player)
-  //       : ''
-  //   )
-  // );
+  console.log(renderedTeamB);
 
   return (
     <section className='match'>
@@ -117,60 +109,53 @@ export default function MatchDetails() {
             <div className='match__team-score'>{match.teamB.teamScore}</div>
             <div className='match__team-name'>{match.teamB.name}</div>
           </div>
-          {/* TODO: If there are goals I can add goals and also the phase of the match */}
-          {/* <div>Phase</div>
-          <ul>
-            <li>Goal</li>
-            <li>Goal</li>
-            <li>Goal</li>
-            <li>Goal</li>
-          </ul>
-          <div>Ball</div>
-          <ul>
-            <li>Goal</li>
-            <li>Goal</li>
-            <li>Goal</li>
-            <li>Goal</li>
-          </ul> */}
         </div>
 
         <div className='match__field-view'>
-          <ul className='match__field-view--team1-list'>
-            {teamAFieldSchema.map((numPlayers, index) => (
+          <ul className='match__field-view-list-team1'>
+            {renderedTeamA.map((playersInPosition, index) => (
               <li key={index}>
-                {Array.from({ length: numPlayers }).map((_, playerIndex) => (
+                {playersInPosition.map((player) => (
                   <PlayerMini
-                    key={playerIndex}
+                    key={player.id}
+                    player={player}
                     cssClass={'match__field-view--team1-list-item'}
                   />
                 ))}
               </li>
             ))}
           </ul>
-          <div className='match__field-view--team2'>
-            <div>player</div>
-            <div>player</div>
-            <div>player</div>
-            <div>player</div>
-            <div>player</div>
+          <div className='match__field-view-list-team2'>
+            {renderedTeamB.map((playersInPosition, index) => (
+              <li key={index}>
+                {playersInPosition.map((player) => (
+                  <PlayerMini
+                    key={player.id}
+                    player={player}
+                    cssClass={'match__field-view--team1-list-item'}
+                  />
+                ))}
+              </li>
+            ))}
           </div>
         </div>
         <aside className='match__team'>
           <div className='match__team-info'>
-            <div className='match__team-name'>Gosho</div>
-            <div className='match__team-flag'></div>
+            <div className='match__team-flag'>
+              <img
+                src={match.teamB.flag}
+                alt={`flag of ${match.teamB.name}`}
+              />
+            </div>
+            <h3 className='match__team-manager'>{`Team Manager: ${match.teamB.manager}`}</h3>
             <ul className='match__team-list'>
-              <li className='match__team-players'>2</li>
-              <li className='match__team-players'>2</li>
-              <li className='match__team-players'>2</li>
-              <li className='match__team-players'>2</li>
-              <li className='match__team-players'>2</li>
-              <li className='match__team-players'>2</li>
-              <li className='match__team-players'>2</li>
-              <li className='match__team-players'>2</li>
-              <li className='match__team-players'>2</li>
-              <li className='match__team-players'>2</li>
-              <li className='match__team-players'>2</li>
+              {match.teamB.players.map((player) => (
+                <Player
+                  key={player.id}
+                  player={player}
+                  cssClass={'match__team-player'}
+                />
+              ))}
             </ul>
           </div>
         </aside>
