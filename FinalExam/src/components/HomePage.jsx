@@ -7,6 +7,7 @@ import {
 import { CUTOFF_DATE } from '../utils/config';
 import Match from './Match';
 import Loader from './Loader';
+import ErrorComponent from './ErrorComponent';
 
 export default function HomePage() {
   const { matchesData } = useData();
@@ -17,6 +18,9 @@ export default function HomePage() {
     matchesData.data.length === 0
   ) {
     return <Loader />;
+  }
+  if (matchesData.error) {
+    return <ErrorComponent />;
   }
   const ascendingSortedMatches = getSortedMatchesByDate(matchesData.data);
 
@@ -63,7 +67,6 @@ export default function HomePage() {
 }
 
 function renderMatches(groupedMatches, stageName) {
-  console.log(`rendering: groupedMatches`);
   return Object.keys(groupedMatches).map((date) => {
     return (
       <div key={date}>
