@@ -198,3 +198,17 @@ export function getPlayersByPosition(players, positions) {
     return playersByPositionAccumulator;
   }, {})
 }
+
+export function getWinnerFromMatch(match) {
+  const [teamAScore, teamBScore] = match.score.split('-');
+  const winner = (score1, score2) => {
+    if (!isNaN(+score1) && !isNaN(+score2)) {
+      return score1 > score2 ? match.ateamid : match.bteamid;
+    }
+    const score1New = score1.slice(-2).slice(0, 1)//this is football there are no 2 digits results :)
+    const score2New = score2.slice(-2).slice(0, 1)
+    return score1New > score2New ? match.ateamid : match.bteamid;
+  }
+
+  return winner(teamAScore, teamBScore);
+}
