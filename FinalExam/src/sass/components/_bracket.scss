@@ -12,6 +12,11 @@
   margin: 0 auto;
 
   &__phase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     &-date {
       margin: 2rem auto;
       display: flex;
@@ -30,6 +35,7 @@
     &--1 {
     }
     &--2 {
+      // TODO: 1. get title to the top.2 add proper spacing to match the lines 3. Repeat to next phases
     }
     &--3 {
     }
