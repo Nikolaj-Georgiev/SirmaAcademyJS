@@ -6,15 +6,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: $color-primary-05;
+  height: 100%;
 
   &__match {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 10px 0;
-    gap: 3rem;
+    justify-content: space-between;
+    width: 20rem;
     position: relative;
+    padding: 1rem;
+    border: 1px solid rgba($color-text-light, 0.2);
+    border-radius: 0.9rem;
+    box-shadow: rgba(34, 66, 211, 0.35) 0 0 1.5rem;
+    &:hover {
+      cursor: pointer;
+    }
 
     &-teams {
       display: flex;
@@ -79,5 +87,5 @@
 .bracket-line {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  // transform: translateX(-50%);
 }
