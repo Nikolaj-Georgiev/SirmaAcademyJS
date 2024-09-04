@@ -4,9 +4,15 @@ import {
   getTeamById,
   getWinnerIdAndWinWayFromMatch,
 } from '../utils/dataUtils';
+import ErrorComponent from './ErrorComponent';
+import Loader from './Loader';
 
 export default function BracketMatch({ match }) {
   const { teamsData } = useData();
+
+  if (teamsData.loading) return <Loader text='Match info loading..' />;
+  if (teamsData.error)
+    return <ErrorComponent text='Cannot load teams data :(' />;
 
   const matchInfo = () => {
     const teamA = getTeamById(teamsData, match.ateamid);
