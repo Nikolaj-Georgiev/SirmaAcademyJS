@@ -30,20 +30,24 @@ export default function BracketMatch({ match }) {
   return (
     <div className='bracket__match'>
       <div className='bracket__match-teams'>
-        <div className='bracket__match-teams--1'>
-          {matchInfo.teamA.name}
+        <div className='bracket__match-teams--info'>
+          {matchInfo.teamA.name && <span>{matchInfo.teamA.name}</span>}
           {matchInfo.winnerId === matchInfo.teamA.id ? <span>Win</span> : null}
-          {!matchInfo.winWay && <span>with penalties</span>}
+          {!matchInfo.winWay && matchInfo.winnerId === matchInfo.teamA.id && (
+            <span>with penalties</span>
+          )}
         </div>
-        <div className='bracket__match-teams--2'>
-          {matchInfo.teamB.name}
+        <div className='bracket__match-teams--info'>
+          {matchInfo.teamB.name && <span>{matchInfo.teamB.name}</span>}
           {matchInfo.winnerId === matchInfo.teamB.id ? <span>Win</span> : null}
-          {!matchInfo.winWay && <span>with penalties</span>}
+          {!matchInfo.winWay && matchInfo.winnerId === matchInfo.teamB.id && (
+            <span>with penalties</span>
+          )}
         </div>
-        <div className='bracket__match-score'>
-          <div className='bracket__match-score--1'>{matchInfo.scoreA}</div>
-          <div className='bracket__match-score--2'>{matchInfo.scoreB}</div>
-        </div>
+      </div>
+      <div className='bracket__match-score'>
+        <div className='bracket__match-score--1'>{matchInfo.scoreA}</div>
+        <div className='bracket__match-score--2'>{matchInfo.scoreB}</div>
       </div>
     </div>
   );
