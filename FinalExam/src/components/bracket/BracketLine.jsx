@@ -1,6 +1,6 @@
 export default function BracketLine({ x1, y1, x2, y2 }) {
   return (
-    <svg className='bracket-line'>
+    <svg className='bracket__line'>
       <line
         x1={x1}
         y1={y1}
