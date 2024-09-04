@@ -60,3 +60,10 @@ export const FIELD_SCHEMA = [
 export const POSITIONS = ['GK', 'DF', 'MF', 'FW'];
 
 export const PHASE_NAMES = ['RoundOf16', 'Quarter Final', 'Semi Final', 'Final'];
+
+export const COORDINATES = [
+  { x1: 100, y1: 50, x2: 150, y2: 50 },
+  { x1: 150, y1: 50, x2: 150, y2: 150 },
+  { x1: 150, y1: 150, x2: 100, y2: 150 },
+  { x1: 150, y1: 100, x2: 250, y2: 100 },
+];

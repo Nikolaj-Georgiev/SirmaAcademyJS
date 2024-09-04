@@ -20,8 +20,6 @@ export default function BracketMatch({ match }) {
   if (teamsData.error)
     return <ErrorComponent text='Cannot load teams data :(' />;
 
-  console.log(teamsData);
-
   const matchInfoFn = (teams, match) => {
     const teamA = getTeamById(teams, match.ateamid);
     const teamB = getTeamById(teams, match.bteamid);

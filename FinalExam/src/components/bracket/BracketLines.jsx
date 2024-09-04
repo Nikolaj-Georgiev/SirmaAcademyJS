@@ -1,14 +1,17 @@
-export default function BracketLines({ x1, y1, x2, y2 }) {
+import BracketLine from './BracketLine';
+
+export default function BracketLines({ coordinates }) {
   return (
-    <svg className='bracket-line'>
-      <line
-        x1={x1}
-        y1={y1}
-        x2={x2}
-        y2={y2}
-        stroke='white'
-        strokeWidth='1'
-      />
-    </svg>
+    <>
+      {coordinates.map((coord, index) => (
+        <BracketLine
+          key={index}
+          x1={coord.x1}
+          y1={coord.y1}
+          x2={coord.x2}
+          y2={coord.y2}
+        />
+      ))}
+    </>
   );
 }
