@@ -62,6 +62,7 @@ function renderBracket(phases, phaseNames) {
           key={phaseNames[index]}
           phase={phase}
           phaseName={phaseNames[index]}
+          cssId={index + 1}
         />
       ))}
     </div>
