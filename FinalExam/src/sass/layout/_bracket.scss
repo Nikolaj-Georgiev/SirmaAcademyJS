@@ -1,5 +1,6 @@
 // TODO:
 // 1. to add grid for 0 matches 1 bracket
+// --- trying with flex!!!
 // 2. to add 'proper' styling for games and lines
 
 .bracket {
@@ -30,12 +31,21 @@
         font-size: 1.2rem;
         margin-bottom: -1rem;
       }
+
+      &--1 {
+      }
+      &--2 {
+      }
+      &--3 {
+      }
     }
 
     &--1 {
     }
     &--2 {
       // TODO: 1. get title to the top.2 add proper spacing to match the lines 3. Repeat to next phases
+      align-self: baseline;
+      gap: 10rem;
     }
     &--3 {
     }
