@@ -1,7 +1,5 @@
 import { useData } from '../../context/DataContext';
 
-import BracketLines from './BracketLines';
-import BracketMatch from './BracketMatch';
 import Loader from '../Loader';
 import ErrorComponent from '../ErrorComponent';
 

@@ -4,11 +4,12 @@
 
 .bracket {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: $color-primary-05;
+  width: 90%;
   height: 100%;
+  margin: 0 auto;
 
   &__match {
     display: flex;
