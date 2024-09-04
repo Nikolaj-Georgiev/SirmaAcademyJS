@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useData } from '../context/DataContext';
 import {
   getScoreFromMatch,
@@ -9,6 +10,11 @@ import Loader from './Loader';
 
 export default function BracketMatch({ match }) {
   const { teamsData } = useData();
+  const navigate = useNavigate();
+
+  function handleSelectMatch(matchId) {
+    navigate(`/matches/${matchId}`);
+  }
 
   if (teamsData.loading) return <Loader text='Match info loading..' />;
   if (teamsData.error)
@@ -26,9 +32,11 @@ export default function BracketMatch({ match }) {
   };
 
   const matchInfo = matchInfoFn(teamsData.data, match);
-  console.log(matchInfo);
   return (
-    <div className='bracket__match'>
+    <div
+      className='bracket__match'
+      onClick={() => handleSelectMatch(match.id)}
+    >
       <div className='bracket__match-teams'>
         <div className='bracket__match-teams--info'>
           {matchInfo.teamA.name && <span>{matchInfo.teamA.name}</span>}
