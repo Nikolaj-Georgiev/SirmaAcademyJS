@@ -14,26 +14,30 @@ export default function BracketMatch({ match }) {
   if (teamsData.error)
     return <ErrorComponent text='Cannot load teams data :(' />;
 
-  const matchInfo = () => {
-    const teamA = getTeamById(teamsData, match.ateamid);
-    const teamB = getTeamById(teamsData, match.bteamid);
+  console.log(teamsData);
+
+  const matchInfoFn = (teams, match) => {
+    const teamA = getTeamById(teams, match.ateamid);
+    const teamB = getTeamById(teams, match.bteamid);
     const { winnerId, winWay } = getWinnerIdAndWinWayFromMatch(match);
     const { teamA: scoreA, teamB: scoreB } = getScoreFromMatch(match);
 
     return { teamA, teamB, winnerId, winWay, scoreA, scoreB };
   };
 
+  const matchInfo = matchInfoFn(teamsData.data, match);
+  console.log(matchInfo);
   return (
     <div className='bracket__match'>
       <div className='bracket__match-teams'>
         <div className='bracket__match-teams--1'>
           {matchInfo.teamA.name}
-          {matchInfo.winnerId === teamA.id ? <span>Win</span> : null}
+          {matchInfo.winnerId === matchInfo.teamA.id ? <span>Win</span> : null}
           {!matchInfo.winWay && <span>with penalties</span>}
         </div>
         <div className='bracket__match-teams--2'>
-          {teamB.name}
-          {matchInfo.winnerId === teamB.id ? <span>Win</span> : null}
+          {matchInfo.teamB.name}
+          {matchInfo.winnerId === matchInfo.teamB.id ? <span>Win</span> : null}
           {!matchInfo.winWay && <span>with penalties</span>}
         </div>
         <div className='bracket__match-score'>
