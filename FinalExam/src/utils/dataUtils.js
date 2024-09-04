@@ -199,16 +199,47 @@ export function getPlayersByPosition(players, positions) {
   }, {})
 }
 
-export function getWinnerFromMatch(match) {
+export function getScoreFromMatch(match) {
   const [teamAScore, teamBScore] = match.score.split('-');
-  const winner = (score1, score2) => {
+  return {
+    teamA: teamAScore,
+    teamB: teamBScore
+  }
+}
+
+export function getWinnerIdAndWinWayFromMatch(match) {
+  let winWay = true;
+  let winnerId = null;
+  const winnerAndWay = ({ teamA: score1, teamB: score2 }) => {
     if (!isNaN(+score1) && !isNaN(+score2)) {
-      return score1 > score2 ? match.ateamid : match.bteamid;
+      winnerId = score1 > score2 ? match.ateamid : match.bteamid;
+      return { winnerId, winWay }
+      // return [winnerId, winWay]
     }
     const score1New = score1.slice(-2).slice(0, 1)//this is football there are no 2 digits results :)
     const score2New = score2.slice(-2).slice(0, 1)
-    return score1New > score2New ? match.ateamid : match.bteamid;
+    winnerId = score1New > score2New ? match.ateamid : match.bteamid;
+    winWay = false;
+    return { winnerId, winWay }
+    // return [winnerId, winWay]
   }
 
-  return winner(teamAScore, teamBScore);
+  return winnerAndWay(getScoreFromMatch(match));
 }
+
+
+// export function getWinnerIdFromMatch(match) {
+//   const [teamAScore, teamBScore] = match.score.split('-');
+//   const winner = (score1, score2) => {
+//     if (!isNaN(+score1) && !isNaN(+score2)) {
+//       return score1 > score2 ? match.ateamid : match.bteamid;
+//     }
+//     const score1New = score1.slice(-2).slice(0, 1)//this is football there are no 2 digits results :)
+//     const score2New = score2.slice(-2).slice(0, 1)
+//     return score1New > score2New ? match.ateamid : match.bteamid;
+//   }
+
+//   return winner(teamAScore, teamBScore);
+// }
+
+// getting the score and a boolean to show if it's won by penalties
