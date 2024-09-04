@@ -1,17 +1,17 @@
-import { useData } from '../context/DataContext';
+import { useData } from '../../context/DataContext';
 
 import BracketLine from './BracketLine';
-import Loader from './Loader';
-import ErrorComponent from './ErrorComponent';
+import Loader from '../Loader';
+import ErrorComponent from '../ErrorComponent';
 
 import {
   divideMatchesByStage,
   getGroupedMatchesByDate,
   getSortedMatchesByDate,
-  getWinnerIdAndWinWayFromMatch,
-} from '../utils/dataUtils';
-import { CUTOFF_DATE } from '../utils/config';
-import { PHASE_NAMES } from '../utils/config';
+} from '../../utils/dataUtils';
+import { CUTOFF_DATE } from '../../utils/config';
+import { PHASE_NAMES } from '../../utils/config';
+import BracketMatch from './BracketMatch';
 
 export default function Bracket() {
   const { matchesData } = useData();
@@ -62,46 +62,41 @@ function renderBracket(datesWithMatches) {
           className='bracket-date'
         >
           <h3>{date}</h3>
-          {
-            <span>
-              {/* {getWinnerIdAndWinWayFromMatch(matches[1])[1].toString()} */}
-            </span>
-          }
+          <>
+            <BracketLine
+              x1={100}
+              y1={50}
+              x2={150}
+              y2={50}
+            />
+            <BracketLine
+              x1={150}
+              y1={50}
+              x2={150}
+              y2={150}
+            />
+            <BracketLine
+              x1={150}
+              y1={150}
+              x2={100}
+              y2={150}
+            />
+            <BracketLine
+              x1={150}
+              y1={100}
+              x2={250}
+              y2={100}
+            />
+          </>
           {matches.map((match, matchIndex) => (
             <div
               key={matchIndex}
               className='match'
             >
-              <div className='team'>{match.ateamid}</div>
-              <div className='team'>{match.bteamid}</div>
-              {/* {matchIndex % 2 === 0 && matchIndex < matches.length - 2 && ( */}
-              <>
-                <BracketLine
-                  x1={100}
-                  y1={50}
-                  x2={150}
-                  y2={50}
-                />
-                <BracketLine
-                  x1={150}
-                  y1={50}
-                  x2={150}
-                  y2={150}
-                />
-                <BracketLine
-                  x1={150}
-                  y1={150}
-                  x2={100}
-                  y2={150}
-                />
-                <BracketLine
-                  x1={150}
-                  y1={100}
-                  x2={250}
-                  y2={100}
-                />
-              </>
-              {/* )} */}
+              <BracketMatch
+                match={match}
+                key={match.id}
+              />
             </div>
           ))}
         </div>

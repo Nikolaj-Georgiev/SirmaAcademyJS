@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom';
-import { useData } from '../context/DataContext';
+import { useData } from '../../context/DataContext';
 import {
   getScoreFromMatch,
   getTeamById,
   getWinnerIdAndWinWayFromMatch,
-} from '../utils/dataUtils';
-import ErrorComponent from './ErrorComponent';
-import Loader from './Loader';
+} from '../../utils/dataUtils';
+import ErrorComponent from '../ErrorComponent';
+import Loader from '../Loader';
 
 export default function BracketMatch({ match }) {
   const { teamsData } = useData();
