@@ -60,14 +60,8 @@ export function getPlayersFromTeam(teamId, players) {
 }
 
 export function getSortedMatchesByDate(matches) {
-  return [...matches].sort((a, b) => new Date(a.date) - new Date(b.date));
+  return [...matches].sort((a, b) => new Date(dateValidateAndParseMMDDYYYY(a.date)) - new Date(dateValidateAndParseMMDDYYYY(b.date)));
 }
-
-export const getMatchesByDate = (matches) => {
-  const date = matches[0]?.date;
-  const onDateMatches = matches.filter((match) => match.date === date);
-  return { date, onDateMatches };
-};
 
 export function getGroupedMatchesByDate(matches) {
   return matches.reduce((groupedMatches, match) => {
@@ -94,7 +88,6 @@ export function divideMatchesByStage(matches, cutOffDate) {
 
   matches.forEach((match) => {
     //
-    const matchDate = new Date(match.date);
     if (match.date <= cutOffDate) {
       stages.groupPhase.push(match);
     } else {
@@ -227,7 +220,9 @@ export function getWinnerIdAndWinWayFromMatch(match) {
   return winnerAndWay(getScoreFromMatch(match));
 }
 
-function dateValidateAndParseMMDDYYYY(dateString) {
+export function dateValidateAndParseMMDDYYYY(dateString) {
+  console.log('-----');
+  console.log(`initial date ${dateString}`);
   // months in en and bg
   const monthNames = {
     en: {
@@ -272,6 +267,7 @@ function dateValidateAndParseMMDDYYYY(dateString) {
       if (!month) return 'Fake Date'; // if text is not a valid month
     } else {
       month = parseInt(match[3]);
+      [day, month] = [month, day]; // switch date and month to match the needed format
     }
 
     // check if month is bigger then 12
@@ -303,5 +299,8 @@ function dateValidateAndParseMMDDYYYY(dateString) {
   }
 
   // I return this format MM/DD/YYYY here because the rest of the app works with it 
-  return `${String(month).padStart(2, '0')}/${String(day).padStart(2, '0')}/${year}`;
+  console.log(`date after validation: ${String(month)}/${String(day)}/${year}`);
+  console.log('-----');
+  return `${String(month)}/${String(day)}/${year}`;
+  // return `${String(month).padStart(2, '0')}/${String(day).padStart(2, '0')}/${year}`;
 }
