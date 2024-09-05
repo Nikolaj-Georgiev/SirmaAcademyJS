@@ -19,7 +19,6 @@
     align-items: center;
 
     &-date {
-      margin: 2rem auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -47,6 +46,7 @@
     }
 
     &--1 {
+      gap: 2rem;
     }
     &--2 {
       // TODO: 1. get title to the top.2 add proper spacing to match the lines 3. Repeat to next phases
@@ -64,6 +64,10 @@
     &--4 {
       align-self: baseline;
       gap: 55rem;
+
+      &*h4 {
+        padding-bottom: 1rem;
+      }
     }
   }
 
