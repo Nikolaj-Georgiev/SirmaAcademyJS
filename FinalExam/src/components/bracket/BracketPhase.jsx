@@ -12,7 +12,6 @@ export default function BracketPhase({ phase, phaseName, cssId }) {
           className={`bracket__phase-date bracket__phase-date--${index + 1}`}
         >
           <h4>{date}</h4>
-          {/* {index != Object.entries(phase).length - 1 && */}
           {phaseName !== 'Final' &&
             !(
               phaseName === 'Semi Final' &&
@@ -20,7 +19,9 @@ export default function BracketPhase({ phase, phaseName, cssId }) {
             ) && (
               <BracketLines
                 key={date}
-                coordinates={COORDINATES[0]}
+                coordinates={
+                  date === '6/29/2024' ? COORDINATES[1] : COORDINATES[0]
+                }
               />
             )}
           {}
