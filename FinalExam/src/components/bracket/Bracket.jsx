@@ -44,9 +44,9 @@ export default function Bracket() {
     groupedSemiFinalsMatches,
     groupedFinalMatches,
   ];
-  console.log(phases);
+  // console.log(phases);
 
-  console.log(groupedRoundOf16Matches);
+  // console.log(groupedRoundOf16Matches);
   // TODO:
   // 1. to add real data for the groups from Round of 16 further - done
   // 2. to remove the dummy data and fix the code for my needs - done

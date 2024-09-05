@@ -61,9 +61,16 @@ export const POSITIONS = ['GK', 'DF', 'MF', 'FW'];
 
 export const PHASE_NAMES = ['RoundOf16', 'Quarter Final', 'Semi Final', 'Final'];
 
-export const COORDINATES = [
+export const COORDINATES = [[
   { x1: 100, y1: 50, x2: 150, y2: 50 },
   { x1: 150, y1: 50, x2: 150, y2: 150 },
   { x1: 150, y1: 150, x2: 100, y2: 150 },
   { x1: 150, y1: 100, x2: 200, y2: 100 },
+], [
+  { x1: 100, y1: 50, x2: 150, y2: 50 },
+  { x1: 150, y1: 50, x2: 150, y2: 250 },
+  { x1: 150, y1: 200, x2: 100, y2: 200 },
+  { x1: 150, y1: 300, x2: 200, y2: 300 },
+],
 ];
+

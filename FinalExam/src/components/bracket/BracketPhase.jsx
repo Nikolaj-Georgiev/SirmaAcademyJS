@@ -20,7 +20,7 @@ export default function BracketPhase({ phase, phaseName, cssId }) {
             ) && (
               <BracketLines
                 key={date}
-                coordinates={COORDINATES}
+                coordinates={COORDINATES[0]}
               />
             )}
           {}
