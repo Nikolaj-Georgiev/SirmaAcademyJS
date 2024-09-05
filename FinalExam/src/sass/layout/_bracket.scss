@@ -44,12 +44,20 @@
     }
     &--2 {
       // TODO: 1. get title to the top.2 add proper spacing to match the lines 3. Repeat to next phases
+      gap: 22rem;
       align-self: baseline;
-      gap: 10rem;
     }
     &--3 {
+      align-self: baseline;
+      gap: 20rem;
+
+      & h3 {
+        margin-bottom: 15rem;
+      }
     }
     &--4 {
+      align-self: baseline;
+      gap: 55rem;
     }
   }
 
