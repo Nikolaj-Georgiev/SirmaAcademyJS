@@ -1,6 +1,6 @@
 import BracketMatch from './BracketMatch';
 import BracketLines from './BracketLines';
-import { COORDINATES } from '../../utils/config';
+import { COORDINATES, SPECIAL_DATES } from '../../utils/config';
 
 export default function BracketPhase({ phase, phaseName, cssId }) {
   return (
@@ -19,9 +19,7 @@ export default function BracketPhase({ phase, phaseName, cssId }) {
             ) && (
               <BracketLines
                 key={date}
-                coordinates={
-                  date === '6/29/2024' ? COORDINATES[1] : COORDINATES[0]
-                }
+                coordinates={SPECIAL_DATES[date] || COORDINATES[0]}
               />
             )}
           {}
