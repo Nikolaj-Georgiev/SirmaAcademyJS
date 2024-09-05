@@ -221,8 +221,6 @@ export function getWinnerIdAndWinWayFromMatch(match) {
 }
 
 export function dateValidateAndParseMMDDYYYY(dateString) {
-  console.log('-----');
-  console.log(`initial date ${dateString}`);
   // months in en and bg
   const monthNames = {
     en: {
@@ -299,8 +297,6 @@ export function dateValidateAndParseMMDDYYYY(dateString) {
   }
 
   // I return this format MM/DD/YYYY here because the rest of the app works with it 
-  console.log(`date after validation: ${String(month)}/${String(day)}/${year}`);
-  console.log('-----');
   return `${String(month)}/${String(day)}/${year}`;
   // return `${String(month).padStart(2, '0')}/${String(day).padStart(2, '0')}/${year}`;
 }
