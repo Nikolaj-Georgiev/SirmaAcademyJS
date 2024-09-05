@@ -40,6 +40,11 @@
       }
     }
 
+    & h3 {
+      border-bottom: 1px solid $color-text-light;
+      padding-top: 1rem;
+    }
+
     &--1 {
     }
     &--2 {
