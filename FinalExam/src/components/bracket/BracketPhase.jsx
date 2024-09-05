@@ -12,10 +12,18 @@ export default function BracketPhase({ phase, phaseName, cssId }) {
           className={`bracket__phase-date bracket__phase-date--${index + 1}`}
         >
           <h4>{date}</h4>
-          <BracketLines
-            key={date}
-            coordinates={COORDINATES}
-          />
+          {/* {index != Object.entries(phase).length - 1 && */}
+          {phaseName !== 'Final' &&
+            !(
+              phaseName === 'Semi Final' &&
+              index == Object.entries(phase).length - 1
+            ) && (
+              <BracketLines
+                key={date}
+                coordinates={COORDINATES}
+              />
+            )}
+          {}
           {matches.map((match) => (
             <BracketMatch
               key={match.id}
