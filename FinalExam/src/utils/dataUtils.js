@@ -60,7 +60,13 @@ export function getPlayersFromTeam(teamId, players) {
 }
 
 export function getSortedMatchesByDate(matches) {
-  return [...matches].sort((a, b) => new Date(dateValidateAndParseMMDDYYYY(a.date)) - new Date(dateValidateAndParseMMDDYYYY(b.date)));
+  const validatedMatches = matches.map((match) => {
+    return {
+      ...match,
+      date: dateValidateAndParseMMDDYYYY(match.date),
+    }
+  });
+  return [...validatedMatches].sort((a, b) => new Date(a.date) - new Date(b.date));
 }
 
 export function getGroupedMatchesByDate(matches) {
