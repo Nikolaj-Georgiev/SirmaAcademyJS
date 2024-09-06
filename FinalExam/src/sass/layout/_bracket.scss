@@ -82,7 +82,7 @@
     border: 1px solid rgba($color-text-light, 0.2);
     border-radius: 0.9rem;
     box-shadow: rgba(34, 66, 211, 0.35) 0 0 1.5rem;
-    z-index: 200;
+    z-index: 1000;
 
     &:hover {
       cursor: pointer;
@@ -137,5 +137,9 @@
   &__line {
     position: absolute;
     z-index: 100;
+
+    @include respond(tab-land) {
+      opacity: 0;
+    }
   }
 }
