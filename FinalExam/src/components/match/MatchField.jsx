@@ -13,7 +13,7 @@ export default function MatchField({ renderedTeam, cssId }) {
               <PlayerMini
                 key={player.id}
                 player={player}
-                cssClass={`match-details__field-team-line-item--${cssId}`}
+                cssClass={`match-details__field-team-line-item match-details__field-team-line-item--${cssId}`}
               />
             ))}
           </li>
