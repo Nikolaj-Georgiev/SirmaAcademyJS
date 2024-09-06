@@ -104,7 +104,6 @@ export default function MatchDetails() {
         <h3 className='match-details__team-manager'>
           <span>Team Manager:</span> <strong>{match.teamA.manager}</strong>
         </h3>
-        a
         <ul className='match-details__team-list'>
           {playersAByPosition.map((player) => (
             <Player
