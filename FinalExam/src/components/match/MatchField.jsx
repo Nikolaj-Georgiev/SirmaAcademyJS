@@ -1,6 +1,6 @@
 import PlayerMini from '../players/PlayerMini';
 
-export default function MatchField({ renderedTeam }) {
+export default function MatchField({ renderedTeam, cssId }) {
   return (
     <ul className='match-details__field-view-list-team'>
       {renderedTeam.map((playersInPosition, index) => (
@@ -12,7 +12,7 @@ export default function MatchField({ renderedTeam }) {
             <PlayerMini
               key={player.id}
               player={player}
-              cssClass={'match-details__field-view-list-team--list-item1'}
+              cssClass={`match-details__field-view-list-team--list-item${cssId}`}
             />
           ))}
         </li>
