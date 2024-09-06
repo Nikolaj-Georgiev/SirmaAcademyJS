@@ -6,27 +6,8 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   height: 100%;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  color: $color-text-light;
-  font-family: $font-stack-main;
-  font-weight: 400;
-  font-size: 1.8rem;
-  // background-image: linear-gradient(
-  //   to bottom,
-  //   $color-primary-01,
-  //   $color-primary-02
-  // );
-  background-color: $color-primary-01;
+  width: 100%;
 }
 
 a {
@@ -36,16 +17,29 @@ li {
   list-style: none;
 }
 
-// body {
-//   margin: 0;
-//   display: flex;
-//   place-items: center;
-//   min-width: 320px;
-//   min-height: 100vh;
-//   font-family: $font-stack-main;
-// }
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 
-// h1 {
-//   font-size: 3.2em;
-//   line-height: 1.1;
-// }
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px; 9/16 == 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px; 8/16 == 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 30%; // 1rem = 8px; 8/16 == 50%;
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px; 12/16 == 75%;
+  }
+}
+
+body {
+  color: $color-text-light;
+  font-family: $font-stack-main;
+  font-weight: 400;
+  font-size: 1.8rem;
+  background-color: $color-primary-01;
+}

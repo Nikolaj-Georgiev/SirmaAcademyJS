@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: $shadow-darker;
 
   &__logo-container {
     display: flex;
@@ -11,7 +11,7 @@
     align-items: center;
     gap: 1rem;
     padding: 2rem 0;
-    padding-left: 10rem;
+    padding-left: 10%;
 
     &--img {
       width: 3rem;
@@ -25,7 +25,7 @@
   }
 
   &__nav {
-    padding-right: 10rem;
+    padding-right: 10%;
     &-list {
       display: flex;
       justify-content: space-between;
