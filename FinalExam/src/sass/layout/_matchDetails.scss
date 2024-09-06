@@ -5,13 +5,6 @@
   display: flex;
   justify-content: center;
 
-  // &__container {
-  //   width: 90%;
-  //   margin: 0 auto;
-  //   display: flex;
-  //   justify-content: center;
-  // }
-
   &__team {
     display: flex;
     flex-direction: column;
@@ -63,6 +56,27 @@
         text-align: left;
       }
     }
+
+    @include respond(tab-land) {
+      font-size: 1.4rem;
+
+      &-flag {
+        width: 12rem;
+        height: 12rem;
+        margin: 2rem auto;
+      }
+
+      &-manager {
+        font-size: 1.4rem;
+        overflow-wrap: break-word;
+        & span {
+          white-space: normal;
+          overflow-wrap: break-word;
+          font-size: 1rem;
+        }
+        // word-wrap: break-word;
+      }
+    }
   }
 
   &__details {
@@ -76,6 +90,10 @@
     justify-content: space-around;
     align-items: center;
     padding: 4rem 2rem;
+
+    @include respond(tab-land) {
+      padding: 2rem 1rem;
+    }
 
     &-name {
       font-size: 3.2rem;
