@@ -24,7 +24,7 @@
       align-items: center;
       padding: 2rem;
       // margin-bottom: 1rem;
-      border-bottom: 1px solid rgba($color-text-light, 0.3);
+      border-bottom: $light-border;
       margin-bottom: auto;
 
       & > div:not(:last-child) {

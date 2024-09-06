@@ -59,6 +59,7 @@
     transition: all 0.2s ease-in;
     border-radius: 2rem;
     margin: 2rem 0;
+    border-bottom: $light-border;
 
     &:hover {
       transform: scale(1.05);
