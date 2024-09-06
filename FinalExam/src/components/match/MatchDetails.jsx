@@ -13,6 +13,7 @@ import { FIELD_SCHEMA, POSITIONS } from '../../utils/config';
 import PlayerMini from '../players/PlayerMini';
 import useTeamFieldSchema from '../../hooks/useTeamFieldSchema';
 import { useMemo } from 'react';
+import MatchField from './MatchField';
 
 export default function MatchDetails() {
   const { matchesData, flagUrls, teamsData, playersData, recordsIndexObject } =
@@ -128,7 +129,8 @@ export default function MatchDetails() {
         </div>
 
         <div className='match-details__field-view'>
-          <ul className='match-details__field-view-list-team'>
+          <MatchField renderedTeam={renderedTeamA} />
+          {/* <ul className='match-details__field-view-list-team'>
             {renderedTeamA.map((playersInPosition, index) => (
               <li
                 key={index}
@@ -143,7 +145,7 @@ export default function MatchDetails() {
                 ))}
               </li>
             ))}
-          </ul>
+          </ul> */}
           <ul className='match-details__field-view-list-team'>
             {[...renderedTeamB].reverse().map((playersInPosition, index) => (
               <li
