@@ -42,11 +42,11 @@ export default function HomePage() {
         <span></span>
         {renderMatches(groupedGroupPhaseMatches, 'Group Phase')}
       </div>
-      <dir className='home__phase'>
+      <div className='home__phase'>
         <h2 className='home__heading-secondary'>Round of 16</h2>
         <span></span>
         {renderMatches(groupedRoundOf16Matches, 'Round of 16')}
-      </dir>
+      </div>
       <dir className='home__phase'>
         <h2 className='home__heading-secondary'>Quarter Finals</h2>
         <span></span>

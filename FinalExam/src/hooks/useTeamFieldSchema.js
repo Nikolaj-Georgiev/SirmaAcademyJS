@@ -11,7 +11,7 @@ export default function useTeamFieldSchema(teamSchema, players) {
       const lastUsedPosition = POSITIONS[index - 1];
       currentPosition = currentPosition ? currentPosition : lastUsedPosition;
       const playersInPosition = playersByPosition[currentPosition] || [];
-      console.log(`Position: ${currentPosition}, Players:`, playersInPosition);
+      // console.log(`Position: ${currentPosition}, Players:`, playersInPosition);
       return playersInPosition.slice(0, numPlayers);
     })
   }, [teamSchema, playersByPosition]);

@@ -1,12 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 
-import TeamDetails from './components/TeamDetails';
+import TeamDetails from './components/teams/TeamDetails';
 import MatchDetails from './components/match/MatchDetails';
 import Header from './components/Header';
 import Players from './components/players/Players';
 import HomePage from './components/HomePage';
 import Groups from './components/Groups';
 import Bracket from './components/bracket/Bracket';
+import Teams from './components/teams/Teams';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         /> */}
         <Route
           path='/teams'
-          element={<TeamDetails />}
+          element={<Teams />}
         />
         <Route
           path='/bracket'

@@ -6,9 +6,6 @@
 @import 'base/typography';
 @import 'base/utilities';
 
-@import 'components/button';
-@import 'components/card';
-@import 'components/table';
 @import 'components/loader';
 @import 'components/error';
 
@@ -18,7 +15,3 @@
 @import 'layout/homePage';
 @import 'layout/matchDetails';
 @import 'layout/bracket';
-
-@import 'pages/homePage';
-@import 'pages/matchDetails';
-@import 'pages/teamDetails';

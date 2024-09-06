@@ -4,13 +4,11 @@ import Loader from '../Loader';
 import {
   getFilteredMatchPlayers,
   getMatchDetailsById,
-  getMatchPlayersByPosition,
   getTeamFieldSchemaByTeamName,
 } from '../../utils/dataUtils';
 import Error from '../ErrorComponent';
 import Player from '../players/Player';
 import { FIELD_SCHEMA, POSITIONS } from '../../utils/config';
-import PlayerMini from '../players/PlayerMini';
 import useTeamFieldSchema from '../../hooks/useTeamFieldSchema';
 import { useMemo } from 'react';
 import MatchField from './MatchField';
@@ -20,13 +18,7 @@ export default function MatchDetails() {
     useData();
 
   const { matchId } = useParams();
-  console.log(matchId);
-
-  // TODO:
-  // 1. add logic for extracting the teams and players with their records - done
-  // 2. visualize teams on both size of the fields with names and records - done
-  // 3. add data to visualize the players on their corresponding fields - done
-  // 4. style the component
+  // console.log(matchId);
 
   if (
     matchesData.loading ||
