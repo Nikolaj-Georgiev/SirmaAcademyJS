@@ -33,13 +33,15 @@ export default function Teams() {
         <ul className='teams__list'>
           {teamsData.data.map((team) => (
             <li
+              className='teams__list-team'
               key={team.id}
               onClick={() => handleSelectTeam(team.id)}
             >
-              <div>
+              <div className='teams__list-team-flag'>
                 <img
                   src={flagUrls.flagUrls[team.name]}
                   alt='Team flag'
+                  className='teams__list-team-flag--img'
                 />
               </div>
               <div> {team.name}</div>

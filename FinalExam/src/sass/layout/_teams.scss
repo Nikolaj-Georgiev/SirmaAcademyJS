@@ -1,0 +1,124 @@
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: inherit;
+
+  &__container {
+    flex: 2;
+    background-color: $color-primary-04;
+  }
+
+  &__list {
+    &-team {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      // TODO: добави ховър ефект и бокс шадоу 2. добави стайлинг за другото.
+      &-flag {
+        width: 5rem;
+        height: 5rem;
+        // margin: 3rem auto;
+
+        &--img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          overflow: hidden;
+          border: 2px solid $color-text-light;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__players {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-dark-01;
+
+    &-manager {
+      font-weight: 300;
+      & strong {
+        margin-left: 1rem;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    &-player {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2.5rem;
+      align-self: flex-start;
+
+      & p:nth-child(2) {
+        margin-right: auto;
+        text-align: left;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    background-color: $color-dark-01;
+
+    &-flag {
+      width: 20rem;
+      height: 20rem;
+      margin: 3rem auto;
+
+      &--img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border: 2px solid $color-text-light;
+        border-radius: 50%;
+      }
+    }
+
+    &-manager {
+      font-weight: 300;
+      & strong {
+        margin-left: 1rem;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    &-player {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2.5rem;
+      align-self: flex-start;
+
+      & p:nth-child(2) {
+        margin-right: auto;
+        text-align: left;
+      }
+    }
+  }
+}
