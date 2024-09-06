@@ -51,7 +51,12 @@ export default function Teams() {
           ))}
         </ul>
       </div>
-      {isSelected && <TeamDetails players={players} />}
+      {isSelected && (
+        <TeamDetails
+          players={players}
+          teamName={team.name}
+        />
+      )}
     </div>
   );
 }
