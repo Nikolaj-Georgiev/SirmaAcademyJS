@@ -2,6 +2,8 @@
   background-color: $color-data-02;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
 
   // &__container {
   //   width: 90%;
@@ -89,66 +91,90 @@
     }
   }
 
-  &__field-view {
-    height: fit-content;
-    background-image: url('/src/assets/pitch-bg.svg');
-    overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
-    &-list-team {
-      &--line {
+  &__field {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    &-container {
+      flex: 1 1 auto;
+      min-height: 0;
+      background-image: url('/src/assets/pitch-bg.svg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+    }
+
+    &-team {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-width: 1200px;
+      &-line {
         display: flex;
         justify-content: space-around;
         align-items: center;
         gap: 3rem;
-        margin: 4rem auto;
-      }
+        margin: 0 auto;
+        margin-bottom: 8rem;
 
-      &--list-item1,
-      &--list-item2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        &-item--1,
+        &-item--2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
 
-        & p:last-child {
-          font-size: 0.8rem;
+          & p:last-child {
+            font-size: 0.8rem;
+          }
         }
-      }
 
-      &--list-item1 {
-        p:nth-child(1) {
-          padding: 0.4rem 1.3rem;
-          margin-bottom: 1rem;
-          border-radius: 50%;
-          border: 1px solid $color-text-light;
-          background-color: $color-dark-01;
+        &-item--1 {
+          p:nth-child(1) {
+            padding: 0.4rem 1.3rem;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            border: 1px solid $color-text-light;
+            background-color: $color-dark-01;
+          }
         }
-      }
-      &--list-item2 {
-        p:nth-child(1) {
-          line-height: 2.1;
-          padding: 0 1.4rem;
-          margin-bottom: 1rem;
-          border-radius: 50%;
-          border: 1px solid $color-text-light;
-          background-color: $color-data-04;
+        &-item--2 {
+          p:nth-child(1) {
+            line-height: 2.1;
+            padding: 0 1.4rem;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            color: $color-dark-01;
+            border: 1px solid $color-dark-01;
+            background-color: $color-text-light;
+            // background-color: $color-data-04;
+          }
         }
       }
     }
 
-    &-list-team2 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    // &-list-team2 {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
 
-      &-list-item {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-    }
+    //   &-list-item {
+    //     display: flex;
+    //     justify-content: space-around;
+    //     align-items: center;
+    //   }
+    // }
   }
 }
 

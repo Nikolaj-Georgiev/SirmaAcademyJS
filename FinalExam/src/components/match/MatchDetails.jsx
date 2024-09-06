@@ -128,7 +128,7 @@ export default function MatchDetails() {
           <div className='match-details__info-name'>{match.teamB.name}</div>
         </div>
 
-        <div className='match-details__field-view'>
+        <div className='match-details__field'>
           <MatchField
             key={match.teamA.name}
             renderedTeam={renderedTeamA}
