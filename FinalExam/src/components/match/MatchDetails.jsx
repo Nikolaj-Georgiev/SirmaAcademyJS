@@ -58,7 +58,7 @@ export default function MatchDetails() {
   if (!match) {
     return <ErrorComponent />;
   }
-  console.log(match);
+  // console.log(match);
 
   const teamAFieldSchema = getTeamFieldSchemaByTeamName(
     match.teamA.name,
@@ -68,28 +68,28 @@ export default function MatchDetails() {
     match.teamB.name,
     FIELD_SCHEMA
   );
-  console.log(teamAFieldSchema);
-  console.log(teamBFieldSchema);
-
-  const renderedTeamA = useTeamFieldSchema(
-    teamAFieldSchema,
-    match.teamA.players
-  );
-  const renderedTeamB = useTeamFieldSchema(
-    teamAFieldSchema,
-    match.teamB.players
-  );
-  console.log(renderedTeamA);
-  console.log(renderedTeamB);
+  // console.log(teamAFieldSchema);
+  // console.log(teamBFieldSchema);
 
   const playersAByPosition = useMemo(
     () => getFilteredMatchPlayers(match.teamA.players, POSITIONS),
     [match.teamA.players]
   );
   const playersBByPosition = useMemo(
-    () => getFilteredMatchPlayers(match.teamA.players, POSITIONS),
+    () => getFilteredMatchPlayers(match.teamB.players, POSITIONS),
     [match.teamB.players]
   );
+
+  const renderedTeamA = useTeamFieldSchema(
+    teamAFieldSchema,
+    playersAByPosition
+  );
+  const renderedTeamB = useTeamFieldSchema(
+    teamBFieldSchema,
+    playersBByPosition
+  );
+  // console.log(renderedTeamA);
+  // console.log(renderedTeamB);
 
   return (
     <section className='match-details'>
