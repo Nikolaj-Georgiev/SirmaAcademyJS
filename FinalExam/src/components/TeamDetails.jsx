@@ -1,6 +1,6 @@
 import { useData } from '../context/DataContext';
 import { getPlayersFromTeam, getTeamByName } from '../utils/dataUtils';
-import Player from './Player';
+import Player from './players/Player';
 
 function TeamDetails() {
   const { teamsData } = useData();

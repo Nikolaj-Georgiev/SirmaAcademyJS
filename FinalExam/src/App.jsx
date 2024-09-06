@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import TeamDetails from './components/TeamDetails';
 import MatchDetails from './components/match/MatchDetails';
 import Header from './components/Header';
-import Players from './components/Players';
+import Players from './components/players/Players';
 import HomePage from './components/HomePage';
 import Groups from './components/Groups';
 import Bracket from './components/bracket/Bracket';

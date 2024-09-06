@@ -6,9 +6,9 @@ import {
   getTeamFieldSchemaByTeamName,
 } from '../../utils/dataUtils';
 import Error from '../ErrorComponent';
-import Player from '../Player';
+import Player from '../players/Player';
 import { FIELD_SCHEMA } from '../../utils/config';
-import PlayerMini from '../PlayerMini';
+import PlayerMini from '../players/PlayerMini';
 import useTeamFieldSchema from '../../hooks/useTeamFieldSchema';
 
 export default function MatchDetails() {
