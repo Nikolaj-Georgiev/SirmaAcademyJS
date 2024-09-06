@@ -70,11 +70,10 @@ A CSV files with data in the following format:
 The project is structured as follows:
 
 - **App**: The main component that manages the routing of the application.
-- **Homepage**: The component that visualizes the tournament bracket and all matches.
+- **Home**: The component that visualizes the tournament stages and all matches. Click on any match lead to Match Details page.
 - **MatchDetails**: The component for match details, displaying formations and results.
 - **TeamDetails**: The component for team details, including a roster of all players.
-- **PlayerList**: A subcomponent of TeamDetails that displays a list of players.
-- **Player**: A component that displays a single player.
+- **Bracket**: A component displaying bracket view of the final four stages of the tournament
 
 ## Implementation Algorithm
 
@@ -84,7 +83,7 @@ CSV files are loaded using JavaScript's `fetch` function and are manually parsed
 
 ### Match Sorting
 
-Matches are sorted by date. The tournament bracket is organized by stages (group stage, knockout stage, etc.).
+Matches are sorted by date. The tournament bracket is organized by stages (round of 16, quarter final, etc.).
 
 ### Visualization
 
