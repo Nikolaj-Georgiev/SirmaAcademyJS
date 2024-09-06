@@ -147,12 +147,17 @@
         margin: 20% auto;
         // margin: 6rem auto;
 
-        &-item--1,
-        &-item--2 {
+        &-item {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          // &-item--1,
+          // &-item--2 {
+          //   display: flex;
+          //   flex-direction: column;
+          //   justify-content: center;
+          //   align-items: center;
 
           & p:last-child {
             font-size: 0.8rem;
@@ -187,6 +192,14 @@
           gap: 0;
           margin: 10% auto;
         }
+      }
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+      &-line {
+        gap: 0;
+        margin: 10% auto;
       }
     }
   }
