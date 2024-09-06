@@ -21,10 +21,10 @@ function App() {
           path='/matches/:matchId'
           element={<MatchDetails />}
         />
-        <Route
+        {/* <Route
           path='/groups'
           element={<Groups />}
-        />
+        /> */}
         <Route
           path='/teams'
           element={<TeamDetails />}
@@ -33,10 +33,10 @@ function App() {
           path='/bracket'
           element={<Bracket />}
         />
-        <Route
+        {/* <Route
           path='/players'
           element={<Players />}
-        />
+        /> */}
       </Routes>
     </>
   );
