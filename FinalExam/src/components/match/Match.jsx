@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { useData } from '../context/DataContext';
-import { getTeamById } from '../utils/dataUtils';
-import Loader from './Loader';
+import { useData } from '../../context/DataContext';
+import { getTeamById } from '../../utils/dataUtils';
+import Loader from '../Loader';
 
 export default function Match({ match }) {
   const { teamsData, flagUrls } = useData();

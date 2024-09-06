@@ -5,7 +5,7 @@ import {
   getSortedMatchesByDate,
 } from '../utils/dataUtils';
 import { CUTOFF_DATE } from '../utils/config';
-import Match from './Match';
+import Match from './match/Match';
 import Loader from './Loader';
 import ErrorComponent from './ErrorComponent';
 

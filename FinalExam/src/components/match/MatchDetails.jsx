@@ -1,15 +1,15 @@
 import { useParams } from 'react-router-dom';
-import { useData } from '../context/DataContext';
-import Loader from './Loader';
+import { useData } from '../../context/DataContext';
+import Loader from '../Loader';
 import {
   getMatchDetailsById,
   getTeamFieldSchemaByTeamName,
-} from '../utils/dataUtils';
-import Error from './ErrorComponent';
-import Player from './Player';
-import { FIELD_SCHEMA } from '../utils/config';
-import PlayerMini from './PlayerMini';
-import useTeamFieldSchema from '../hooks/useTeamFieldSchema';
+} from '../../utils/dataUtils';
+import Error from '../ErrorComponent';
+import Player from '../Player';
+import { FIELD_SCHEMA } from '../../utils/config';
+import PlayerMini from '../PlayerMini';
+import useTeamFieldSchema from '../../hooks/useTeamFieldSchema';
 
 export default function MatchDetails() {
   const { matchesData, flagUrls, teamsData, playersData, recordsIndexObject } =

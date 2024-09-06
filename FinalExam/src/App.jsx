@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
 import TeamDetails from './components/TeamDetails';
-import MatchDetails from './components/MatchDetails';
+import MatchDetails from './components/match/MatchDetails';
 import Header from './components/Header';
 import Players from './components/Players';
 import HomePage from './components/HomePage';
