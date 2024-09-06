@@ -93,9 +93,9 @@ React is used to create components that visualize different aspects of the tourn
 
 1. **Clone the repository**:
 
-   ```bash
-   git clone https://github.com/Nikolaj-Georgiev/SirmaAcademyJS.git
-   ```
+```bash
+git clone https://github.com/Nikolaj-Georgiev/SirmaAcademyJS.git
+```
 
 2.**Navigate into the project subfolder**:
 
