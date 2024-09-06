@@ -25,24 +25,24 @@ export default function Match({ match }) {
     >
       <div className='home__team-card'>
         <p className='home__heading-tertiary home__team-name'>{`${teamA.name}`}</p>
-        <img
-          src={flagUrls.flagUrls[teamA.name]}
-          alt={`${teamA.name} flag`}
-          width='40'
-          height='40'
-          className='home__list-item--img'
-        />
+        <div className='home__list-item-image'>
+          <img
+            src={flagUrls.flagUrls[teamA.name]}
+            alt={`${teamA.name} flag`}
+            className='home__list-item-image--img'
+          />
+        </div>
       </div>
       <p> vs </p>
       <div className='home__team-card'>
         <p className='home__heading-tertiary home__team-name'>{`${teamB.name}`}</p>
-        <img
-          src={flagUrls.flagUrls[teamB.name]}
-          alt={`${teamA.name} flag`}
-          width='40'
-          height='40'
-          className='home__list-item--img'
-        />
+        <div className='home__list-item-image'>
+          <img
+            src={flagUrls.flagUrls[teamB.name]}
+            alt={`${teamA.name} flag`}
+            className='home__list-item-image--img'
+          />
+        </div>
       </div>
       <p className='home__list-item--text'>{` Score: ${match.score}`}</p>
     </li>
