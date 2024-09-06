@@ -88,3 +88,36 @@ Matches are sorted by date. The tournament bracket is organized by stages (round
 ### Visualization
 
 React is used to create components that visualize different aspects of the tournament. The structure is designed to be responsive and easy to use.
+
+### Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/Nikolaj-Georgiev/SirmaAcademyJS.git
+   ```
+
+2.**Navigate into the project subfolder**:
+
+```bash
+cd SirmaAcademyJS/FinalExam
+```
+
+3.**Install dependencies**:
+
+```bash
+npm install
+```
+
+4.**Run the development server**:
+
+```bash
+npm run dev
+```
+
+5.**This will start the project on localhost**
+
+### Deployment
+
+**You can access the deployed project at**:
+[text](https://ng-football.netlify.app/)https://ng-football.netlify.app/
