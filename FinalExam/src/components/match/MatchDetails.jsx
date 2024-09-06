@@ -12,6 +12,7 @@ import { FIELD_SCHEMA, POSITIONS } from '../../utils/config';
 import useTeamFieldSchema from '../../hooks/useTeamFieldSchema';
 import { useMemo } from 'react';
 import MatchField from './MatchField';
+import ErrorComponent from '../ErrorComponent';
 
 export default function MatchDetails() {
   const { matchesData, flagUrls, teamsData, playersData, recordsIndexObject } =
@@ -35,7 +36,7 @@ export default function MatchDetails() {
     playersData.error ||
     flagUrls.error
   ) {
-    return <Error />;
+    return <ErrorComponent text='Cannot load match details...' />;
   }
 
   const match = getMatchDetailsById(

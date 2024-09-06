@@ -1,11 +1,12 @@
 import { useData } from '../../context/DataContext';
+import ErrorComponent from '../ErrorComponent';
 import Player from '../players/Player';
 
 export default function TeamDetails({ players, teamName }) {
   const { flagUrls } = useData();
 
   if (flagUrls.loading) return <Loader text='Flags are loading...' />;
-  if (flagUrls.error) return <Error text='Cannot load flags...' />;
+  if (flagUrls.error) return <ErrorComponent text='Cannot load flags...' />;
 
   console.log(players);
   console.log(teamName);

@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useData } from '../../context/DataContext';
 import { getTeamById } from '../../utils/dataUtils';
 import Loader from '../Loader';
+import ErrorComponent from '../ErrorComponent';
 
 export default function Match({ match }) {
   const { teamsData, flagUrls } = useData();
@@ -13,6 +14,9 @@ export default function Match({ match }) {
 
   if (teamsData.loading || flagUrls.loading) {
     return <Loader />;
+  }
+  if (teamsData.error || flagUrls.error) {
+    return <ErrorComponent />;
   }
 
   const teamA = getTeamById(teamsData.data, match.ateamid);
