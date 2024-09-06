@@ -1,9 +1,9 @@
 import { useMemo } from "react";
 import { POSITIONS } from "../utils/config";
-import { getPlayersByPosition } from "../utils/dataUtils";
+import { getMatchPlayersByPosition } from "../utils/dataUtils";
 
 export default function useTeamFieldSchema(teamSchema, players) {
-  const playersByPosition = useMemo(() => getPlayersByPosition(players, POSITIONS), [players]);
+  const playersByPosition = useMemo(() => getMatchPlayersByPosition(players, POSITIONS), [players]);
 
   return useMemo(() => {
     return teamSchema.map((numPlayers, index) => {

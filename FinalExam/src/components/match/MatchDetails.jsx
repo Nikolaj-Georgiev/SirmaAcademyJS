@@ -2,14 +2,17 @@ import { useParams } from 'react-router-dom';
 import { useData } from '../../context/DataContext';
 import Loader from '../Loader';
 import {
+  getFilteredMatchPlayers,
   getMatchDetailsById,
+  getMatchPlayersByPosition,
   getTeamFieldSchemaByTeamName,
 } from '../../utils/dataUtils';
 import Error from '../ErrorComponent';
 import Player from '../players/Player';
-import { FIELD_SCHEMA } from '../../utils/config';
+import { FIELD_SCHEMA, POSITIONS } from '../../utils/config';
 import PlayerMini from '../players/PlayerMini';
 import useTeamFieldSchema from '../../hooks/useTeamFieldSchema';
+import { useMemo } from 'react';
 
 export default function MatchDetails() {
   const { matchesData, flagUrls, teamsData, playersData, recordsIndexObject } =
@@ -78,105 +81,109 @@ export default function MatchDetails() {
   console.log(renderedTeamA);
   console.log(renderedTeamB);
 
+  const playersAByPosition = useMemo(
+    () => getFilteredMatchPlayers(match.teamA.players, POSITIONS),
+    [match.teamA.players]
+  );
+  const playersBByPosition = useMemo(
+    () => getFilteredMatchPlayers(match.teamA.players, POSITIONS),
+    [match.teamB.players]
+  );
+
   return (
     <section className='match-details'>
-      <div className='match-details__container'>
-        <aside className='match-details__team'>
-          <div className='match-details__team-flag'>
-            <img
-              src={match.teamA.flag}
-              alt={`flag of ${match.teamA.name}`}
-              className='match-details__team-flag--img'
+      <aside className='match-details__team'>
+        <div className='match-details__team-flag'>
+          <img
+            src={match.teamA.flag}
+            alt={`flag of ${match.teamA.name}`}
+            className='match-details__team-flag--img'
+          />
+        </div>
+        <h3 className='match-details__team-manager'>
+          <span>Team Manager:</span> <strong>{match.teamA.manager}</strong>
+        </h3>
+        a
+        <ul className='match-details__team-list'>
+          {playersAByPosition.map((player) => (
+            <Player
+              key={player.id}
+              player={player}
+              cssClass={'match-details__team-player'}
             />
+          ))}
+        </ul>
+      </aside>
+      <div className='match-details__details'>
+        <div className='match-details__info'>
+          <div className='match-details__info-name'>{match.teamA.name}</div>
+          <div className='match-details__info-score'>
+            {match.teamA.teamScore}
           </div>
-          <h3 className='match-details__team-manager'>
-            <span>Team Manager:</span> <strong>{match.teamA.manager}</strong>
-          </h3>
-          <ul className='match-details__team-list'>
-            {match.teamA.players.map((player) => (
-              <Player
-                key={player.id}
-                player={player}
-                cssClass={'match-details__team-player'}
-              />
-            ))}
-          </ul>
-        </aside>
-        <div className='match-details__details'>
-          <div className='match-details__info'>
-            <div className='match-details__team-name'>{match.teamA.name}</div>
-            <div className='match-details__team-score'>
-              {match.teamA.teamScore}
-            </div>
-            <div className='match-details__team-delimiter'>-</div>
-            <div className='match-details__team-score'>
-              {match.teamB.teamScore}
-            </div>
-            <div className='match-details__team-name'>{match.teamB.name}</div>
+          <div className='match-details__info-delimiter'>-</div>
+          <div className='match-details__info-score'>
+            {match.teamB.teamScore}
           </div>
-
-          <div className='match-details__field-view'>
-            <ul className='match-details__field-view-list-team'>
-              {renderedTeamA.map((playersInPosition, index) => (
-                <li
-                  key={index}
-                  className='match-details__field-view-list-team--line'
-                >
-                  {playersInPosition.map((player) => (
-                    <PlayerMini
-                      key={player.id}
-                      player={player}
-                      cssClass={
-                        'match-details__field-view-list-team--list-item1'
-                      }
-                    />
-                  ))}
-                </li>
-              ))}
-            </ul>
-            <ul className='match-details__field-view-list-team'>
-              {[...renderedTeamB].reverse().map((playersInPosition, index) => (
-                <li
-                  key={index}
-                  className='match-details__field-view-list-team--line'
-                >
-                  {playersInPosition.map((player) => (
-                    <PlayerMini
-                      key={player.id}
-                      player={player}
-                      cssClass={
-                        'match-details__field-view-list-team--list-item2'
-                      }
-                    />
-                  ))}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className='match-details__info-name'>{match.teamB.name}</div>
         </div>
 
-        <aside className='match-details__team'>
-          <div className='match-details__team-flag'>
-            <img
-              src={match.teamB.flag}
-              alt={`flag of ${match.teamB.name}`}
-              className='match-details__team-flag--img'
-            />
-          </div>
-          <h3 className='match-details__team-manager'>
-            <span>Team Manager:</span> <strong>{match.teamB.manager}</strong>
-          </h3>
-          <ul className='match-details__team-list'>
-            {match.teamB.players.map((player) => (
-              <Player
-                key={player.id}
-                player={player}
-                cssClass={'match-details__team-player'}
-              />
+        <div className='match-details__field-view'>
+          <ul className='match-details__field-view-list-team'>
+            {renderedTeamA.map((playersInPosition, index) => (
+              <li
+                key={index}
+                className='match-details__field-view-list-team--line'
+              >
+                {playersInPosition.map((player) => (
+                  <PlayerMini
+                    key={player.id}
+                    player={player}
+                    cssClass={'match-details__field-view-list-team--list-item1'}
+                  />
+                ))}
+              </li>
             ))}
           </ul>
-        </aside>
+          <ul className='match-details__field-view-list-team'>
+            {[...renderedTeamB].reverse().map((playersInPosition, index) => (
+              <li
+                key={index}
+                className='match-details__field-view-list-team--line'
+              >
+                {playersInPosition.map((player) => (
+                  <PlayerMini
+                    key={player.id}
+                    player={player}
+                    cssClass={'match-details__field-view-list-team--list-item2'}
+                  />
+                ))}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
+
+      <aside className='match-details__team'>
+        <div className='match-details__team-flag'>
+          <img
+            src={match.teamB.flag}
+            alt={`flag of ${match.teamB.name}`}
+            className='match-details__team-flag--img'
+          />
+        </div>
+        <h3 className='match-details__team-manager'>
+          <span>Team Manager:</span> <strong>{match.teamB.manager}</strong>
+        </h3>
+        <ul className='match-details__team-list'>
+          {playersBByPosition.map((player) => (
+            <Player
+              key={player.id}
+              player={player}
+              cssClass={'match-details__team-player'}
+            />
+          ))}
+        </ul>
+      </aside>
     </section>
   );
 }

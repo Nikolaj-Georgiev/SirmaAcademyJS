@@ -198,6 +198,19 @@ export function getPlayersByPosition(players, positions) {
   }, {})
 }
 
+export function getMatchPlayersByPosition(players, positions) {
+  return positions.reduce((playersByPositionAccumulator, position) => {
+    playersByPositionAccumulator[position] = players.filter(
+      player => player.position === position && player.playingTime.length > 0
+    );
+    return playersByPositionAccumulator;
+  }, {});
+}
+
+export function getFilteredMatchPlayers(players, positions) {
+  return players.filter((player) => positions.includes(player.position) && player.playingTime.length > 0);
+}
+
 export function getScoreFromMatch(match) {
   const [teamAScore, teamBScore] = match.score.split('-');
   return {
