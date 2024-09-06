@@ -23,9 +23,9 @@ export default function Teams() {
     setIsSelected(true);
     setPlayers(getPlayersFromTeam(teamId, playersData.data));
   };
-  console.log(team);
-  console.log(flagUrls.flagUrls);
-  console.log(players);
+  // console.log(team);
+  // console.log(flagUrls.flagUrls);
+  // console.log(players);
 
   return (
     <div className='teams'>

@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   // gap: 2rem;
-  background-color: inherit;
+  background-color: $color-primary-04;
   transition: all 0.2s ease-in-out;
 
   &__container {
@@ -13,13 +13,28 @@
 
   &__list {
     width: 100%;
-    max-width: 1200px;
+    height: 100%;
+    margin: 3rem auto;
+    // max-width: 1200px;
+
     &-team {
       display: flex;
       flex: 1 1 calc(20% - 20rem);
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-      padding: 1rem;
+      padding: 2rem;
+      // margin-bottom: 1rem;
+      border-bottom: 1px solid rgba($color-text-light, 0.3);
+      margin-bottom: auto;
+
+      & > div:not(:last-child) {
+        margin-right: auto;
+        justify-self: flex-start;
+      }
+      &:hover {
+        transform: scaleY(1.05);
+        box-shadow: $shadow-dark;
+      }
 
       // TODO: добави ховър ефект и бокс шадоу 2. добави стайлинг за другото.
       &-flag {
@@ -45,6 +60,7 @@
     flex-direction: column;
     align-items: center;
     background-color: $color-dark-01;
+    margin-bottom: auto;
 
     &-list {
       display: flex;
